@@ -24,13 +24,13 @@ class UserVerificationCodeResult {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['waitError'] = this.waitError;
-    data['expiredDate'] = this.expiredDate;
-    data['requestCount'] = this.requestCount;
-    data['createDate'] = this.createDate;
-    data['email'] = this.email;
-    data['mobileNumber'] = this.mobileNumber;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['waitError'] = waitError;
+    data['expiredDate'] = expiredDate;
+    data['requestCount'] = requestCount;
+    data['createDate'] = createDate;
+    data['email'] = email;
+    data['mobileNumber'] = mobileNumber;
     return data;
   }
 }

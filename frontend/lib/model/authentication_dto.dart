@@ -14,11 +14,11 @@ class AuthenticationDto {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['userID'] = this.userID;
-    data['authToken'] = this.authToken;
-    data['refreshToken'] = this.refreshToken;
-    data['expiresIn'] = this.expiresIn;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['userID'] = userID;
+    data['authToken'] = authToken;
+    data['refreshToken'] = refreshToken;
+    data['expiresIn'] = expiresIn;
     return data;
   }
 }

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:frontend/controller/childCardController.dart';
 import 'package:frontend/controller/notification_controller.dart';
 import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/model/childCardDto.dart';
-import 'package:frontend/view/screen/home/childCard/student_check_form.dart';
 import 'package:frontend/view/screen/home/childCard/student_check_form_with_reason.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';

@@ -8,12 +8,10 @@ import 'package:frontend/core/services/session.dart';
 import 'package:frontend/model/class_subjects.dart';
 import 'package:frontend/model/subjects.dart';
 import 'package:frontend/view/screen/subject/add_subject.dart';
-import 'package:frontend/view/screen/subject/subjet_with_units.dart';
 import 'package:frontend/view/screen/units/add_units.dart';
 import 'package:frontend/view/screen/units/unit.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class Subjects extends StatelessWidget {
   Subjects({super.key});

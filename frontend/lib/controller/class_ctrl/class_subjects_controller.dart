@@ -1,5 +1,4 @@
 
-import 'package:frontend/core/services/class_service.dart';
 import 'package:frontend/core/services/class_subjects_services.dart';
 import 'package:frontend/locator.dart';
 import 'package:frontend/model/class.dart';

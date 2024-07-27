@@ -1,8 +1,6 @@
 import 'package:frontend/core/services/ApiService.dart';
 import 'package:frontend/locator.dart';
 import 'package:frontend/model/registration_fees.dart';
-import 'package:frontend/model/student_fees.dart';
-import 'package:frontend/model/subjects.dart';
 
 class RegistrationFeesServices {
   ApiService apiService = locator<ApiService>();

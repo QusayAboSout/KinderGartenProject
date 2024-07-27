@@ -1,8 +1,6 @@
 import 'package:frontend/core/services/class_service.dart';
 import 'package:frontend/core/services/session.dart';
 import 'package:frontend/core/services/student_services.dart';
-import 'package:frontend/core/services/subject_service.dart';
-import 'package:frontend/core/services/unit_services.dart';
 import 'package:frontend/locator.dart';
 import 'package:frontend/model/class.dart';
 import 'package:frontend/model/custom_excetion.dart';

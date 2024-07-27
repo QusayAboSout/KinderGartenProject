@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/core/services/progress_evaluation_services.dart';
 import 'package:frontend/core/services/student_fees_service.dart';
 import 'package:frontend/locator.dart';
 import 'package:frontend/model/custom_excetion.dart';
-import 'package:frontend/model/progress_evaluation.dart';
-import 'package:frontend/model/progress_evaluation_from_query.dart';
 import 'package:frontend/model/student_fees.dart';
 import 'package:frontend/model/student_fees_from_query.dart';
 import 'package:get/get.dart';
@@ -22,11 +19,6 @@ class StudentFeesController extends GetxController {
   var service = locator<StudentFeesServices>();
   var error = "";
 
-  @override
-  void onInit() async {
-    super.onInit();
-    // await getStudentFeess();
-  }
 
   Future getStudentFeess() async {
     try {

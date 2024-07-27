@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:frontend/controller/my_students_controller.dart';
 import 'package:frontend/controller/student_ctrl/students_controller.dart';
 import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/services/session.dart';

@@ -10,9 +10,9 @@ class Auth {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['userid'] = this.userId;
-    data['token'] = this.token;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['userid'] = userId;
+    data['token'] = token;
     return data;
   }
 }

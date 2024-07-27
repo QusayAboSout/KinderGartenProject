@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/controller/childCardController.dart';
 import 'package:frontend/core/class/colors.dart';
-import 'package:frontend/core/services/session.dart';
 import 'package:frontend/model/childCardDto.dart';
 import 'package:frontend/view/screen/home/childCard/student_check_form.dart';
 import 'package:get/get.dart';

@@ -1,13 +1,9 @@
-import 'dart:convert';
 
 import 'package:frontend/core/services/ApiService.dart';
 import 'package:frontend/locator.dart';
 import 'package:frontend/model/general_evaluation.dart';
 import 'package:frontend/model/general_evaluation_final_marks_from_query.dart';
 import 'package:frontend/model/general_evaluation_from_query.dart';
-import 'package:frontend/model/progress_evaluation.dart';
-import 'package:frontend/model/progress_evaluation_from_query.dart';
-import 'package:frontend/model/subjects.dart';
 
 class GeneralEvaluationServices {
   ApiService apiService = locator<ApiService>();

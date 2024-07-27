@@ -7,7 +7,6 @@ import 'package:frontend/core/class/custom_button.dart';
 import 'package:frontend/core/class/custom_text_field.dart';
 import 'package:frontend/core/class/row_text_button.dart';
 import 'package:frontend/view/screen/login.dart';
-import 'package:frontend/view/screen/signup/signupInfo.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
 

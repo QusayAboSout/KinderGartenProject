@@ -6,7 +6,6 @@ import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/services/session.dart';
 import 'package:frontend/model/class.dart';
 import 'package:frontend/model/students.dart';
-import 'package:frontend/utils/session.dart';
 import 'package:frontend/view/screen/home/student/student_profile.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';

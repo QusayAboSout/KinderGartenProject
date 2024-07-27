@@ -12,10 +12,10 @@ class LoginDto {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['userName'] = this.userName;
-    data['googleAuthTokin'] = this.googleAuthTokin;
-    data['password'] = this.password;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['userName'] = userName;
+    data['googleAuthTokin'] = googleAuthTokin;
+    data['password'] = password;
     return data;
   }
 }

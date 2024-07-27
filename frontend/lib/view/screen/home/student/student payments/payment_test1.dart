@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -13,9 +15,9 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     // Show Overlay when the app starts
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       _overlayEntry = _createOverlayEntry();
-      Overlay.of(context)!.insert(_overlayEntry);
+      Overlay.of(context).insert(_overlayEntry);
     });
   }
 
@@ -32,9 +34,9 @@ class _MyHomePageState extends State<MyHomePage> {
           top: 50.0,
           left: 50.0,
           child: Container(
-            padding: EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
             color: Colors.white,
-            child: Text(
+            child: const Text(
               'This is the message you want to show.',
               style: TextStyle(fontSize: 18.0),
             ),
@@ -48,9 +50,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My App'),
+        title: const Text('My App'),
       ),
-      body: Center(
+      body: const Center(
         child: Text('Hello World!'),
       ),
     );

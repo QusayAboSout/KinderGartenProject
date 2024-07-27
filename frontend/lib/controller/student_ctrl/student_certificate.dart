@@ -1,5 +1,3 @@
-import 'package:frontend/controller/class_ctrl/class_controller.dart';
-import 'package:frontend/core/services/class_service.dart';
 import 'package:frontend/core/services/general_evaluation_services.dart';
 import 'package:frontend/core/services/progress_evaluation_services.dart';
 import 'package:frontend/core/services/student_services.dart';

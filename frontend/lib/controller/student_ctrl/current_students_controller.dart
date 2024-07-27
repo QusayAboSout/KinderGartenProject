@@ -3,7 +3,6 @@ import 'package:frontend/core/services/class_service.dart';
 import 'package:frontend/core/services/student_services.dart';
 import 'package:frontend/locator.dart';
 import 'package:frontend/model/class.dart';
-import 'package:frontend/model/custom_excetion.dart';
 import 'package:frontend/model/student_filter.dart';
 import 'package:frontend/model/students.dart';
 import 'package:frontend/utils/global.dart';

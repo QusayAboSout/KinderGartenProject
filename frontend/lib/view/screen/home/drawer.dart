@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/controller/class_ctrl/class_controller.dart';
-import 'package:frontend/controller/drawer_controller.dart';
 import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/class/custom_alert_dialog.dart';
 import 'package:frontend/core/services/session.dart';
-import 'package:frontend/view/screen/Fees/RegistrationFees.dart';
 import 'package:frontend/view/screen/class_manage/class_info.dart';
 import 'package:frontend/view/screen/home/childCard/application_form_screen.dart';
 import 'package:frontend/view/screen/home/student/my_students.dart';
 import 'package:frontend/view/screen/home/student/student%20evaluation/final_marks.dart';
-import 'package:frontend/view/screen/home/student/students_certificate.dart';
 import 'package:frontend/view/screen/subject/subjects.dart';
 import 'package:frontend/view/screen/class_manage/classes.dart';
 import 'package:frontend/view/screen/home/student/students.dart';
@@ -17,7 +14,6 @@ import 'package:frontend/view/screen/login.dart';
 import 'package:frontend/view/screen/teachers/taecher.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 
 class CustomDrawer extends StatelessWidget {
   CustomDrawer({super.key}) {

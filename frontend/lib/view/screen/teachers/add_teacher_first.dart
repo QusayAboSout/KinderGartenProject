@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
-import 'package:frontend/controller/singup_controller.dart';
 import 'package:frontend/controller/teacher_controller.dart';
 import 'package:frontend/core/class/colors.dart';
-import 'package:frontend/core/class/custom_alert_dialog.dart';
 import 'package:frontend/core/class/custom_button.dart';
 import 'package:frontend/core/class/custom_text_field.dart';
-import 'package:frontend/view/screen/teachers/add_teacher_second.dart';
 import 'package:frontend/view/screen/teachers/taecher.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';

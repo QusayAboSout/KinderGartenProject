@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/controller/student_ctrl/student_certificate.dart';
-import 'package:frontend/controller/student_ctrl/students_controller.dart';
 import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/model/students.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
@@ -77,7 +76,7 @@ class _StudentCertificateState extends State<StudentCertificate> {
                         headingRowHeight: 50,
                         columnSpacing: 20,
                         dataRowHeight: 60,
-                        headingRowColor: MaterialStateColor.resolveWith(
+                        headingRowColor: WidgetStateColor.resolveWith(
                             (states) => AppColors.SECONDARY_COLOR),
                         columns: const [
                           DataColumn(
@@ -170,7 +169,7 @@ class _StudentCertificateState extends State<StudentCertificate> {
                             headingRowHeight: 50,
                             columnSpacing: 20,
                             dataRowHeight: 60,
-                            headingRowColor: MaterialStateColor.resolveWith(
+                            headingRowColor: WidgetStateColor.resolveWith(
                                 (states) => AppColors.SECONDARY_COLOR),
                             columns: const [
                               DataColumn(

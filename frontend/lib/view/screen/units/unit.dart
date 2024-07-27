@@ -5,7 +5,6 @@ import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/model/subjects.dart';
 import 'package:frontend/model/unit.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class UnitRow extends StatelessWidget {
   UnitRow(this._rowUnit, this._subjectDto, {super.key});

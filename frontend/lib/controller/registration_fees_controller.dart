@@ -16,10 +16,6 @@ class RegistrationFeesController extends GetxController {
   var service = locator<RegistrationFeesServices>();
   var error = "";
 
-  @override
-  void onInit() async {
-    super.onInit();
-  }
 
   Future getRegistrationFeess() async {
     try {

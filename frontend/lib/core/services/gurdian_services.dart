@@ -1,7 +1,6 @@
 import 'package:frontend/core/services/ApiService.dart';
 import 'package:frontend/locator.dart';
 import 'package:frontend/model/gurdian.dart';
-import 'package:frontend/model/teacher.dart';
 
 class GuardianServices {
   ApiService apiService = locator<ApiService>();

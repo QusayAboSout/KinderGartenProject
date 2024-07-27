@@ -21,10 +21,6 @@ class GeneralEvaluationController extends GetxController {
   String? classID;
   String? studentID;
 
-  @override
-  void onInit() async {
-    super.onInit();
-  }
 
   Future getGeneralEvaluations() async {
     try {

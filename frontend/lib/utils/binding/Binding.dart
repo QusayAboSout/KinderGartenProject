@@ -6,7 +6,6 @@ import 'package:frontend/controller/guardian_controller.dart';
 import 'package:frontend/controller/homeController.dart';
 import 'package:frontend/controller/loginController.dart';
 import 'package:frontend/controller/childCardController.dart';
-import 'package:frontend/controller/my_students_controller.dart';
 import 'package:frontend/controller/notification_controller.dart';
 import 'package:frontend/controller/post_controller.dart';
 import 'package:frontend/controller/progress_evaluation_controller.dart';
@@ -20,7 +19,6 @@ import 'package:frontend/controller/subject_controller.dart';
 import 'package:frontend/controller/teacher_controller.dart';
 import 'package:frontend/controller/unit_controller.dart';
 import 'package:frontend/controller/user_controller.dart';
-import 'package:frontend/model/general_evaluation.dart';
 import 'package:frontend/view/screen/password/forget_password.dart';
 import 'package:get/get.dart';
 

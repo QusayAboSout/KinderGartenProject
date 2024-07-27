@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
-import 'package:frontend/controller/class_ctrl/class_subjects_controller.dart';
 import 'package:frontend/controller/general_evaluation_controller.dart';
-import 'package:frontend/controller/progress_evaluation_controller.dart';
-import 'package:frontend/controller/unit_controller.dart';
 import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/model/class.dart';
-import 'package:frontend/model/class_subjects.dart';
 import 'package:frontend/model/general_evaluation.dart';
 import 'package:frontend/model/students.dart';
 import 'package:frontend/model/subjects.dart';

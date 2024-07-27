@@ -1,10 +1,8 @@
-import 'dart:convert';
 
 import 'package:frontend/core/services/ApiService.dart';
 import 'package:frontend/locator.dart';
 import 'package:frontend/model/progress_evaluation.dart';
 import 'package:frontend/model/progress_evaluation_from_query.dart';
-import 'package:frontend/model/subjects.dart';
 
 class ProgressEvaluationServices {
   ApiService apiService = locator<ApiService>();

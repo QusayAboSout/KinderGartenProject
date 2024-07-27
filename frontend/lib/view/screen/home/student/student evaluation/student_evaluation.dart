@@ -7,7 +7,6 @@ import 'package:frontend/model/class.dart';
 import 'package:frontend/model/students.dart';
 import 'package:frontend/model/subjects.dart';
 import 'package:frontend/view/screen/home/student/student%20evaluation/final_marks.dart';
-import 'package:frontend/view/screen/home/student/student%20evaluation/student_general_evaluation.dart';
 import 'package:frontend/view/screen/home/student/student%20evaluation/student_progress_evaluation.dart';
 import 'package:get/get.dart';
 

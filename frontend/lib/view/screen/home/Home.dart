@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:frontend/controller/homeController.dart';
 import 'package:frontend/controller/post_controller.dart';
@@ -16,9 +14,7 @@ import 'package:frontend/view/screen/home/student/my_students.dart';
 import 'package:frontend/view/screen/home/student/students.dart';
 import 'package:frontend/view/screen/home/user_profile.dart';
 import 'package:frontend/view/screen/teachers/my_class_students.dart';
-import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
-import 'package:reactive_forms/reactive_forms.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});

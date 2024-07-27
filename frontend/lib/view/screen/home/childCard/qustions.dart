@@ -252,12 +252,10 @@ class _childCardFormState extends State<childCardForm> {
       firstDate: DateTime(2010),
       lastDate: DateTime(2100),
     );
-    if (picked != null) {
-      setState(() {
-        _dataController.text = picked.toString().split(" ")[0];
-      });
+    setState(() {
+      _dataController.text = picked.toString().split(" ")[0];
+    });
     }
-  }
 
   String? _validateDate(String? value) {
     if (value == null || value.isEmpty) {

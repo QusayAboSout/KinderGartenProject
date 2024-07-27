@@ -4,14 +4,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/Reposetories/AuthReposetory.dart';
 import 'package:frontend/core/services/AuthService.dart';
-import 'package:frontend/core/services/gurdian_services.dart';
 import 'package:frontend/core/services/session.dart';
 import 'package:frontend/core/services/user_services.dart';
 import 'package:frontend/locator.dart';
 import 'package:frontend/model/auth.dart';
 import 'package:frontend/model/custom_excetion.dart';
 import 'package:frontend/model/login.dart';
-import 'package:frontend/model/user.dart';
 import 'package:frontend/view/screen/home/Home.dart';
 import 'package:get/get.dart';
 

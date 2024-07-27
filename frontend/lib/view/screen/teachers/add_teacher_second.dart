@@ -8,10 +8,8 @@ import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/class/custom_alert_dialog.dart';
 import 'package:frontend/core/class/custom_button.dart';
 import 'package:frontend/core/class/custom_text_field.dart';
-import 'package:frontend/core/services/session.dart';
 import 'package:frontend/model/user.dart';
 import 'package:frontend/view/screen/home/Home.dart';
-import 'package:frontend/view/screen/teachers/add_teacher_first.dart';
 import 'package:frontend/view/screen/teachers/taecher.dart';
 import 'package:get/get.dart';
 

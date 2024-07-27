@@ -1,6 +1,5 @@
 import 'package:frontend/core/services/ApiService.dart';
 import 'package:frontend/locator.dart';
-import 'package:frontend/model/class.dart';
 import 'package:frontend/model/class_subjects.dart';
 
 class ClassSubjectsServices {

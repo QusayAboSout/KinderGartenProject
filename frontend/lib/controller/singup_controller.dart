@@ -9,7 +9,6 @@ import 'package:frontend/locator.dart';
 import 'package:frontend/model/CheckVerificationCodeDto.dart';
 import 'package:frontend/model/auth.dart';
 import 'package:frontend/model/authentication_dto.dart';
-import 'package:frontend/model/custom_excetion.dart';
 import 'package:frontend/model/sigin_up.dart';
 import 'package:frontend/model/teacher.dart';
 import 'package:frontend/model/user.dart';

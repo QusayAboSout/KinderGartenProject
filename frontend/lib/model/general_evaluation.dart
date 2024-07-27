@@ -1,4 +1,3 @@
-import 'package:frontend/model/class_subjects.dart';
 import 'package:frontend/model/subjects.dart';
 
 class GeneralEvaluationDto {

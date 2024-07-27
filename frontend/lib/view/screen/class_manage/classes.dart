@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/controller/class_ctrl/class_controller.dart';
-import 'package:frontend/controller/class_ctrl/class_subjects_controller.dart';
 import 'package:frontend/core/class/colors.dart';
-import 'package:frontend/core/class/custom_alert_dialog.dart';
-import 'package:frontend/model/class.dart';
 import 'package:frontend/view/screen/class_manage/add_class.dart';
-import 'package:frontend/view/screen/class_manage/class_info.dart';
 import 'package:frontend/view/screen/class_manage/class_row.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/class/custom_button.dart';
-import 'package:get/get_connect/http/src/request/request.dart';
 
 class CustomAlertDialog extends StatelessWidget {
   String? headText;

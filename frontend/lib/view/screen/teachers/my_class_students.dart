@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/controller/class_ctrl/class_controller.dart';
 import 'package:frontend/controller/student_ctrl/my_class_student_controller.dart';
-import 'package:frontend/controller/student_ctrl/students_controller.dart';
 import 'package:frontend/core/class/colors.dart';
-import 'package:frontend/core/services/session.dart';
-import 'package:frontend/model/class.dart';
-import 'package:frontend/model/students.dart';
 import 'package:frontend/view/screen/home/student/students.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
-import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 class MyClassStudents extends StatefulWidget {
   const MyClassStudents({super.key});

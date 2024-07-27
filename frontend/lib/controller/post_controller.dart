@@ -1,9 +1,7 @@
 import 'package:frontend/core/services/post_services.dart';
-import 'package:frontend/core/services/subject_service.dart';
 import 'package:frontend/locator.dart';
 import 'package:frontend/model/Posts.dart';
 import 'package:frontend/model/custom_excetion.dart';
-import 'package:frontend/model/subjects.dart';
 import 'package:get/get.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 

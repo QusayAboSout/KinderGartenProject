@@ -7,9 +7,7 @@ import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/class/custom_alert_dialog.dart';
 import 'package:frontend/core/class/custom_button.dart';
 import 'package:frontend/core/class/custom_text_field.dart';
-import 'package:frontend/core/services/session.dart';
 import 'package:frontend/view/screen/login.dart';
-import 'package:frontend/view/screen/signup/sign_up.dart';
 import 'package:get/get.dart';
 
 class signupInfo extends StatelessWidget {

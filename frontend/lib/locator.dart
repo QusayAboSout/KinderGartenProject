@@ -1,5 +1,4 @@
 import 'package:frontend/Reposetories/AuthReposetory.dart';
-import 'package:frontend/controller/guardian_controller.dart';
 import 'package:frontend/core/services/ApiService.dart';
 import 'package:frontend/core/services/AuthService.dart';
 import 'package:frontend/core/services/child_card_services.dart';
@@ -15,8 +14,6 @@ import 'package:frontend/core/services/subject_service.dart';
 import 'package:frontend/core/services/teacher_services.dart';
 import 'package:frontend/core/services/unit_services.dart';
 import 'package:frontend/core/services/user_services.dart';
-import 'package:frontend/model/gurdian.dart';
-import 'package:frontend/view/screen/subject/subjects.dart';
 import 'package:get_it/get_it.dart';
 
 final locator = GetIt.instance;

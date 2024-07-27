@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
-import 'package:frontend/controller/singup_controller.dart';
 import 'package:frontend/core/class/custom_alert_dialog.dart';
 import 'package:frontend/core/services/AuthService.dart';
 import 'package:frontend/core/services/SendEmailVerificationDto.dart';
@@ -9,9 +8,7 @@ import 'package:frontend/core/services/user_services.dart';
 import 'package:frontend/locator.dart';
 import 'package:frontend/model/CheckVerificationCodeDto.dart';
 import 'package:frontend/model/custom_excetion.dart';
-import 'package:frontend/model/sigin_up.dart';
 import 'package:frontend/model/teacher.dart';
-import 'package:frontend/model/user.dart';
 import 'package:frontend/view/screen/teachers/add_teacher_second.dart';
 import 'package:get/get.dart';
 

@@ -6,7 +6,6 @@ import 'package:frontend/core/class/custom_alert_dialog.dart';
 import 'package:frontend/model/class.dart';
 import 'package:frontend/view/screen/class_manage/class_info.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class ClassRow extends StatelessWidget {
   ClassRow(this._rowClass, {super.key});

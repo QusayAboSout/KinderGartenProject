@@ -6,9 +6,6 @@ import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/class/custom_alert_dialog.dart';
 import 'package:frontend/core/class/custom_button.dart';
 import 'package:frontend/core/class/custom_text_field.dart';
-import 'package:frontend/model/class.dart';
-import 'package:frontend/model/subjects.dart';
-import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 

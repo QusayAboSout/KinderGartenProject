@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:frontend/controller/childCardController.dart';
 import 'package:frontend/core/class/colors.dart';
-import 'package:frontend/core/services/session.dart';
 import 'package:frontend/view/screen/home/childCard/child_card_row.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';

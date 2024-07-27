@@ -1,20 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:frontend/controller/progress_evaluation_controller.dart';
-import 'package:frontend/controller/unit_controller.dart';
 import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/class/custom_alert_dialog.dart';
 import 'package:frontend/core/services/session.dart';
 import 'package:frontend/model/class.dart';
 import 'package:frontend/model/progress_evaluation.dart';
-import 'package:frontend/model/progress_evaluation_from_query.dart';
 import 'package:frontend/model/students.dart';
 import 'package:frontend/model/subjects.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 
 class StudentUnitMark extends StatefulWidget {
   final ClassDto _classDto;

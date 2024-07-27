@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:frontend/controller/teacher_controller.dart';
 import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/model/teacher.dart';
 import 'package:frontend/view/screen/home/Home.dart';
-import 'package:frontend/view/screen/teachers/add_teacher.dart';
 import 'package:frontend/view/screen/teachers/add_teacher_first.dart';
 import 'package:frontend/view/screen/teachers/teacher_profile.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
