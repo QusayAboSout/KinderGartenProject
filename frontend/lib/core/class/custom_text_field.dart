@@ -150,7 +150,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 Radius.circular(10),
               ),
               borderSide: BorderSide(
-                color: AppColors.LIGHT,
+                color: AppColors.LIGHT_TEXT,
                 width: 1,
                 style: BorderStyle.solid,
               ),

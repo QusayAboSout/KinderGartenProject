@@ -33,10 +33,10 @@ class _childCardFormState extends State<childCardForm> {
           title: const Text(
             'بطاقة طفل الروضة',
             style:
-                TextStyle(fontWeight: FontWeight.bold, color: AppColors.LIGHT),
+                TextStyle(fontWeight: FontWeight.bold, color: AppColors.LIGHT_TEXT),
           ),
           centerTitle: true,
-          backgroundColor: AppColors.PINK,
+          backgroundColor: AppColors.CREMIZON,
           foregroundColor: AppColors.SECONDARY_COLOR,
           leading: IconButton(
             onPressed: () {
@@ -53,7 +53,7 @@ class _childCardFormState extends State<childCardForm> {
                         Get.back();
                       },
                       headColor: AppColors.SECONDARY_COLOR,
-                      btnColor: AppColors.LIGHT,
+                      btnColor: AppColors.LIGHT_TEXT,
                     );
                   });
             },
@@ -75,7 +75,7 @@ class _childCardFormState extends State<childCardForm> {
                       "روضة نور الإيمان الخاصة",
                       style: GoogleFonts.marhey(
                           textStyle: const TextStyle(
-                        color: AppColors.LIGHT,
+                        color: AppColors.LIGHT_TEXT,
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
                       )),
@@ -137,13 +137,13 @@ class _childCardFormState extends State<childCardForm> {
                         decoration: const InputDecoration(
                           label: Text("تاريخ ميلاد الطفل"),
                           labelStyle: TextStyle(
-                              color: AppColors.LIGHT,
+                              color: AppColors.LIGHT_TEXT,
                               fontSize: 20,
                               fontWeight: FontWeight.bold),
                           filled: true,
                           prefixIcon: Icon(
                             Icons.calendar_today,
-                            color: AppColors.LIGHT,
+                            color: AppColors.LIGHT_TEXT,
                           ),
                           enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(

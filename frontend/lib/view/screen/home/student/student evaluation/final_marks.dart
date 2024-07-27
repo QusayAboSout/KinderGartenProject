@@ -26,13 +26,13 @@ class finalMarksClass extends StatelessWidget {
     return GetBuilder<ClassController>(
       init: controller,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BLUE,
+        backgroundColor: AppColors.SECONDARY_COLOR,
         appBar: AppBar(
-          backgroundColor: AppColors.PINK,
+          backgroundColor: AppColors.CREMIZON,
           foregroundColor: AppColors.SECONDARY_COLOR,
           title: const Text(
             'الصفوف',
-            style: TextStyle(color: AppColors.LIGHT),
+            style: TextStyle(color: AppColors.LIGHT_TEXT),
           ),
           centerTitle: true,
         ),
@@ -71,7 +71,7 @@ class FinalMarksClassRow extends StatelessWidget {
       shadowColor: AppColors.LIGHT_TEXT,
       elevation: 3,
       margin: const EdgeInsets.all(8),
-      color: AppColors.LIGHT,
+      color: AppColors.LIGHT_TEXT,
       child: ListTile(
         leading: const CircleAvatar(
           radius: 30,
@@ -129,7 +129,7 @@ class FinalMarksStudents extends StatelessWidget {
       builder: (controller) => Scaffold(
         backgroundColor: AppColors.BACKGROUND_COLOR,
         appBar: AppBar(
-          backgroundColor: AppColors.PINK,
+          backgroundColor: AppColors.CREMIZON,
           foregroundColor: AppColors.SECONDARY_COLOR,
         ),
         body: Container(
@@ -191,7 +191,7 @@ class FinalMarksStudents extends StatelessWidget {
                         ),
                       ),
                       body: Scaffold(
-                          backgroundColor: AppColors.BLUE,
+                          backgroundColor: AppColors.SECONDARY_COLOR,
                           body: Column(
                             children: [
                               if (controller.loading)
@@ -208,7 +208,7 @@ class FinalMarksStudents extends StatelessWidget {
                                           shadowColor: AppColors.LIGHT_TEXT,
                                           elevation: 3,
                                           margin: const EdgeInsets.all(8),
-                                          color: AppColors.LIGHT,
+                                          color: AppColors.LIGHT_TEXT,
                                           child: ListTile(
                                             leading: const CircleAvatar(
                                               radius: 20,
@@ -302,7 +302,7 @@ class _StudentFinalMarksState extends State<StudentFinalMarks> {
                       Get.back();
                     },
                     headColor: AppColors.SECONDARY_COLOR,
-                    btnColor: AppColors.LIGHT,
+                    btnColor: AppColors.LIGHT_TEXT,
                   );
                 });
           },
@@ -311,7 +311,7 @@ class _StudentFinalMarksState extends State<StudentFinalMarks> {
             color: AppColors.SECONDARY_COLOR,
           ),
         ),
-        backgroundColor: AppColors.PINK,
+        backgroundColor: AppColors.CREMIZON,
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -366,11 +366,11 @@ class _StudentFinalMarksState extends State<StudentFinalMarks> {
                                   shadowColor: AppColors.LIGHT_TEXT,
                                   elevation: 3,
                                   margin: const EdgeInsets.all(8),
-                                  color: AppColors.LIGHT,
+                                  color: AppColors.LIGHT_TEXT,
                                   child: ListTile(
                                     leading: const CircleAvatar(
                                       radius: 20,
-                                      backgroundColor: AppColors.LIGHT,
+                                      backgroundColor: AppColors.LIGHT_TEXT,
                                       child: Icon(Icons.menu_book_sharp),
                                     ),
                                     title: Text(
@@ -489,7 +489,7 @@ class _StudentFinalMarksState extends State<StudentFinalMarks> {
             style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: AppColors.LIGHT),
+                color: AppColors.LIGHT_TEXT),
           ),
         ),
       ),

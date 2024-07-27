@@ -26,9 +26,9 @@ class CustomAlertDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: AppColors.LIGHT,
+      backgroundColor: AppColors.LIGHT_TEXT,
       titleTextStyle: TextStyle(
-          color: headColor ?? AppColors.PINK,
+          color: headColor ?? AppColors.CREMIZON,
           fontWeight: FontWeight.bold,
           fontSize: 20),
       contentTextStyle: const TextStyle(color: AppColors.LIGHT_TEXT),
@@ -36,7 +36,7 @@ class CustomAlertDialog extends StatelessWidget {
       content: Text(bodyText),
       actions: <Widget>[
         CustomButton(
-            txtColor: AppColors.LIGHT,
+            txtColor: AppColors.LIGHT_TEXT,
             text: ButtonText,
             color: AppColors.SECONDARY_COLOR,
             onPressed: onPressed)
@@ -68,7 +68,7 @@ class CustomAlertDialog2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: AppColors.LIGHT,
+      backgroundColor: AppColors.LIGHT_TEXT,
       titleTextStyle: TextStyle(
         color: headColor ?? AppColors.SECONDARY_COLOR,
         fontWeight: FontWeight.bold,
@@ -85,7 +85,7 @@ class CustomAlertDialog2 extends StatelessWidget {
           ),
           child: Text(
             buttonText,
-            style: const TextStyle(color: AppColors.LIGHT),
+            style: const TextStyle(color: AppColors.LIGHT_TEXT),
           ),
         ),
       ],

@@ -31,7 +31,7 @@ class _AddTeacherStep1State extends State<AddTeacherStep1> {
       builder: (controller) => Scaffold(
         backgroundColor: AppColors.BACKGROUND_COLOR,
         appBar: AppBar(
-          backgroundColor: AppColors.PINK,
+          backgroundColor: AppColors.CREMIZON,
           foregroundColor: AppColors.SECONDARY_COLOR,
           automaticallyImplyLeading: true,
           leading: IconButton(

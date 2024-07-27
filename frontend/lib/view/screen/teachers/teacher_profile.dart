@@ -36,9 +36,9 @@ class TeacherProfile extends StatelessWidget {
                 appBar: AppBar(
                   title: const Text(
                     'ملف الشخصي للمعلمة',
-                    style: TextStyle(color: AppColors.LIGHT),
+                    style: TextStyle(color: AppColors.LIGHT_TEXT),
                   ),
-                  backgroundColor: AppColors.PINK,
+                  backgroundColor: AppColors.CREMIZON,
                   foregroundColor: AppColors.SECONDARY_COLOR,
                   centerTitle: true,
                 ),

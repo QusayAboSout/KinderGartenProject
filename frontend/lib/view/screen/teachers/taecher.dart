@@ -23,14 +23,14 @@ class TeacherManagement extends StatelessWidget {
         builder: (controller) => Scaffold(
               appBar: AppBar(
                 foregroundColor: AppColors.SECONDARY_COLOR,
-                backgroundColor: AppColors.PINK,
+                backgroundColor: AppColors.CREMIZON,
                 centerTitle: true,
                 title: const Text(
                   'قائمة المعلمات',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 22,
-                      color: AppColors.LIGHT),
+                      color: AppColors.LIGHT_TEXT),
                 ),
                 leading: IconButton(
                   onPressed: () {
@@ -45,7 +45,7 @@ class TeacherManagement extends StatelessWidget {
               backgroundColor: AppColors.BACKGROUND_COLOR,
               body: Scaffold(
                 appBar: AppBar(
-                  backgroundColor: AppColors.BLUE,
+                  backgroundColor: AppColors.SECONDARY_COLOR,
                   toolbarHeight: 100,
                   automaticallyImplyLeading: false,
                   actions: [
@@ -63,7 +63,7 @@ class TeacherManagement extends StatelessWidget {
                                     icon: const Icon(
                                       Icons.search,
                                       size: 35,
-                                      color: AppColors.LIGHT,
+                                      color: AppColors.LIGHT_TEXT,
                                     ),
                                   ),
                                   SizedBox(
@@ -108,7 +108,7 @@ class TeacherManagement extends StatelessWidget {
                                       icon: const Icon(
                                         Icons.filter_list_rounded,
                                         size: 30,
-                                        color: AppColors.LIGHT,
+                                        color: AppColors.LIGHT_TEXT,
                                       ),
                                     ),
                                   )
@@ -125,7 +125,7 @@ class TeacherManagement extends StatelessWidget {
                   ],
                 ),
                 body: Container(
-                  color: AppColors.BLUE,
+                  color: AppColors.SECONDARY_COLOR,
                   child: Column(
                     children: [
                       if (controller.loading)
@@ -181,7 +181,7 @@ class TeacherRow extends StatelessWidget {
       shadowColor: AppColors.LIGHT_TEXT,
       elevation: 2,
       margin: const EdgeInsets.all(8),
-      color: AppColors.LIGHT,
+      color: AppColors.LIGHT_TEXT,
       child: ListTile(
         leading: const Icon(
           color: AppColors.BACKGROUND_COLOR,

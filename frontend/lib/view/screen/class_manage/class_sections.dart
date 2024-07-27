@@ -18,11 +18,11 @@ class ClassSections extends StatelessWidget {
         backgroundColor: AppColors.BACKGROUND_COLOR,
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: AppColors.PINK,
+          backgroundColor: AppColors.CREMIZON,
           foregroundColor: AppColors.SECONDARY_COLOR,
           title: const Text(
             'الشعبة',
-            style: TextStyle(color: AppColors.LIGHT),
+            style: TextStyle(color: AppColors.LIGHT_TEXT),
           ),
         ),
         body: Column(
@@ -52,7 +52,7 @@ class ClassSections extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             const CircleAvatar(
-                              backgroundColor: AppColors.LIGHT,
+                              backgroundColor: AppColors.LIGHT_TEXT,
                               radius: 30,
                               child: Icon(
                                 Icons.home,
@@ -89,7 +89,7 @@ class ClassSections extends StatelessWidget {
               style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: AppColors.LIGHT),
+                  color: AppColors.LIGHT_TEXT),
             ),
           ),
         ),

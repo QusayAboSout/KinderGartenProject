@@ -43,10 +43,9 @@ dependencies:
   flutter_svg: ^2.0.9
   reactive_forms: ^16.1.1
   flutter_form_builder: ^9.2.1
-  form_builder_validators: ^9.1.0
+  form_builder_validators: 10.0.1
   google_sign_in: ^6.2.1
   get_it: ^7.6.7
-  flutter_spinkit: ^5.2.0
   sqflite: ^2.3.2
   package_info_plus: ^8.0.0
   google_fonts: ^6.2.0

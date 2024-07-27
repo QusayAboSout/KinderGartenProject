@@ -42,7 +42,7 @@ class _MyClassStudentsState extends State<MyClassStudents> {
               builder: (controller) => Scaffold(
                 appBar: AppBar(
                   toolbarHeight: 50,
-                  backgroundColor: AppColors.PINK,
+                  backgroundColor: AppColors.CREMIZON,
                   foregroundColor: AppColors.SECONDARY_COLOR,
                   centerTitle: true,
                   title: const Text(
@@ -50,7 +50,7 @@ class _MyClassStudentsState extends State<MyClassStudents> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 22,
-                      color: AppColors.LIGHT,
+                      color: AppColors.LIGHT_TEXT,
                     ),
                   ),
                 ),
@@ -80,7 +80,7 @@ class _MyClassStudentsState extends State<MyClassStudents> {
                                               icon: const Icon(
                                                 Icons.search,
                                                 size: 35,
-                                                color: AppColors.LIGHT,
+                                                color: AppColors.LIGHT_TEXT,
                                               ),
                                             ),
                                             SizedBox(
@@ -120,7 +120,7 @@ class _MyClassStudentsState extends State<MyClassStudents> {
                                                             horizontal: 10),
                                                   ),
                                                   style: const TextStyle(
-                                                      color: AppColors.LIGHT),
+                                                      color: AppColors.LIGHT_TEXT),
                                                 ),
                                               ),
                                             ),
@@ -140,7 +140,7 @@ class _MyClassStudentsState extends State<MyClassStudents> {
                                                 icon: const Icon(
                                                   Icons.filter_list_rounded,
                                                   size: 30,
-                                                  color: AppColors.LIGHT,
+                                                  color: AppColors.LIGHT_TEXT,
                                                 ),
                                               ),
                                             ),
@@ -170,7 +170,7 @@ class _MyClassStudentsState extends State<MyClassStudents> {
                               ),
                               body: controller.isHave == true
                                   ? Container(
-                                      color: AppColors.BLUE,
+                                      color: AppColors.SECONDARY_COLOR,
                                       child: TabBarView(
                                         children: [
                                           Expanded(
@@ -196,12 +196,12 @@ class _MyClassStudentsState extends State<MyClassStudents> {
                                       ),
                                     )
                                   : Container(
-                                      color: AppColors.BLUE,
+                                      color: AppColors.SECONDARY_COLOR,
                                       child: const Center(
                                         child: Text(
                                           "لست مسؤول عن صف حتى الان",
                                           style: TextStyle(
-                                              color: AppColors.LIGHT,
+                                              color: AppColors.LIGHT_TEXT,
                                               fontSize: 20,
                                               fontWeight: FontWeight.bold),
                                         ),

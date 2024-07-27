@@ -25,7 +25,7 @@ class RowTextButton extends StatelessWidget {
         Text(
           text,
           style: TextStyle(
-            color: AppColors.LIGHT_TEXT,
+            color: AppColors.SECONDARY_COLOR,
             fontSize: TextSize ?? 20,
           ),
         ),

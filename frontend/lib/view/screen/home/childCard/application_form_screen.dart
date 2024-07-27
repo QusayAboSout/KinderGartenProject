@@ -24,7 +24,7 @@ class _ApplicationFormScreenState extends State<ApplicationFormScreen> {
       init: controller,
       builder: (controller) => Scaffold(
         appBar: AppBar(
-          backgroundColor: AppColors.PINK,
+          backgroundColor: AppColors.CREMIZON,
           foregroundColor: AppColors.SECONDARY_COLOR,
         ),
         backgroundColor: AppColors.BACKGROUND_COLOR,
@@ -37,7 +37,7 @@ class _ApplicationFormScreenState extends State<ApplicationFormScreen> {
                 style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: AppColors.LIGHT),
+                    color: AppColors.LIGHT_TEXT),
               ),
               Expanded(
                 child: Padding(

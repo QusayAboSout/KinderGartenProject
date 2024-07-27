@@ -33,7 +33,7 @@ class ClassInfo extends StatelessWidget {
       builder: (controller) => Scaffold(
         backgroundColor: AppColors.BACKGROUND_COLOR,
         appBar: AppBar(
-          backgroundColor: AppColors.PINK,
+          backgroundColor: AppColors.CREMIZON,
           foregroundColor: AppColors.SECONDARY_COLOR,
         ),
         body: Padding(
@@ -42,7 +42,7 @@ class ClassInfo extends StatelessWidget {
             children: [
               const SizedBox(height: 10),
               const CircleAvatar(
-                backgroundColor: AppColors.LIGHT,
+                backgroundColor: AppColors.LIGHT_TEXT,
                 radius: 60,
                 child: Icon(
                   Icons.home,
@@ -125,7 +125,7 @@ class ClassInfo extends StatelessWidget {
                         ///////////// $$$$$$ The Money $$$$$ ///////////////////////////////////////////
                         /////////////////////////////////////////////////////////////////////////////////////////
                         const Scaffold(
-                          backgroundColor: AppColors.BLUE,
+                          backgroundColor: AppColors.SECONDARY_COLOR,
                           body: Column(
                             children: [
                               Text('Money'),
@@ -136,7 +136,7 @@ class ClassInfo extends StatelessWidget {
                         ///////////// The Subjects /////////////////////////////////////////////
                         /////////////////////////////////////////////////////////////////////////////////////////
                         Scaffold(
-                          backgroundColor: AppColors.BLUE,
+                          backgroundColor: AppColors.SECONDARY_COLOR,
                           body: GetBuilder<ClassSubjectsController>(
                             builder: (controller) => Column(
                               children: [
@@ -154,7 +154,7 @@ class ClassInfo extends StatelessWidget {
                                           shadowColor: AppColors.LIGHT_TEXT,
                                           elevation: 3,
                                           margin: const EdgeInsets.all(8),
-                                          color: AppColors.LIGHT,
+                                          color: AppColors.LIGHT_TEXT,
                                           child: ListTile(
                                               leading: const CircleAvatar(
                                                 radius: 22,

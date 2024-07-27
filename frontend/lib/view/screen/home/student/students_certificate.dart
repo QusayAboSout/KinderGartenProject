@@ -29,13 +29,13 @@ class _StudentCertificateState extends State<StudentCertificate> {
       home: GetBuilder<StudentCertificateController>(
         builder: (controller) {
           return Scaffold(
-            backgroundColor: AppColors.BLUE,
+            backgroundColor: AppColors.SECONDARY_COLOR,
             appBar: AppBar(
-              backgroundColor: AppColors.PINK,
+              backgroundColor: AppColors.CREMIZON,
               foregroundColor: AppColors.SECONDARY_COLOR,
               title: const Text(
                 'أداء الطالب',
-                style: TextStyle(color: AppColors.LIGHT),
+                style: TextStyle(color: AppColors.LIGHT_TEXT),
               ),
               centerTitle: true,
               actions: [

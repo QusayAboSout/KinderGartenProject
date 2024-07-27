@@ -32,13 +32,10 @@ class MyApp extends StatelessWidget {
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
       debugShowCheckedModeBanner: false,
       title: 'Kindergarten Welcome',
       textDirection: TextDirection.rtl,
-      home: const WelcomePage(),
+      home: Login(),
       initialBinding: AllBinding(),
     );
   }

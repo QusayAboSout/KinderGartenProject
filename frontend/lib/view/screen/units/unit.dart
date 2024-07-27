@@ -21,7 +21,7 @@ class UnitRow extends StatelessWidget {
       shadowColor: AppColors.LIGHT_TEXT,
       elevation: 3,
       margin: const EdgeInsets.all(8),
-      color: AppColors.LIGHT,
+      color: AppColors.SECONDARY_COLOR,
       child: ListTile(
         leading: const CircleAvatar(
           backgroundColor: AppColors.SECONDARY_COLOR,

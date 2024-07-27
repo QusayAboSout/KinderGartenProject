@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/core/class/colors.dart';
 
 class RatingType extends StatelessWidget {
   const RatingType({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Add Rating'),
-      ),
+  Widget build(BuildContext context) { return Scaffold( appBar: AppBar( title: const Text('Add Rating'),),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -20,7 +17,7 @@ class RatingType extends StatelessWidget {
                 },
                 child: Container(
                   padding: const EdgeInsets.all(20.0),
-                  color: Colors.blue,
+                  color: AppColors.SECONDARY_COLOR,
                   child: const Center(
                     child: Text(
                       'تقييم درس',

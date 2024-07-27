@@ -25,7 +25,7 @@ class StudentMarks extends StatelessWidget {
       shadowColor: AppColors.LIGHT_TEXT,
       elevation: 3,
       margin: const EdgeInsets.all(8),
-      color: AppColors.LIGHT,
+      color: AppColors.LIGHT_TEXT,
       child: ListTile(
         leading: const CircleAvatar(
           radius: 22,

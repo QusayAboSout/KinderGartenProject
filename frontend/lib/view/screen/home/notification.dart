@@ -17,7 +17,7 @@ class NotificationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.BLUE,
+      color: AppColors.SECONDARY_COLOR,
       child: FutureBuilder(
           future: _controller.getChildCardsStatusByUser(),
           builder: (context, snapshot) {
@@ -64,7 +64,7 @@ class NotificationPage extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold,
-                                      color: AppColors.LIGHT),
+                                      color: AppColors.LIGHT_TEXT),
                                 ),
                               ),
                       ),
@@ -93,7 +93,7 @@ class NotificationChildCardRow extends StatelessWidget {
         child: ListTile(
           // tileColor:
           leading: const CircleAvatar(
-            backgroundColor: AppColors.LIGHT,
+            backgroundColor: AppColors.LIGHT_TEXT,
             child: Icon(
               Icons.person,
               color: AppColors.LIGHT_TEXT,

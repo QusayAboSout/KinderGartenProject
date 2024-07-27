@@ -107,7 +107,7 @@ class _StudentUnitMarkState extends State<StudentUnitMark> {
             ),
             Expanded(
               child: Container(
-                color: AppColors.BLUE,
+                color: AppColors.SECONDARY_COLOR,
                 child: GetBuilder<ProgressEvaluationController>(
                   builder: (controller) => Column(
                     children: [

@@ -22,14 +22,14 @@ class Subjects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.BLUE,
+      backgroundColor: AppColors.SECONDARY_COLOR,
       appBar: AppBar(
         centerTitle: true,
         foregroundColor: AppColors.SECONDARY_COLOR,
-        backgroundColor: AppColors.PINK,
+        backgroundColor: AppColors.CREMIZON,
         title: const Text(
           'إدارة المواد',
-          style: TextStyle(color: AppColors.LIGHT),
+          style: TextStyle(color: AppColors.LIGHT_TEXT),
         ),
       ),
       body: GetBuilder<SubjectController>(
@@ -64,7 +64,7 @@ class Subjects extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: AppColors.LIGHT),
+                      color: AppColors.LIGHT_TEXT),
                 ),
               ),
             )
@@ -91,7 +91,7 @@ class _SubjectRowState extends State<SubjectRow> {
       shadowColor: AppColors.LIGHT_TEXT,
       elevation: 3,
       margin: const EdgeInsets.all(8),
-      color: AppColors.LIGHT,
+      color: AppColors.LIGHT_TEXT,
       child: ListTile(
         leading: const CircleAvatar(
           radius: 22,
@@ -137,7 +137,7 @@ class _SubjectRowState extends State<SubjectRow> {
                           bodyText:
                               'يحتوي هذا الكتاب على مجموعة دروس، يرجى حذفهن قبل حذف هذا الدرس',
                           ButtonText: 'مفهوم',
-                          btnColor: AppColors.BLUE,
+                          btnColor: AppColors.SECONDARY_COLOR,
                           onPressed: () {
                             Get.back();
                           },
@@ -181,7 +181,7 @@ class SubjectInfo extends StatelessWidget {
       builder: (controller) => Scaffold(
         backgroundColor: AppColors.BACKGROUND_COLOR,
         appBar: AppBar(
-          backgroundColor: AppColors.PINK,
+          backgroundColor: AppColors.CREMIZON,
           foregroundColor: AppColors.SECONDARY_COLOR,
         ),
         body: Padding(
@@ -239,7 +239,7 @@ class SubjectInfo extends StatelessWidget {
                     ),
                   ),
                   body: Container(
-                    color: AppColors.BLUE,
+                    color: AppColors.SECONDARY_COLOR,
                     child: TabBarView(
                       children: [
                         GetBuilder<UnitController>(

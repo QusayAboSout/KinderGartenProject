@@ -35,7 +35,7 @@ class ClassSubjectsInfo extends StatelessWidget {
       builder: (controller) => Scaffold(
         backgroundColor: AppColors.BACKGROUND_COLOR,
         appBar: AppBar(
-          backgroundColor: AppColors.PINK,
+          backgroundColor: AppColors.CREMIZON,
           foregroundColor: AppColors.SECONDARY_COLOR,
         ),
         body: Padding(

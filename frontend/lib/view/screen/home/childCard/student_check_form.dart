@@ -50,10 +50,10 @@ class _StudentCheckFormState extends State<StudentCheckForm> {
           title: const Text(
             'بطاقة طفل الروضة',
             style:
-                TextStyle(fontWeight: FontWeight.bold, color: AppColors.LIGHT),
+                TextStyle(fontWeight: FontWeight.bold, color: AppColors.LIGHT_TEXT),
           ),
           centerTitle: true,
-          backgroundColor: AppColors.PINK,
+          backgroundColor: AppColors.CREMIZON,
           foregroundColor: AppColors.SECONDARY_COLOR,
         ),
         body: SafeArea(
@@ -68,7 +68,7 @@ class _StudentCheckFormState extends State<StudentCheckForm> {
                       "روضة نور الإيمان الخاصة",
                       style: GoogleFonts.marhey(
                           textStyle: const TextStyle(
-                        color: AppColors.LIGHT,
+                        color: AppColors.LIGHT_TEXT,
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
                       )),

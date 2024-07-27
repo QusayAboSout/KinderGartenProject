@@ -20,10 +20,10 @@ class MyStudents extends StatelessWidget {
   Widget build(BuildContext context) {
     double? sizedBoxHeight = 20;
     return Scaffold(
-      backgroundColor: AppColors.BLUE,
+      backgroundColor: AppColors.SECONDARY_COLOR,
       appBar: AppBar(
         toolbarHeight: 60,
-        backgroundColor: AppColors.PINK,
+        backgroundColor: AppColors.CREMIZON,
         foregroundColor: AppColors.SECONDARY_COLOR,
       ),
       body: FutureBuilder<void>(
@@ -45,7 +45,7 @@ class MyStudents extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 30,
                               fontWeight: FontWeight.bold,
-                              color: AppColors.LIGHT),
+                              color: AppColors.LIGHT_TEXT),
                         ),
                         SizedBox(height: sizedBoxHeight),
                         const Padding(

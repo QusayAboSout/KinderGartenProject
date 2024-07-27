@@ -744,7 +744,7 @@ namespace DataAccess.Migrations
                             ID = 1L,
                             CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Discription = "غدا سيكون موعد دفع الرسوم",
-                            PostDate = new DateTime(2024, 6, 19, 18, 46, 24, 476, DateTimeKind.Local).AddTicks(6651),
+                            PostDate = new DateTime(2024, 7, 11, 12, 3, 24, 147, DateTimeKind.Local).AddTicks(2783),
                             UserID = 1L
                         });
                 });

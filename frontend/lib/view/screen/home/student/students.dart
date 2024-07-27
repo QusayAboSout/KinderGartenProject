@@ -36,7 +36,7 @@ class _StudentListPageState extends State<StudentListPage> {
       builder: (controller) => Scaffold(
         appBar: AppBar(
           toolbarHeight: 50,
-          backgroundColor: AppColors.PINK,
+          backgroundColor: AppColors.CREMIZON,
           foregroundColor: AppColors.SECONDARY_COLOR,
           centerTitle: true,
           title: const Text(
@@ -44,7 +44,7 @@ class _StudentListPageState extends State<StudentListPage> {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 22,
-              color: AppColors.LIGHT,
+              color: AppColors.LIGHT_TEXT,
             ),
           ),
         ),
@@ -73,7 +73,7 @@ class _StudentListPageState extends State<StudentListPage> {
                                     icon: const Icon(
                                       Icons.search,
                                       size: 35,
-                                      color: AppColors.LIGHT,
+                                      color: AppColors.LIGHT_TEXT,
                                     ),
                                   ),
                                   SizedBox(
@@ -104,7 +104,7 @@ class _StudentListPageState extends State<StudentListPage> {
                                               horizontal: 10),
                                         ),
                                         style: const TextStyle(
-                                            color: AppColors.LIGHT),
+                                            color: AppColors.LIGHT_TEXT),
                                       ),
                                     ),
                                   ),
@@ -122,7 +122,7 @@ class _StudentListPageState extends State<StudentListPage> {
                                       icon: const Icon(
                                         Icons.filter_list_rounded,
                                         size: 30,
-                                        color: AppColors.LIGHT,
+                                        color: AppColors.LIGHT_TEXT,
                                       ),
                                     ),
                                   ),
@@ -161,7 +161,7 @@ class _StudentListPageState extends State<StudentListPage> {
                       ),
                     ),
                     body: Container(
-                      color: AppColors.BLUE,
+                      color: AppColors.SECONDARY_COLOR,
                       child: TabBarView(
                         children: [
                           // Column for old students
@@ -290,7 +290,7 @@ class StudentCard extends StatelessWidget {
       shadowColor: AppColors.LIGHT_TEXT,
       elevation: 3,
       margin: const EdgeInsets.all(8),
-      color: AppColors.LIGHT,
+      color: AppColors.LIGHT_TEXT,
       child: ListTile(
         leading: const CircleAvatar(
           backgroundColor: AppColors.SECONDARY_COLOR,

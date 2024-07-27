@@ -54,7 +54,7 @@ class ClassRow extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               const CircleAvatar(
-                backgroundColor: AppColors.LIGHT,
+                backgroundColor: AppColors.LIGHT_TEXT,
                 radius: 30,
                 child: Icon(
                   Icons.home,

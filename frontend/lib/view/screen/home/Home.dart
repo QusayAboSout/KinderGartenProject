@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
       builder: (controller) => Scaffold(
         key: _scaffoldKey,
         appBar: AppBar(
-          backgroundColor: AppColors.PINK,
+          backgroundColor: AppColors.CREMIZON,
           title: const Center(
             child: Text(
               '__________',
@@ -58,7 +58,7 @@ class _HomeState extends State<Home> {
           leading: IconButton(
             icon: const Icon(
               Icons.menu,
-              color: AppColors.LIGHT,
+              color: AppColors.LIGHT_TEXT,
             ),
             onPressed: () {
               _scaffoldKey.currentState!.openDrawer();
@@ -69,7 +69,7 @@ class _HomeState extends State<Home> {
               IconButton(
                 icon: const Icon(
                   Icons.person_add,
-                  color: AppColors.LIGHT,
+                  color: AppColors.LIGHT_TEXT,
                 ),
                 onPressed: () {
                   Get.to(() => const childCardForm());
@@ -79,7 +79,7 @@ class _HomeState extends State<Home> {
               return IconButton(
                 icon: const Icon(
                   Icons.notifications,
-                  color: AppColors.LIGHT,
+                  color: AppColors.LIGHT_TEXT,
                 ),
                 onPressed: () {
                   controller.showNotificationPage();
@@ -90,7 +90,7 @@ class _HomeState extends State<Home> {
         ),
         drawer: CustomDrawer(),
         bottomNavigationBar: BottomAppBar(
-          color: const Color.fromRGBO(255, 208, 214, 1),
+          color: AppColors.CREMIZON,
           // color: const Color(0xFFFFD0D6),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -99,7 +99,7 @@ class _HomeState extends State<Home> {
                 return IconButton(
                   icon: const Icon(
                     Icons.home,
-                    color: AppColors.LIGHT,
+                    color: AppColors.LIGHT_TEXT,
                   ),
                   onPressed: () {
                     controller.showHomePage();
@@ -110,7 +110,7 @@ class _HomeState extends State<Home> {
                 return IconButton(
                   icon: const Icon(
                     Icons.location_history_rounded,
-                    color: AppColors.LIGHT,
+                    color: AppColors.LIGHT_TEXT,
                   ),
                   onPressed: () {
                     controller.showFormsPage();
@@ -120,7 +120,7 @@ class _HomeState extends State<Home> {
               const SizedBox(width: 64), // Empty space for the center button
               GetBuilder<HomeController>(builder: (HomeController controller) {
                 return IconButton(
-                  icon: const Icon(Icons.notifications, color: AppColors.LIGHT),
+                  icon: const Icon(Icons.notifications, color: AppColors.LIGHT_TEXT),
                   onPressed: () {
                     controller.showNotificationPage();
                   },
@@ -130,7 +130,7 @@ class _HomeState extends State<Home> {
                 return IconButton(
                   icon: const Icon(
                     Icons.account_circle,
-                    color: AppColors.LIGHT,
+                    color: AppColors.LIGHT_TEXT,
                   ),
                   onPressed: () {
                     controller.showUserProfilePage();
@@ -229,12 +229,7 @@ class HomePageContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/HomePage.png'),
-            fit: BoxFit.cover,
-          ),
-        ),
+        color: AppColors.BACKGROUND_COLOR,
         child: GetBuilder<PostController>(
             id: 'postHome',
             builder: (controller) {

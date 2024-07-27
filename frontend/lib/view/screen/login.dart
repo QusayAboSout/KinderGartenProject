@@ -13,7 +13,8 @@ import 'package:get/get.dart';
 class Login extends StatefulWidget {
   Login({super.key});
 
-  final UserController _userController = Get.find<UserController>();
+  //final UserController _userController = Get.find<UserController>();
+  final UserController _userController = Get.put(UserController());
   @override
   State<Login> createState() => _LoginState();
 }
@@ -32,7 +33,7 @@ class _LoginState extends State<Login> {
     return GetBuilder<LoginController>(
       init: loginController,
       builder: (controller) => Scaffold(
-        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: AppColors.BACKGROUND_COLOR,
         resizeToAvoidBottomInset: false,
         body: Center(
           child: FormBuilder(
@@ -45,7 +46,7 @@ class _LoginState extends State<Login> {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
-                      color: AppColors.SECONDARY_COLOR),
+                      color: AppColors.LIGHT_TEXT),
                 ),
                 const SizedBox(height: 130),
                 CustomTextField(
@@ -90,7 +91,7 @@ class _LoginState extends State<Login> {
                           padding:
                               EdgeInsets.only(left: 10, right: 10, top: 10),
                           child: Text('يوجد خطأ في اسم المستخدم أو كلمة المرور',
-                              style: TextStyle(color: Colors.red)),
+                              style: TextStyle(color: AppColors.CREMIZON)),
                         )
                       : null,
                 ),

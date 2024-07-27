@@ -19,7 +19,7 @@ class ChildCardRow extends StatelessWidget {
       child: ListTile(
         tileColor: _rowCardDto.userID == 1
             ? const Color.fromARGB(154, 138, 113, 125)
-            : AppColors.LIGHT,
+            : AppColors.LIGHT_TEXT,
         leading: const CircleAvatar(
           backgroundColor: AppColors.SECONDARY_COLOR,
           child: Icon(

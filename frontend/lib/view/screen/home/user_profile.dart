@@ -10,7 +10,7 @@ class UserProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     // Implement your user profile page UI here
     return Container(
-      color: AppColors.BLUE,
+      color: AppColors.SECONDARY_COLOR,
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -26,7 +26,7 @@ class UserProfilePage extends StatelessWidget {
               style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: AppColors.LIGHT),
+                  color: AppColors.LIGHT_TEXT),
             ),
             const SizedBox(height: 16),
           ],
