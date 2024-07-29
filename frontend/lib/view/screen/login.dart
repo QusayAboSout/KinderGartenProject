@@ -7,7 +7,7 @@ import 'package:frontend/core/class/custom_text_field.dart';
 import 'package:frontend/core/class/custom_button.dart';
 import 'package:frontend/core/class/row_text_button.dart';
 import 'package:get/get.dart';
-
+// loginFast
 class Login extends StatefulWidget {
   Login({super.key});
 
@@ -89,7 +89,7 @@ class _LoginState extends State<Login> {
                           padding:
                               EdgeInsets.only(left: 10, right: 10, top: 10),
                           child: Text('يوجد خطأ في اسم المستخدم أو كلمة المرور',
-                              style: TextStyle(color: AppColors.CREMIZON)),
+                              style: TextStyle(color: AppColors.DANGER)),
                         )
                       : null,
                 ),

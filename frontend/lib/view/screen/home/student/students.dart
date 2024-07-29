@@ -59,79 +59,80 @@ class _StudentListPageState extends State<StudentListPage> {
                     appBar: AppBar(
                       automaticallyImplyLeading: false,
                       backgroundColor: AppColors.BACKGROUND_COLOR,
-                      actions: [
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 10),
-                            child: SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                    onPressed: () {},
-                                    icon: const Icon(
-                                      Icons.search,
-                                      size: 35,
-                                      color: AppColors.LIGHT_TEXT,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: MediaQuery.of(context).size.width *
-                                        0.62,
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
-                                        border: Border.all(
-                                          color: AppColors.SECONDARY_COLOR,
-                                          width: 2,
-                                        ),
-                                      ),
-                                      child: TextField(
-                                        controller: searchController,
-                                        onChanged: (value) {
-                                          setState(() {
-                                            // Trigger rebuild to apply filtering
-                                          });
-                                        },
-                                        decoration: const InputDecoration(
-                                          hintText: 'ابحث عن طالب...',
-                                          hintStyle: TextStyle(
-                                              color: Color.fromARGB(
-                                                  211, 248, 247, 247)),
-                                          border: InputBorder.none,
-                                          contentPadding: EdgeInsets.symmetric(
-                                              horizontal: 10),
-                                        ),
-                                        style: const TextStyle(
-                                            color: AppColors.LIGHT_TEXT),
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(width: 10),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(15),
-                                      border: Border.all(
-                                        color: AppColors.SECONDARY_COLOR,
-                                        width: 2,
-                                      ),
-                                    ),
-                                    child: IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(
-                                        Icons.filter_list_rounded,
-                                        size: 30,
-                                        color: AppColors.LIGHT_TEXT,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                      toolbarHeight: 70,
+                      // actions: [
+                      //   Expanded(
+                      //     child: Padding(
+                      //       padding: const EdgeInsets.symmetric(horizontal: 10),
+                      //       child: SingleChildScrollView(
+                      //         scrollDirection: Axis.horizontal,
+                      //         child: Row(
+                      //           children: [
+                      //             IconButton(
+                      //               onPressed: () {},
+                      //               icon: const Icon(
+                      //                 Icons.search,
+                      //                 size: 35,
+                      //                 color: AppColors.LIGHT_TEXT,
+                      //               ),
+                      //             ),
+                      //             SizedBox(
+                      //               width: MediaQuery.of(context).size.width *
+                      //                   0.62,
+                      //               child: Container(
+                      //                 decoration: BoxDecoration(
+                      //                   borderRadius: BorderRadius.circular(20),
+                      //                   border: Border.all(
+                      //                     color: AppColors.SECONDARY_COLOR,
+                      //                     width: 2,
+                      //                   ),
+                      //                 ),
+                      //                 child: TextField(
+                      //                   controller: searchController,
+                      //                   onChanged: (value) {
+                      //                     setState(() {
+                      //                       // Trigger rebuild to apply filtering
+                      //                     });
+                      //                   },
+                      //                   decoration: const InputDecoration(
+                      //                     hintText: 'ابحث عن طالب...',
+                      //                     hintStyle: TextStyle(
+                      //                         color: Color.fromARGB(
+                      //                             211, 248, 247, 247)),
+                      //                     border: InputBorder.none,
+                      //                     contentPadding: EdgeInsets.symmetric(
+                      //                         horizontal: 10),
+                      //                   ),
+                      //                   style: const TextStyle(
+                      //                       color: AppColors.LIGHT_TEXT),
+                      //                 ),
+                      //               ),
+                      //             ),
+                      //             const SizedBox(width: 10),
+                      //             Container(
+                      //               decoration: BoxDecoration(
+                      //                 borderRadius: BorderRadius.circular(15),
+                      //                 border: Border.all(
+                      //                   color: AppColors.SECONDARY_COLOR,
+                      //                   width: 2,
+                      //                 ),
+                      //               ),
+                      //               child: IconButton(
+                      //                 onPressed: () {},
+                      //                 icon: const Icon(
+                      //                   Icons.filter_list_rounded,
+                      //                   size: 30,
+                      //                   color: AppColors.LIGHT_TEXT,
+                      //                 ),
+                      //               ),
+                      //             ),
+                      //           ],
+                      //         ),
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ],
+                      // toolbarHeight: 70,
+                      toolbarHeight: 10,
                       bottom: const TabBar(
                         labelColor: AppColors.LIGHT_TEXT,
                         indicatorColor: AppColors.LIGHT_TEXT,
@@ -159,110 +160,124 @@ class _StudentListPageState extends State<StudentListPage> {
                         ],
                       ),
                     ),
-                    body: Container(
-                      color: AppColors.SECONDARY_COLOR,
-                      child: TabBarView(
-                        children: [
-                          // Column for old students
-                          Column(
+                    body: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 200,
+                          color: AppColors.SECONDARY_COLOR,
+                          child: TabBarView(
                             children: [
-                              if (controller.loading)
-                                const Padding(
-                                    padding: EdgeInsets.only(top: 10)),
-                              if (controller.loading)
-                                const CustomLoadingAnimation(),
-                              Expanded(
-                                child: GetBuilder<StudentController>(
-                                  builder: (controller) {
-                                    return PagedListView<int, StudentDto>(
-                                      scrollDirection: Axis.vertical,
-                                      shrinkWrap: true,
-                                      pagingController:
-                                          controller.pagingController,
-                                      builderDelegate:
-                                          PagedChildBuilderDelegate<StudentDto>(
-                                        itemBuilder: (context, item, index) {
-                                          if (searchController
-                                              .text.isNotEmpty) {
-                                            if (item.studentName!.contains(
-                                                searchController.text)) {
-                                              return StudentCard(item);
-                                            }
-                                          } else if (searchController
-                                              .text.isEmpty) {
-                                            return StudentCard(item);
-                                          }
-                                          return Container();
-                                        },
-                                        noItemsFoundIndicatorBuilder: (_) =>
-                                            Column(
-                                          children: [
-                                            Text(
-                                              "لا يوجد طلاب",
-                                              style: TextStyle(
-                                                  color: Theme.of(context)
-                                                      .primaryColor),
+                              // Column for old students
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  if (controller.loading)
+                                    const Padding(
+                                        padding: EdgeInsets.only(top: 10)),
+                                  if (controller.loading)
+                                    const CustomLoadingAnimation(),
+                                  Expanded(
+                                    child: GetBuilder<StudentController>(
+                                      builder: (controller) {
+                                        return PagedListView<int, StudentDto>(
+                                          scrollDirection: Axis.vertical,
+                                          shrinkWrap: true,
+                                          pagingController:
+                                              controller.pagingController,
+                                          builderDelegate:
+                                              PagedChildBuilderDelegate<StudentDto>(
+                                            itemBuilder: (context, item, index) {
+                                              if (searchController
+                                                  .text.isNotEmpty) {
+                                                if (item.studentName!.contains(
+                                                    searchController.text)) {
+                                                  return StudentCard(item);
+                                                }
+                                              } else if (searchController
+                                                  .text.isEmpty) {
+                                                return StudentCard(item);
+                                              }
+                                              return Container();
+                                            },
+                                            noItemsFoundIndicatorBuilder: (_) =>
+                                                const Column(
+                                              children: [
+                                                Text(
+                                                  "ٌRight",
+                                                  style: TextStyle(
+                                                      color: AppColors.CREMIZON,
+                                                      fontSize: 30,
+                                                      fontWeight: FontWeight.bold),
+                                                ),
+                                              ],
                                             ),
-                                          ],
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                ),
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              // Column for current students
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  if (controller.loading)
+                                    const Padding(
+                                        padding: EdgeInsets.only(top: 10)),
+                                  if (controller.loading)
+                                    const CustomLoadingAnimation(),
+                                  Expanded(
+                                    child: GetBuilder<CurrentStudentController>(
+                                      builder: (controller) {
+                                        return PagedListView<int, StudentDto>(
+                                          scrollDirection: Axis.vertical,
+                                          shrinkWrap: true,
+                                          pagingController:
+                                              controller.pagingController,
+                                          builderDelegate:
+                                              PagedChildBuilderDelegate<StudentDto>(
+                                            itemBuilder: (context, item, index) {
+                                              if (searchController
+                                                  .text.isNotEmpty) {
+                                                if (item.studentName!.contains(
+                                                    searchController.text)) {
+                                                  return StudentCard(item);
+                                                }
+                                              } else if (searchController
+                                                  .text.isEmpty) {
+                                                return StudentCard(item);
+                                              }
+                                              return Container();
+                                            },
+                                            noItemsFoundIndicatorBuilder: (_) =>
+                                                 Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                 Container(
+                                                  child: const Text(
+                                                    "Left",
+                                                    style: TextStyle(
+                                                        color: AppColors.CREMIZON,
+                                                        fontSize: 30,
+                                                        fontWeight: FontWeight.bold),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
-                          // Column for current students
-                          Column(
-                            children: [
-                              if (controller.loading)
-                                const Padding(
-                                    padding: EdgeInsets.only(top: 10)),
-                              if (controller.loading)
-                                const CustomLoadingAnimation(),
-                              Expanded(
-                                child: GetBuilder<CurrentStudentController>(
-                                  builder: (controller) {
-                                    return PagedListView<int, StudentDto>(
-                                      scrollDirection: Axis.vertical,
-                                      shrinkWrap: true,
-                                      pagingController:
-                                          controller.pagingController,
-                                      builderDelegate:
-                                          PagedChildBuilderDelegate<StudentDto>(
-                                        itemBuilder: (context, item, index) {
-                                          if (searchController
-                                              .text.isNotEmpty) {
-                                            if (item.studentName!.contains(
-                                                searchController.text)) {
-                                              return StudentCard(item);
-                                            }
-                                          } else if (searchController
-                                              .text.isEmpty) {
-                                            return StudentCard(item);
-                                          }
-                                          return Container();
-                                        },
-                                        noItemsFoundIndicatorBuilder: (_) =>
-                                            Column(
-                                          children: [
-                                            Text(
-                                              "لا يوجد طلاب",
-                                              style: TextStyle(
-                                                  color: Theme.of(context)
-                                                      .primaryColor),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

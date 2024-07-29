@@ -15,6 +15,8 @@ import 'package:frontend/view/screen/teachers/taecher.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
 
+// drawerfast
+
 class CustomDrawer extends StatelessWidget {
   CustomDrawer({super.key}) {
     if (Get.isRegistered<ClassController>()) {
@@ -27,13 +29,13 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: AppColors.LIGHT_TEXT,
+      backgroundColor: AppColors.BACKGROUND_COLOR,
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
           DrawerHeader(
             decoration: const BoxDecoration(
-              color: AppColors.SECONDARY_COLOR,
+              color: AppColors.CREMIZON,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

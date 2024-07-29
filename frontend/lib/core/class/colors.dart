@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
 
+// colorfast
   static const BACKGROUND_COLOR =
       Color.fromRGBO(34,40,49,1); // (34,40,49,1)
 

@@ -110,21 +110,21 @@ class _CustomTextFieldState extends State<CustomTextField> {
             errorBorder: OutlineInputBorder(
               borderSide: BorderSide(
                   color:
-                      _hasError ? AppColors.DANGER : AppColors.SECONDARY_COLOR,
+                      _hasError ? AppColors.DANGER : AppColors.CREMIZON,
                   width: 2.0),
               borderRadius: const BorderRadius.all(Radius.circular(22.3)),
             ),
             focusedErrorBorder: OutlineInputBorder(
               borderSide: BorderSide(
                   color:
-                      _hasError ? AppColors.DANGER : AppColors.SECONDARY_COLOR,
+                      _hasError ? AppColors.DANGER : AppColors.CREMIZON,
                   width: 2.0),
               borderRadius: const BorderRadius.all(Radius.circular(22.3)),
             ),
             label: Text(
               widget.label,
               style: const TextStyle(
-                  color: AppColors.SECONDARY_COLOR,
+                  color: AppColors.LIGHT_TEXT,
                   fontSize: 20,
                   fontWeight: FontWeight.bold),
             ),
@@ -132,13 +132,13 @@ class _CustomTextFieldState extends State<CustomTextField> {
             enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
                     color: _hasError
-                        ? AppColors.SECONDARY_COLOR
-                        : AppColors.SECONDARY_COLOR,
+                        ? AppColors.DANGER
+                        : AppColors.CREMIZON,
                     width: 2.0),
                 borderRadius: const BorderRadius.all(Radius.circular(22.3))),
             focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(
-                color: AppColors.SECONDARY_COLOR,
+                color: AppColors.CREMIZON,
                 width: 2.0,
               ),
               borderRadius: BorderRadius.all(Radius.circular(22.3)),
@@ -155,7 +155,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               ),
             ),
             hintStyle:
-                const TextStyle(color: Color.fromARGB(255, 231, 234, 238)),
+                const TextStyle(color: Color.fromARGB(91, 231, 234, 238)),
             prefixIcon: widget.formName == 'email'
                 ? const Icon(
                     Icons.person,

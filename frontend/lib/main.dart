@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:frontend/locator.dart';
 import 'package:frontend/utils/binding/Binding.dart';
+import 'package:frontend/view/screen/home/Home.dart';
 import 'package:frontend/view/screen/login.dart';
+import 'package:frontend/view/screen/welcome_page.dart';
 import 'package:frontend/view/tools/http_client.dart';
 import 'package:get/get.dart';
 
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Kindergarten Welcome',
       textDirection: TextDirection.rtl,
-      home: Login(),
+      home: WelcomePage(),
       initialBinding: AllBinding(),
     );
   }
