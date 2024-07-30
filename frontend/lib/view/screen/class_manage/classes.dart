@@ -46,7 +46,7 @@ class Classes extends StatelessWidget {
         floatingActionButton: SizedBox(
           width: MediaQuery.of(context).size.width * 3 / 10,
           child: FloatingActionButton(
-            backgroundColor: AppColors.SECONDARY_COLOR,
+            backgroundColor: AppColors.CREMIZON,
             onPressed: () {
               Get.to(() => const AddClass());
             },

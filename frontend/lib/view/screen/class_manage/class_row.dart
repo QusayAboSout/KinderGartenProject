@@ -43,7 +43,7 @@ class ClassRow extends StatelessWidget {
         shadowColor: AppColors.LIGHT_TEXT,
         elevation: 3,
         margin: const EdgeInsets.all(8),
-        color: AppColors.SECONDARY_COLOR,
+        color: AppColors.LIGHT_TEXT,
         // Use a PopupMenuButton as the trailing widget
         // Note: You may need to adjust the position of the PopupMenuButton
         // depending on your layout
@@ -53,9 +53,8 @@ class ClassRow extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               const CircleAvatar(
-                backgroundColor: AppColors.LIGHT_TEXT,
-                radius: 30,
-                child: Icon(
+                backgroundColor: AppColors.CREMIZON,
+                radius: 30, child: Icon(
                   Icons.home,
                   color: AppColors.LIGHT_TEXT,
                 ),

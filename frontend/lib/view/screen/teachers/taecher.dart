@@ -150,7 +150,7 @@ class TeacherManagement extends StatelessWidget {
               floatingActionButton: SizedBox(
                 width: MediaQuery.of(context).size.width * 3 / 10,
                 child: FloatingActionButton(
-                  backgroundColor: AppColors.SECONDARY_COLOR,
+                  backgroundColor: AppColors.CREMIZON,
                   onPressed: () {
                     Get.to(() => const AddTeacherStep1());
                   },
@@ -159,6 +159,7 @@ class TeacherManagement extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
+                      color: AppColors.LIGHT_TEXT
                     ),
                   ),
                 ),
@@ -182,7 +183,7 @@ class TeacherRow extends StatelessWidget {
       color: AppColors.LIGHT_TEXT,
       child: ListTile(
         leading: const Icon(
-          color: AppColors.BACKGROUND_COLOR,
+          color: AppColors.CREMIZON,
           Icons.account_circle_rounded, // Specify the desired icon
           size: 50, // Adjust the size of the icon
         ),
@@ -197,12 +198,12 @@ class TeacherRow extends StatelessWidget {
           'التخصص : ${_rowTeacher.speciallizationName}',
           style: const TextStyle(
             fontSize: 14,
-            color: AppColors.LIGHT_TEXT,
+            color: AppColors.CREMIZON,
           ),
         ),
         trailing: const Icon(
           Icons.star,
-          color: AppColors.LIGHT_TEXT,
+          color: AppColors.CREMIZON,
         ),
         onTap: () {
           Get.to(() => TeacherProfile(teacherDto: _rowTeacher));

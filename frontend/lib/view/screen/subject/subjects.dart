@@ -94,10 +94,10 @@ class _SubjectRowState extends State<SubjectRow> {
       child: ListTile(
         leading: const CircleAvatar(
           radius: 22,
-          backgroundColor: AppColors.SECONDARY_COLOR,
+          backgroundColor: AppColors.CREMIZON,
           child: Icon(
             Icons.menu_book,
-            color: AppColors.CREMIZON,
+            color: AppColors.LIGHT_TEXT,
           ),
         ),
         title: Text(

@@ -147,13 +147,13 @@ class _childCardFormState extends State<childCardForm> {
                           ),
                           enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                  color: AppColors.SECONDARY_COLOR, width: 2.0),
+                                  color: AppColors.CREMIZON, width: 2.0),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(22.3))),
                           fillColor: AppColors.BACKGROUND_COLOR,
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                                color: AppColors.SECONDARY_COLOR, width: 2.0),
+                                color: AppColors.CREMIZON, width: 2.0),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(22.3)),
                           ),

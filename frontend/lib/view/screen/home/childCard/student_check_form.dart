@@ -43,7 +43,7 @@ class _StudentCheckFormState extends State<StudentCheckForm> {
     return GetBuilder<ChildCardController>(
       init: controller,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
+        backgroundColor: AppColors.CREMIZON,
         appBar: AppBar(
           title: const Text(
             'بطاقة طفل الروضة',
@@ -51,8 +51,8 @@ class _StudentCheckFormState extends State<StudentCheckForm> {
                 TextStyle(fontWeight: FontWeight.bold, color: AppColors.LIGHT_TEXT),
           ),
           centerTitle: true,
-          backgroundColor: AppColors.CREMIZON,
-          foregroundColor: AppColors.SECONDARY_COLOR,
+          backgroundColor: AppColors.BACKGROUND_COLOR,
+          foregroundColor: AppColors.CREMIZON,
         ),
         body: SafeArea(
           child: SingleChildScrollView(
@@ -66,7 +66,7 @@ class _StudentCheckFormState extends State<StudentCheckForm> {
                       "روضة نور الإيمان الخاصة",
                       style: GoogleFonts.marhey(
                           textStyle: const TextStyle(
-                        color: AppColors.LIGHT_TEXT,
+                        color: AppColors.BACKGROUND_COLOR,
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
                       )),

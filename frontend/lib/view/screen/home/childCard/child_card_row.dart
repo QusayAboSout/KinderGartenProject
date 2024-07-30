@@ -17,17 +17,18 @@ class ChildCardRow extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(5, 3, 5, 3),
       child: ListTile(
         tileColor: _rowCardDto.userID == 1
-            ? const Color.fromARGB(154, 138, 113, 125)
+            ?
+            AppColors.CREMIZON
             : AppColors.LIGHT_TEXT,
         leading: const CircleAvatar(
-          backgroundColor: AppColors.SECONDARY_COLOR,
+          backgroundColor: AppColors.LIGHT_TEXT,
           child: Icon(
             Icons.person,
-            color: AppColors.LIGHT_TEXT,
+            color: AppColors.BACKGROUND_COLOR,
           ),
         ),
         title: Text('${_rowCardDto.studentName}'),
-        subtitle: Text('رقم الطلب : ${_rowCardDto.id}'),
+        subtitle: Text('رقم الطلب : ${_rowCardDto.id}',style: const TextStyle(color: AppColors.LIGHT_TEXT),),
         trailing: (Text(
           '${DateTime.now().year}',
           style: const TextStyle(

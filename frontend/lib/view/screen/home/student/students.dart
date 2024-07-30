@@ -175,43 +175,41 @@ class _StudentListPageState extends State<StudentListPage> {
                               if (controller.loading)
                                 const CustomLoadingAnimation(),
                               Expanded(
-                                child: Center(
-                                  child: GetBuilder<StudentController>(
-                                    builder: (controller) {
-                                      return PagedListView<int, StudentDto>(
-                                        scrollDirection: Axis.vertical,
-                                        shrinkWrap: true,
-                                        pagingController:
-                                            controller.pagingController,
-                                        builderDelegate:
-                                            PagedChildBuilderDelegate<StudentDto>(
-                                          itemBuilder: (context, item, index) {
-                                            if (searchController
-                                                .text.isNotEmpty) {
-                                              if (item.studentName!.contains(
-                                                  searchController.text)) {
-                                                return StudentCard(item);
-                                              }
-                                            } else if (searchController
-                                                .text.isEmpty) {
+                                child: GetBuilder<StudentController>(
+                                  builder: (controller) {
+                                    return PagedListView<int, StudentDto>(
+                                      scrollDirection: Axis.vertical,
+                                      shrinkWrap: true,
+                                      pagingController:
+                                          controller.pagingController,
+                                      builderDelegate:
+                                          PagedChildBuilderDelegate<StudentDto>(
+                                        itemBuilder: (context, item, index) {
+                                          if (searchController
+                                              .text.isNotEmpty) {
+                                            if (item.studentName!.contains(
+                                                searchController.text)) {
                                               return StudentCard(item);
                                             }
-                                            return Container();
-                                          },
-                                          noItemsFoundIndicatorBuilder: (_) =>
-                                              const Center(
-                                                child: Text(
-                                                  "لا يوجد طلاب",
-                                                  style: TextStyle(
-                                                      color: AppColors.DANGER,
-                                                      fontSize: 30,
-                                                      fontWeight: FontWeight.bold),
-                                                ),
+                                          } else if (searchController
+                                              .text.isEmpty) {
+                                            return StudentCard(item);
+                                          }
+                                          return Container();
+                                        },
+                                        noItemsFoundIndicatorBuilder: (_) =>
+                                            const Center(
+                                              child: Text(
+                                                "لا يوجد طلاب",
+                                                style: TextStyle(
+                                                    color: AppColors.DANGER,
+                                                    fontSize: 30,
+                                                    fontWeight: FontWeight.bold),
                                               ),
-                                        ),
-                                      );
-                                    },
-                                  ),
+                                            ),
+                                      ),
+                                    );
+                                  },
                                 ),
                               ),
                             ],
@@ -226,43 +224,41 @@ class _StudentListPageState extends State<StudentListPage> {
                               if (controller.loading)
                                 const CustomLoadingAnimation(),
                               Expanded(
-                                child: Center(
-                                  child: GetBuilder<CurrentStudentController>(
-                                    builder: (controller) {
-                                      return PagedListView<int, StudentDto>(
-                                        scrollDirection: Axis.vertical,
-                                        shrinkWrap: true,
-                                        pagingController:
-                                            controller.pagingController,
-                                        builderDelegate:
-                                            PagedChildBuilderDelegate<StudentDto>(
-                                          itemBuilder: (context, item, index) {
-                                            if (searchController
-                                                .text.isNotEmpty) {
-                                              if (item.studentName!.contains(
-                                                  searchController.text)) {
-                                                return StudentCard(item);
-                                              }
-                                            } else if (searchController
-                                                .text.isEmpty) {
+                                child: GetBuilder<CurrentStudentController>(
+                                  builder: (controller) {
+                                    return PagedListView<int, StudentDto>(
+                                      scrollDirection: Axis.vertical,
+                                      shrinkWrap: true,
+                                      pagingController:
+                                          controller.pagingController,
+                                      builderDelegate:
+                                          PagedChildBuilderDelegate<StudentDto>(
+                                        itemBuilder: (context, item, index) {
+                                          if (searchController
+                                              .text.isNotEmpty) {
+                                            if (item.studentName!.contains(
+                                                searchController.text)) {
                                               return StudentCard(item);
                                             }
-                                            return Container();
-                                          },
-                                          noItemsFoundIndicatorBuilder: (_) =>
-                                               const Center(
-                                                 child: Text(
-                                                   "لا يوجد طلاب",
-                                                   style: TextStyle(
-                                                       color: AppColors.DANGER,
-                                                       fontSize: 30,
-                                                       fontWeight: FontWeight.bold),
-                                                 ),
+                                          } else if (searchController
+                                              .text.isEmpty) {
+                                            return StudentCard(item);
+                                          }
+                                          return Container();
+                                        },
+                                        noItemsFoundIndicatorBuilder: (_) =>
+                                             const Center(
+                                               child: Text(
+                                                 "لا يوجد طلاب",
+                                                 style: TextStyle(
+                                                     color: AppColors.DANGER,
+                                                     fontSize: 30,
+                                                     fontWeight: FontWeight.bold),
                                                ),
-                                        ),
-                                      );
-                                    },
-                                  ),
+                                             ),
+                                      ),
+                                    );
+                                  },
                                 ),
                               ),
                             ],

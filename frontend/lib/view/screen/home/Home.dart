@@ -242,11 +242,12 @@ class HomePageContent extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Card(
-                          color: const Color.fromARGB(255, 255, 255, 255),
+                          color: AppColors.CREMIZON,
                           elevation: 3,
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(0, 12, 12, 12),
                             child: ListTile(
+                              textColor: AppColors.LIGHT_TEXT,
                               leading: const CircleAvatar(
                                 radius: 20,
                                 backgroundImage:
@@ -259,6 +260,7 @@ class HomePageContent extends StatelessWidget {
                                     style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
+                                      color: AppColors.BACKGROUND_COLOR
                                     ),
                                   ),
                                 ],
@@ -282,7 +284,7 @@ class HomePageContent extends StatelessWidget {
                                             postDescription,
                                             style: const TextStyle(
                                               fontSize: 16,
-                                              color: Colors.black87,
+                                              color: AppColors.LIGHT_TEXT
                                             ),
                                           ),
                                           actions: <Widget>[

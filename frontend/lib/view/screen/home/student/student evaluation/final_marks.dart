@@ -71,6 +71,7 @@ class FinalMarksClassRow extends StatelessWidget {
       color: AppColors.LIGHT_TEXT,
       child: ListTile(
         leading: const CircleAvatar(
+          backgroundColor: AppColors.CREMIZON,
           radius: 30,
           child: Icon(
             Icons.home,
@@ -88,7 +89,7 @@ class FinalMarksClassRow extends StatelessWidget {
           '${_rowClass.classYear}',
           style: const TextStyle(
             fontSize: 14,
-            color: AppColors.LIGHT_TEXT,
+            color: AppColors.CREMIZON,
           ),
         ),
         onTap: () => Get.to(

@@ -57,6 +57,7 @@ class _StudentCheckFormWithReasonState
           foregroundColor: AppColors.SECONDARY_COLOR,
         ),
         body: SafeArea(
+          
           child: SingleChildScrollView(
             child: Center(
               child: FormBuilder(
