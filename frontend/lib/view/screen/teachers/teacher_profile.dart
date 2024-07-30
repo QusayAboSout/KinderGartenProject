@@ -19,6 +19,14 @@ class TeacherProfile extends StatelessWidget {
   final TeacherController teacherController = Get.put(TeacherController());
   final ClassController classController = Get.find<ClassController>();
   double? fsize = 20;
+  // Define a common TextStyle
+ TextStyle commonTextStyle = const TextStyle(
+  fontSize: 18, // or any other size you prefer
+  color: AppColors.LIGHT_TEXT, // use the color from AppColors
+  fontWeight: FontWeight.bold,
+);
+
+  static const CREMIZON = Color.fromRGBO(0,173,181,1);
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
@@ -46,84 +54,80 @@ class TeacherProfile extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
-                      children: [
-                        const CircleAvatar(
-                          radius: 80,
-                          child: Icon(
-                            Icons.girl,
-                            size: 120,
-                            color: AppColors.LIGHT_TEXT,
-                          ),
-                        ),
-                        const SizedBox(height: 20),
-                        Text(
-                          'اسم المعلمة : ${teacherDto.teacherName}',
-                          style: TextStyle(
-                              fontSize: fsize, fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          'اسم التخصص : ${teacherDto.speciallizationName}',
-                          style: TextStyle(
-                              fontSize: fsize, fontWeight: FontWeight.bold),
-                        ),
-                        const SizedBox(height: 20),
-                        const Divider(thickness: 5),
-                        ////////////////////
-                        ////////////////////
-                        ////////////////////
-                        const SizedBox(height: 20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            const Icon(Icons.email),
-                            Text(
-                              '${teacherDto.user?.email}',
-                              style: const TextStyle(fontSize: 18),
-                            )
-                          ],
-                        ),
-                        const SizedBox(height: 20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            const Icon(Icons.phone),
-                            Text(
-                              '${teacherDto.phoneNumber}',
-                              style: const TextStyle(fontSize: 18),
-                            )
-                          ],
-                        ),
-                        const SizedBox(height: 20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            const Icon(Icons.school),
-                            Text(
-                              'اسم الصف : ${classController.claas.className ?? "غير مصنف"}',
-                              style: const TextStyle(fontSize: 18),
-                            )
-                          ],
-                        ),
-                        const SizedBox(height: 20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            const Icon(Icons.person),
-                            Text(
-                              'رقم الهوية : ${teacherDto.idNumber}',
-                              style: const TextStyle(fontSize: 18),
-                            )
-                          ],
-                        ),
-                        const SizedBox(height: 50),
-                        CustomButton(
-                            text: "تعديل المعلومات",
-                            onPressed: () {
-                              showModal(context);
-                            }),
-                      ],
-                    ),
-                  ),
+      children: [
+        const CircleAvatar(
+          backgroundColor: CREMIZON,
+          radius: 80,
+          child: Icon(
+            Icons.girl,
+            size: 120,
+            color: AppColors.LIGHT_TEXT,
+          ),
+        ),
+        const SizedBox(height: 20),
+        Text(
+          'اسم المعلمة : ${teacherDto.teacherName}',
+          style: commonTextStyle.copyWith(fontSize: fsize),
+        ),
+        Text(
+          'اسم التخصص : ${teacherDto.speciallizationName}',
+          style: commonTextStyle.copyWith(fontSize: fsize),
+        ),
+        const SizedBox(height: 20),
+        const Divider(thickness: 5),
+        const SizedBox(height: 20),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            const Icon(Icons.email, color: CREMIZON),
+            Text(
+              '${teacherDto.user?.email}',
+              style: commonTextStyle,
+            ),
+          ],
+        ),
+        const SizedBox(height: 20),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            const Icon(Icons.phone, color: CREMIZON),
+            Text(
+              '${teacherDto.phoneNumber}',
+              style: commonTextStyle,
+            ),
+          ],
+        ),
+        const SizedBox(height: 20),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            const Icon(Icons.school, color: CREMIZON),
+            Text(
+              'اسم الصف : ${classController.claas.className ?? "غير مصنف"}',
+              style: commonTextStyle,
+            ),
+          ],
+        ),
+        const SizedBox(height: 20),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            const Icon(Icons.person, color: CREMIZON),
+            Text(
+              'رقم الهوية : ${teacherDto.idNumber}',
+              style: commonTextStyle,
+            ),
+          ],
+        ),
+        const SizedBox(height: 50),
+        CustomButton(
+          text: "تعديل المعلومات",
+          onPressed: () {
+            showModal(context);
+          },
+        ),
+      ],
+    )                  ),
                 ),
               ),
             );
@@ -133,6 +137,8 @@ class TeacherProfile extends StatelessWidget {
 
   void showModal(BuildContext context) {
     showModalBottomSheet(
+      backgroundColor: AppColors.CREMIZON,
+      barrierColor: const Color.fromARGB(75, 238, 238, 238),
       context: context,
       builder: (BuildContext context) {
         return Container(
@@ -178,6 +184,8 @@ class TeacherProfile extends StatelessWidget {
 
   void showModal2(BuildContext context) {
     showModalBottomSheet(
+      backgroundColor: AppColors.CREMIZON,
+      barrierColor: const Color.fromARGB(75, 238, 238, 238),
       context: context,
       builder: (BuildContext context) {
         return Container(

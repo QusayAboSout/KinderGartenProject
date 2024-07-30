@@ -61,7 +61,7 @@ class TeacherManagement extends StatelessWidget {
                                     icon: const Icon(
                                       Icons.search,
                                       size: 35,
-                                      color: AppColors.LIGHT_TEXT,
+                                      color: AppColors.CREMIZON,
                                     ),
                                   ),
                                   SizedBox(
@@ -71,7 +71,7 @@ class TeacherManagement extends StatelessWidget {
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(20),
                                         border: Border.all(
-                                            color: AppColors.SECONDARY_COLOR,
+                                            color: AppColors.CREMIZON,
                                             width: 2),
                                       ),
                                       child: TextField(
@@ -98,7 +98,7 @@ class TeacherManagement extends StatelessWidget {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(15),
                                       border: Border.all(
-                                          color: AppColors.SECONDARY_COLOR,
+                                          color: AppColors.CREMIZON,
                                           width: 2),
                                     ),
                                     child: IconButton(

@@ -11,6 +11,7 @@ import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
+
 class StudentListPage extends StatefulWidget {
   StudentListPage({super.key}) {
     // studentController.classID = null;
@@ -27,7 +28,7 @@ class _StudentListPageState extends State<StudentListPage> {
   final ClassController classController = Get.find<ClassController>();
 
   final TextEditingController searchController = TextEditingController();
-
+  // studentfast
   @override
   Widget build(BuildContext context) {
     return GetBuilder<StudentController>(
@@ -200,9 +201,9 @@ class _StudentListPageState extends State<StudentListPage> {
                                           noItemsFoundIndicatorBuilder: (_) =>
                                               const Center(
                                                 child: Text(
-                                                  "ٌRight",
+                                                  "لا يوجد طلاب",
                                                   style: TextStyle(
-                                                      color: AppColors.CREMIZON,
+                                                      color: AppColors.DANGER,
                                                       fontSize: 30,
                                                       fontWeight: FontWeight.bold),
                                                 ),
@@ -251,9 +252,9 @@ class _StudentListPageState extends State<StudentListPage> {
                                           noItemsFoundIndicatorBuilder: (_) =>
                                                const Center(
                                                  child: Text(
-                                                   "Left",
+                                                   "لا يوجد طلاب",
                                                    style: TextStyle(
-                                                       color: AppColors.CREMIZON,
+                                                       color: AppColors.DANGER,
                                                        fontSize: 30,
                                                        fontWeight: FontWeight.bold),
                                                  ),

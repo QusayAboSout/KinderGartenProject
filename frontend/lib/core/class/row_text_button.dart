@@ -4,9 +4,8 @@ import 'package:frontend/view/screen/password/forget_password.dart';
 import 'package:frontend/view/screen/login.dart';
 import 'package:frontend/view/screen/signup/sign_up.dart';
 import 'package:get/get.dart';
-
 class RowTextButton extends StatelessWidget {
-  final text;
+  final String text;
   final String ButtonText;
   final double? TextSize;
 
@@ -32,13 +31,13 @@ class RowTextButton extends StatelessWidget {
         TextButton(
           onPressed: () {
             if (ButtonText == 'تسجيل دخول' || ButtonText == 'رجوع') {
-              Get.to(() =>  Login());
+              Get.to(() => Login());
             } else if (ButtonText == 'إنشاء') {
               Get.to(() => const SignUp());
             } else if (ButtonText == 'تغيير') {
               Get.to(() => const ForgetPassword());
             } else {
-              print('Fuck');
+              print('Invalid action');
             }
           },
           child: Text(

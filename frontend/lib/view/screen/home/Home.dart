@@ -46,7 +46,7 @@ class _HomeState extends State<Home> {
       builder: (controller) => Scaffold(
         key: _scaffoldKey,
         appBar: AppBar(
-          backgroundColor: AppColors.CREMIZON,
+          backgroundColor: AppColors.BACKGROUND_COLOR,
           title: const Center(
             child: Text(
               '__________',

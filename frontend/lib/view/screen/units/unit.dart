@@ -20,14 +20,14 @@ class UnitRow extends StatelessWidget {
       shadowColor: AppColors.LIGHT_TEXT,
       elevation: 3,
       margin: const EdgeInsets.all(8),
-      color: AppColors.SECONDARY_COLOR,
+      color: AppColors.LIGHT_TEXT,
       child: ListTile(
         leading: const CircleAvatar(
           backgroundColor: AppColors.SECONDARY_COLOR,
           radius: 30,
           child: Icon(
             Icons.menu_book,
-            color: AppColors.LIGHT_TEXT,
+            color: AppColors.CREMIZON,
           ),
         ),
         title: Text(
@@ -41,7 +41,7 @@ class UnitRow extends StatelessWidget {
           'رقم الدرس : ${_rowUnit.id}',
           style: const TextStyle(
             fontSize: 14,
-            color: AppColors.LIGHT_TEXT,
+            color: AppColors.CREMIZON,
           ),
         ),
         trailing: PopupMenuButton<String>(
