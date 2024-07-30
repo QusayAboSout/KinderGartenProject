@@ -160,124 +160,114 @@ class _StudentListPageState extends State<StudentListPage> {
                         ],
                       ),
                     ),
-                    body: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 200,
-                          color: AppColors.SECONDARY_COLOR,
-                          child: TabBarView(
+                    body: Container(
+                      color: AppColors.SECONDARY_COLOR,
+                      child: TabBarView(
+                        children: [
+                          // Column for old students
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              // Column for old students
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  if (controller.loading)
-                                    const Padding(
-                                        padding: EdgeInsets.only(top: 10)),
-                                  if (controller.loading)
-                                    const CustomLoadingAnimation(),
-                                  Expanded(
-                                    child: GetBuilder<StudentController>(
-                                      builder: (controller) {
-                                        return PagedListView<int, StudentDto>(
-                                          scrollDirection: Axis.vertical,
-                                          shrinkWrap: true,
-                                          pagingController:
-                                              controller.pagingController,
-                                          builderDelegate:
-                                              PagedChildBuilderDelegate<StudentDto>(
-                                            itemBuilder: (context, item, index) {
-                                              if (searchController
-                                                  .text.isNotEmpty) {
-                                                if (item.studentName!.contains(
-                                                    searchController.text)) {
-                                                  return StudentCard(item);
-                                                }
-                                              } else if (searchController
-                                                  .text.isEmpty) {
+                              if (controller.loading)
+                                const Padding(
+                                    padding: EdgeInsets.only(top: 10)),
+                              if (controller.loading)
+                                const CustomLoadingAnimation(),
+                              Expanded(
+                                child: Center(
+                                  child: GetBuilder<StudentController>(
+                                    builder: (controller) {
+                                      return PagedListView<int, StudentDto>(
+                                        scrollDirection: Axis.vertical,
+                                        shrinkWrap: true,
+                                        pagingController:
+                                            controller.pagingController,
+                                        builderDelegate:
+                                            PagedChildBuilderDelegate<StudentDto>(
+                                          itemBuilder: (context, item, index) {
+                                            if (searchController
+                                                .text.isNotEmpty) {
+                                              if (item.studentName!.contains(
+                                                  searchController.text)) {
                                                 return StudentCard(item);
                                               }
-                                              return Container();
-                                            },
-                                            noItemsFoundIndicatorBuilder: (_) =>
-                                                const Column(
-                                              children: [
-                                                Text(
+                                            } else if (searchController
+                                                .text.isEmpty) {
+                                              return StudentCard(item);
+                                            }
+                                            return Container();
+                                          },
+                                          noItemsFoundIndicatorBuilder: (_) =>
+                                              const Center(
+                                                child: Text(
                                                   "ٌRight",
                                                   style: TextStyle(
                                                       color: AppColors.CREMIZON,
                                                       fontSize: 30,
                                                       fontWeight: FontWeight.bold),
                                                 ),
-                                              ],
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    ),
+                                              ),
+                                        ),
+                                      );
+                                    },
                                   ),
-                                ],
-                              ),
-                              // Column for current students
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  if (controller.loading)
-                                    const Padding(
-                                        padding: EdgeInsets.only(top: 10)),
-                                  if (controller.loading)
-                                    const CustomLoadingAnimation(),
-                                  Expanded(
-                                    child: GetBuilder<CurrentStudentController>(
-                                      builder: (controller) {
-                                        return PagedListView<int, StudentDto>(
-                                          scrollDirection: Axis.vertical,
-                                          shrinkWrap: true,
-                                          pagingController:
-                                              controller.pagingController,
-                                          builderDelegate:
-                                              PagedChildBuilderDelegate<StudentDto>(
-                                            itemBuilder: (context, item, index) {
-                                              if (searchController
-                                                  .text.isNotEmpty) {
-                                                if (item.studentName!.contains(
-                                                    searchController.text)) {
-                                                  return StudentCard(item);
-                                                }
-                                              } else if (searchController
-                                                  .text.isEmpty) {
-                                                return StudentCard(item);
-                                              }
-                                              return Container();
-                                            },
-                                            noItemsFoundIndicatorBuilder: (_) =>
-                                                 Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                 Container(
-                                                  child: const Text(
-                                                    "Left",
-                                                    style: TextStyle(
-                                                        color: AppColors.CREMIZON,
-                                                        fontSize: 30,
-                                                        fontWeight: FontWeight.bold),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  ),
-                                ],
+                                ),
                               ),
                             ],
                           ),
-                        ),
-                      ],
+                          // Column for current students
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              if (controller.loading)
+                                const Padding(
+                                    padding: EdgeInsets.only(top: 10)),
+                              if (controller.loading)
+                                const CustomLoadingAnimation(),
+                              Expanded(
+                                child: Center(
+                                  child: GetBuilder<CurrentStudentController>(
+                                    builder: (controller) {
+                                      return PagedListView<int, StudentDto>(
+                                        scrollDirection: Axis.vertical,
+                                        shrinkWrap: true,
+                                        pagingController:
+                                            controller.pagingController,
+                                        builderDelegate:
+                                            PagedChildBuilderDelegate<StudentDto>(
+                                          itemBuilder: (context, item, index) {
+                                            if (searchController
+                                                .text.isNotEmpty) {
+                                              if (item.studentName!.contains(
+                                                  searchController.text)) {
+                                                return StudentCard(item);
+                                              }
+                                            } else if (searchController
+                                                .text.isEmpty) {
+                                              return StudentCard(item);
+                                            }
+                                            return Container();
+                                          },
+                                          noItemsFoundIndicatorBuilder: (_) =>
+                                               const Center(
+                                                 child: Text(
+                                                   "Left",
+                                                   style: TextStyle(
+                                                       color: AppColors.CREMIZON,
+                                                       fontSize: 30,
+                                                       fontWeight: FontWeight.bold),
+                                                 ),
+                                               ),
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
