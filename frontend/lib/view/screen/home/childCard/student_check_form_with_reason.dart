@@ -81,7 +81,7 @@ class _StudentCheckFormWithReasonState
                       hint: 'الاسم...',
                       formName: 'studentName',
                       textInputType: TextInputType.text,
-                      enabled: false,
+                      readonly: true,
                     ),
                     SizedBox(height: sizedBoxHeight),
                     CustomTextField(
@@ -90,7 +90,7 @@ class _StudentCheckFormWithReasonState
                       hint: 'الاسم...',
                       formName: 'fatherName',
                       textInputType: TextInputType.text,
-                      enabled: false,
+                      readonly: true,
                     ),
                     SizedBox(height: sizedBoxHeight),
                     CustomTextField(
@@ -99,7 +99,7 @@ class _StudentCheckFormWithReasonState
                       hint: 'الاسم...',
                       formName: 'grandFatherName',
                       textInputType: TextInputType.text,
-                      enabled: false,
+                      readonly: true,
                     ),
                     SizedBox(height: sizedBoxHeight),
                     CustomTextField(
@@ -108,7 +108,7 @@ class _StudentCheckFormWithReasonState
                       hint: 'الاسم...',
                       formName: 'familyName',
                       textInputType: TextInputType.text,
-                      enabled: false,
+                      readonly: true,
                     ),
                     SizedBox(height: sizedBoxHeight),
                     CustomTextField(
@@ -118,7 +118,7 @@ class _StudentCheckFormWithReasonState
                       hint: 'الاسم...',
                       formName: 'birthOfDate',
                       textInputType: TextInputType.text,
-                      enabled: false,
+                      readonly: true,
                     ),
                     SizedBox(height: sizedBoxHeight),
                     CustomTextField(
@@ -127,7 +127,7 @@ class _StudentCheckFormWithReasonState
                       hint: 'الاسم...',
                       formName: 'studentLocation',
                       textInputType: TextInputType.text,
-                      enabled: false,
+                      readonly: true,
                     ),
                     SizedBox(height: sizedBoxHeight),
                     CustomTextField(
@@ -136,7 +136,7 @@ class _StudentCheckFormWithReasonState
                       hint: 'الرقم...',
                       formName: 'phoneNumber',
                       textInputType: TextInputType.number,
-                      enabled: false,
+                      readonly: true,
                     ),
                     SizedBox(height: sizedBoxHeight),
                     CustomTextField(
@@ -145,7 +145,7 @@ class _StudentCheckFormWithReasonState
                       hint: 'مع...',
                       formName: 'childLivesWith',
                       textInputType: TextInputType.text,
-                      enabled: false,
+                      readonly: true,
                     ),
                     SizedBox(height: sizedBoxHeight),
                     widget.childCard.status == false
@@ -155,7 +155,7 @@ class _StudentCheckFormWithReasonState
                             hint: '',
                             formName: 'rejectReason',
                             textInputType: TextInputType.text,
-                            enabled: false,
+                            readonly: true,
                           )
                         : const SizedBox.shrink(),
                     SizedBox(height: sizedBoxHeight),

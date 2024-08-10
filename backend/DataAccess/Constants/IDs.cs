@@ -120,6 +120,11 @@ namespace DataAccess.Constants
             public static long Expe1 = 1;
             public static long Expe2 = 2;
         }
+
+        public class FamilyProfile
+        {
+
+        }
         public class GeneralEvaluation
         {
             public static long VeryGood = 1;

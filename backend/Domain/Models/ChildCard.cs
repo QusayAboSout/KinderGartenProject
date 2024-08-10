@@ -10,38 +10,22 @@ namespace Domain.Models
         public String? BirthOfDate { get; set; }
         public DateTime? CardFillDate { get; set; }
 
-        public long? NumberOfBrothers { get; set; }
-        public long? NumberOfSisters { get; set; }
         public long? ChildArrangement { get; set; }
-        public long? NumberOfSpicailNeeds { get; set; }
         public long? UserID { get; set; }
 
         public string? KindergartenName { get; set; }
         public string? StudentName { get; set; }  
-        public string? FatherName { get; set; }  
-        public string? GrandFatherName { get; set; }  
-        public string? FamilyName { get; set; }
         public string? BirthPlace { get; set; }
         public string? Nationality { get; set; }
         public string? Religion { get; set; }
-        public string? Address { get; set; }
-        public string? FatherProfession { get; set; }
-        public string? FatherWorkPhone { get; set; }
-        public string? FatherWorkPlace { get; set; }
-        public string? phoneNumber { get; set; }
-        public string? MotherWorkPhone { get; set; }
-        public string? MotherWorkPlace { get; set; }
-        public string? FatherEducationLevel { get; set; }
-        public string? MotherEducationLevel { get; set; }
-        public string? EmergencyPhoneNumber { get; set; }
         public string? childLivesWith { get; set; }
-        public string? ParentsSituation { get; set; }
         public string? DiseasesOfTheChild { get; set; }
         public string? TheAuthoritySupervisingDisability { get; set; }
         public string? ExtraInfo { get; set; }
         public string? GurdianName { get; set; }
-        public string? TeacherName { get; set; }
+/*      public string? TeacherName { get; set; }
         public string? ManegerName { get; set; }
+*/
         public string? TheTypeOfConditionTheChildIsFacing { get; set; }
         public string? ConditionDescription { get; set; }
         public string? ConditionReasons { get; set; }
@@ -54,7 +38,6 @@ namespace Domain.Models
         public bool? DidHeTakesHealthVaccinations { get; set; }
         public bool? ChildReceivedAllTheRequiredVaccinations { get; set; }
         public bool? FromSpecialNeeds { get; set; }
-        public bool? IsThereAnyoneInTheFamilyWithSpecialNeeds { get; set; }
         public bool? HaveChaildAttendedKindergartenBefore { get; set; }
         public bool? isCheck { get; set; } = false;
         public bool? Status { get; set; }
@@ -64,8 +47,6 @@ namespace Domain.Models
         public Attachment? PersonalImage { get; set; }
         public long? BirthCertificateImageID { get; set; }
         public Attachment? BirthCertificateImage { get; set; }
-        public long? ParentIdentifyImageID { get; set; }
-        public Attachment? ParentIdentifyImage { get; set; }
         public long? StudentPersonImageID { get; set; }
         public Attachment? StudentPersonImage { get; set; }
     }

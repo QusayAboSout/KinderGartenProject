@@ -46,6 +46,7 @@ namespace WebApi.Mapper
                 cfg.CreateMap<RegistrationFees, RegistrationFeesDto>().ReverseMap();
                 cfg.CreateMap<PostsViewDto, Posts>().ReverseMap();
                 cfg.CreateMap<Section, SectionDto>().ReverseMap();
+                cfg.CreateMap<FamilyProfile, FamilyProfileDto>().ReverseMap();
                 
             });
             var mapper = config.CreateMapper();

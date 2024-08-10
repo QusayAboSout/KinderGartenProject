@@ -28,121 +28,113 @@ class _SignUpState extends State<SignUp> {
     return GetBuilder<SiginUpController>(
       init: controller,
       builder: (controller) => Scaffold(
+        backgroundColor: AppColors.BACKGROUND_COLOR,
         resizeToAvoidBottomInset: false,
-        body: Container(
-          height: MediaQuery.of(context).size.height * 1,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/logoPro.png'),
-              fit: BoxFit.cover,
-            ),
-          ),
-          child: SingleChildScrollView(
-            child: Center(
-              child: FormBuilder(
-                key: controller.formKey,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const SizedBox(height: 250),
-                    const Text(
-                      'إنشاء حساب',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 40,
-                        color: AppColors.SECONDARY_COLOR,
-                      ),
+        body: SingleChildScrollView(
+          child: Center(
+            child: FormBuilder(
+              key: controller.formKey,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SizedBox(height: 250),
+                  const Text(
+                    'إنشاء حساب',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 40,
+                      color: AppColors.CREMIZON,
                     ),
-                    const SizedBox(height: 70),
-                    const SizedBox(height: 30),
-                    CustomTextField(
-                      enabled: enableTextField,
-                      label: 'البريد الإلكتروني',
-                      hint: 'أدخل البريد الألكتروني',
-                      textInputType: TextInputType.emailAddress,
-                      formName: 'email',
-                      validate: (value) {
-                        if ((value == null || value.isEmpty)) {
-                          return "يرجى ادخال البريد الالكتروني";
-                        } else if (!value.contains('@gmail.com') &&
-                            !value.contains('@outlook.com')) {
+                  ),
+                  const SizedBox(height: 70),
+                  const SizedBox(height: 30),
+                  CustomTextField(
+                    enabled: enableTextField,
+                    label: 'البريد الإلكتروني',
+                    hint: 'أدخل البريد الألكتروني',
+                    textInputType: TextInputType.emailAddress,
+                    formName: 'email',
+                    validate: (value) {
+                      if ((value == null || value.isEmpty)) {
+                        return "يرجى ادخال البريد الالكتروني";
+                      } else if (!value.contains('@gmail.com') &&
+                          !value.contains('@outlook.com')) {
+                        return "يرجى إدخال الحساب بشكل صحيح";
+                      } else if (value.contains('@gmail.com')) {
+                        if (value[value.length - 1] != 'm' &&
+                            value[value.length - 2] != 'o') {
                           return "يرجى إدخال الحساب بشكل صحيح";
-                        } else if (value.contains('@gmail.com')) {
-                          if (value[value.length - 1] != 'm' &&
-                              value[value.length - 2] != 'o') {
-                            return "يرجى إدخال الحساب بشكل صحيح";
-                          }
                         }
-                        return null;
-                      },
-                    ),
-                    GetBuilder<SiginUpController>(
-                        id: 'doubleEmail',
-                        builder: (controller) {
-                          return Container(
-                            key: const Key("errorLable"),
-                            child: (controller.isDoubleEmail)
-                                ? const Padding(
-                                    padding: EdgeInsets.only(
-                                        left: 10, right: 10, top: 10),
-                                    child: Text('هذا الحساب مستخدم بالفعل',
-                                        style: TextStyle(color: Colors.red)),
-                                  )
-                                : null,
-                          );
-                        }),
-                    GetBuilder<SiginUpController>(
-                      id: 'progress',
+                      }
+                      return null;
+                    },
+                  ),
+                  GetBuilder<SiginUpController>(
+                      id: 'doubleEmail',
                       builder: (controller) {
-                        return Column(
-                          children: [
-                            if (controller.showProgress)
-                              const CustomLoadingAnimation(),
-                          ],
+                        return Container(
+                          key: const Key("errorLable"),
+                          child: (controller.isDoubleEmail)
+                              ? const Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 10, right: 10, top: 10),
+                                  child: Text('هذا الحساب مستخدم بالفعل',
+                                      style: TextStyle(color: Colors.red)),
+                                )
+                              : null,
                         );
-                      },
-                    ),
-                    const SizedBox(height: 40),
-                    Column(
-                      children: [
-                        GetBuilder<SiginUpController>(
-                            id: 'checkDoublicateEmail',
-                            builder: (controller) {
-                              return CustomButton(
-                                text: "التالي",
-                                onPressed: () async {
-                                  if (IsValid()) {
-                                    await controller.CheckDoublicateEmail(
-                                        controller.formKey.currentState
-                                            ?.value['email']);
-
-                                    if (!controller.isDoubleEmail) {
-                                      controller.user.email = controller
-                                          .formKey.currentState?.value["email"];
-                                      controller.sendEmailCode();
-                                      if (!showCodeTextField) {
-                                        setState(() {
-                                          sendCodeButton = false;
-                                          showCodeTextField = true;
-                                        });
-                                        Get.to(() => ConfirmCode(
-                                            emailValue: controller.formKey
-                                                .currentState!.value['email']));
-                                      }
+                      }),
+                  GetBuilder<SiginUpController>(
+                    id: 'progress',
+                    builder: (controller) {
+                      return Column(
+                        children: [
+                          if (controller.showProgress)
+                            const CustomLoadingAnimation(),
+                        ],
+                      );
+                    },
+                  ),
+                  const SizedBox(height: 40),
+                  Column(
+                    children: [
+                      GetBuilder<SiginUpController>(
+                          id: 'checkDoublicateEmail',
+                          builder: (controller) {
+                            return CustomButton(
+                              text: "التالي",
+                              onPressed: () async {
+                                if (IsValid()) {
+                                  await controller.CheckDoublicateEmail(
+                                      controller.formKey.currentState
+                                          ?.value['email']);
+        
+                                  if (!controller.isDoubleEmail) {
+                                    controller.user.email = controller
+                                        .formKey.currentState?.value["email"];
+                                    controller.sendEmailCode();
+                                    if (!showCodeTextField) {
+                                      setState(() {
+                                        sendCodeButton = false;
+                                        showCodeTextField = true;
+                                      });
+                                      Get.to(() => ConfirmCode(
+                                          emailValue: controller.formKey
+                                              .currentState!.value['email']));
                                     }
                                   }
-                                },
-                              );
-                            }),
-                      ],
-                    ),
-                    const SizedBox(height: 40),
-                    const RowTextButton(
-                      text: 'هل لديك حساب؟',
-                      ButtonText: 'تسجيل دخول',
-                    ),
-                  ],
-                ),
+                                }
+                              },
+                            );
+                          }),
+                    ],
+                  ),
+                  const SizedBox(height: 40),
+                  const RowTextButton(
+                    text: 'هل لديك حساب؟',
+                    ButtonText: 'تسجيل دخول',
+                  ),
+                ],
               ),
             ),
           ),

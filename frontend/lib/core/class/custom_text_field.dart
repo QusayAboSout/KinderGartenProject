@@ -159,12 +159,17 @@ class _CustomTextFieldState extends State<CustomTextField> {
             prefixIcon: widget.formName == 'email'
                 ? const Icon(
                     Icons.person,
-                    color: AppColors.SECONDARY_COLOR,
+                    color: AppColors.CREMIZON,
                   )
                 : widget.formName == 'password'
                     ? const Icon(
                         Icons.lock,
-                        color: AppColors.SECONDARY_COLOR,
+                        color: AppColors.CREMIZON,
+                      )
+                : widget.formName == 'confirmPassword'
+                    ? const Icon(
+                        Icons.lock,
+                        color: AppColors.CREMIZON,
                       )
                     : null,
           ),
@@ -173,6 +178,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           enabled: widget.enabled,
           readOnly: widget.readonly,
           maxLength: widget.maxLength,
+          
         ),
       ),
     );

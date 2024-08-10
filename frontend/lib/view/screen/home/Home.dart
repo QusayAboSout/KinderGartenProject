@@ -9,10 +9,10 @@ import 'package:frontend/core/services/session.dart';
 import 'package:frontend/model/Posts.dart';
 import 'package:frontend/view/screen/home/childCard/qustions.dart';
 import 'package:frontend/view/screen/home/drawer.dart';
+import 'package:frontend/view/screen/home/family_profile.dart';
 import 'package:frontend/view/screen/home/notification.dart';
 import 'package:frontend/view/screen/home/student/my_students.dart';
 import 'package:frontend/view/screen/home/student/students.dart';
-import 'package:frontend/view/screen/home/user_profile.dart';
 import 'package:frontend/view/screen/teachers/my_class_students.dart';
 import 'package:get/get.dart';
 
@@ -131,7 +131,7 @@ class _HomeState extends State<Home> {
                     color: AppColors.LIGHT_TEXT,
                   ),
                   onPressed: () {
-                    controller.showUserProfilePage();
+                    controller.showFamilyProfile();
                   },
                 );
               }),
@@ -148,14 +148,16 @@ class _HomeState extends State<Home> {
                     ? StudentListPage()
                     : const MyClassStudents(),
             NotificationPage(),
-            const UserProfilePage(),
+            const FamilyProfile(),
           ],
         ),
         floatingActionButton: FloatingActionButton(
             backgroundColor: Colors.white,
             onPressed: () {
               if (Session.user?.role == 'student') {
+
                 Get.to(() => const childCardForm());
+
               } else {
                 showDialog(
                   context: context,

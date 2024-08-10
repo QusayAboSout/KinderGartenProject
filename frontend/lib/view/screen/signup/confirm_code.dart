@@ -42,7 +42,7 @@ class _ConfirmCodeState extends State<ConfirmCode> {
               },
               icon: const Icon(
                 Icons.arrow_forward,
-                color: AppColors.BACKGROUND_COLOR,
+                color: AppColors.CREMIZON,
               ),
             ),
           ],
@@ -61,18 +61,19 @@ class _ConfirmCodeState extends State<ConfirmCode> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
-                      color: AppColors.SECONDARY_COLOR,
+                      color: AppColors.CREMIZON,
                     ),
                   ),
                   const SizedBox(height: 70),
                   const SizedBox(height: 30),
                   CustomTextField(
                     initalValue: widget.emailValue,
-                    enabled: false,
+                    enabled: true,
                     label: 'البريد الإلكتروني',
                     hint: 'أدخل البريد الألكتروني',
                     textInputType: TextInputType.emailAddress,
                     formName: 'email',
+                    readonly: true,
                   ),
                   const SizedBox(height: 29),
                   Column(
@@ -81,7 +82,7 @@ class _ConfirmCodeState extends State<ConfirmCode> {
                       const Text(
                         "ادخل الكود الذي تم إرساله الى البريد الإلكتروني",
                         style: TextStyle(
-                          color: AppColors.SECONDARY_COLOR,
+                          color: AppColors.LIGHT_TEXT,
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),

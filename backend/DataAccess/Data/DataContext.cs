@@ -41,6 +41,7 @@ namespace DataAccess.Data
         public DbSet<ChildCard> ChildCards { get; set; }
         public DbSet<UserVerificationCode> UserVerificationCodes { get; set; }
         public DbSet<ClassSubjects> ClassSubjects { get; set; }
+        public DbSet<FamilyProfile> FamilyProfiles { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -68,6 +69,8 @@ namespace DataAccess.Data
             //new ContactNumbersConfiguration(modelBuilder.Entity<ContactNumbers>());
             new ClassSubjectsConfiguration(modelBuilder.Entity<ClassSubjects>());
             new SectionConfigiuration(modelBuilder.Entity<Section>());
+            new FamilyProfileConfiguration(modelBuilder.Entity<FamilyProfile>());
+
 
             base.OnModelCreating(modelBuilder);
         }

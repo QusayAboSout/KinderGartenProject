@@ -19,6 +19,7 @@ class signupInfo extends StatelessWidget {
   final SiginUpController controller = Get.find<SiginUpController>();
   final LoginController loginController = Get.find<LoginController>();
   @override
+  // signupinfofast
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.BACKGROUND_COLOR,
@@ -64,7 +65,7 @@ class signupInfo extends StatelessWidget {
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 40,
-                          color: AppColors.SECONDARY_COLOR,
+                          color: AppColors.CREMIZON,
                         ),
                       ),
                       const SizedBox(height: 70),

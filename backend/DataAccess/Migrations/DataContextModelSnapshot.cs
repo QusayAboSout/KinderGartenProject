@@ -169,9 +169,6 @@ namespace DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("ID"));
 
-                    b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<long?>("BirthCertificateImageID")
                         .HasColumnType("bigint");
 
@@ -214,35 +211,11 @@ namespace DataAccess.Migrations
                     b.Property<string>("DiseasesOfTheChild")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EmergencyPhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ExtraInfo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FamilyName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FatherEducationLevel")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FatherName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FatherProfession")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FatherWorkPhone")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FatherWorkPlace")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool?>("FromSpecialNeeds")
                         .HasColumnType("bit");
-
-                    b.Property<string>("GrandFatherName")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("GurdianName")
                         .HasColumnType("nvarchar(max)");
@@ -253,40 +226,10 @@ namespace DataAccess.Migrations
                     b.Property<string>("HowTheCaseMonitoredDone")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool?>("IsThereAnyoneInTheFamilyWithSpecialNeeds")
-                        .HasColumnType("bit");
-
                     b.Property<string>("KindergartenName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ManegerName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MotherEducationLevel")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MotherWorkPhone")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MotherWorkPlace")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Nationality")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<long?>("NumberOfBrothers")
-                        .HasColumnType("bigint");
-
-                    b.Property<long?>("NumberOfSisters")
-                        .HasColumnType("bigint");
-
-                    b.Property<long?>("NumberOfSpicailNeeds")
-                        .HasColumnType("bigint");
-
-                    b.Property<long?>("ParentIdentifyImageID")
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("ParentsSituation")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<long?>("PersonalImageID")
@@ -307,9 +250,6 @@ namespace DataAccess.Migrations
                     b.Property<long?>("StudentPersonImageID")
                         .HasColumnType("bigint");
 
-                    b.Property<string>("TeacherName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("TheAuthoritySupervisingDisability")
                         .HasColumnType("nvarchar(max)");
 
@@ -325,14 +265,9 @@ namespace DataAccess.Migrations
                     b.Property<bool?>("isCheck")
                         .HasColumnType("bit");
 
-                    b.Property<string>("phoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("ID");
 
                     b.HasIndex("BirthCertificateImageID");
-
-                    b.HasIndex("ParentIdentifyImageID");
 
                     b.HasIndex("PersonalImageID");
 
@@ -544,6 +479,110 @@ namespace DataAccess.Migrations
                     b.ToTable("Experiences");
                 });
 
+            modelBuilder.Entity("Domain.Models.FamilyProfile", b =>
+                {
+                    b.Property<long>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("ID"));
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EmergencyPhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FamilyName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FatherEducationLevel")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FatherName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FatherProfession")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FatherWorkPhone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FatherWorkPlace")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GrandFatherName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MotherEducationLevel")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MotherWorkPhone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MotherWorkPlace")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("NumberOfDaughters")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("NumberOfSons")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("NumberOfSpicailNeeds")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("ParentIdentifyImageID")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("ParentsSituation")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("PeopleWithSpecialNeeds")
+                        .HasColumnType("bit");
+
+                    b.Property<long?>("UserID")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("phoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("ParentIdentifyImageID");
+
+                    b.ToTable("FamilyProfiles");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1L,
+                            Address = "Hebron - samou",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EmergencyPhoneNumber = "982392298",
+                            FamilyName = "ABS GM",
+                            FatherEducationLevel = "GM",
+                            FatherName = "Xsharawi",
+                            FatherProfession = "Amazon SEO",
+                            FatherWorkPhone = "0000000342",
+                            FatherWorkPlace = "Hell",
+                            GrandFatherName = "Xsharawi GRAND ORDER",
+                            MotherEducationLevel = "Master",
+                            MotherWorkPhone = "2938283",
+                            MotherWorkPlace = "9823382",
+                            NumberOfDaughters = 5L,
+                            NumberOfSons = 3L,
+                            NumberOfSpicailNeeds = 4L,
+                            ParentsSituation = "togather",
+                            PeopleWithSpecialNeeds = true,
+                            UserID = 3L,
+                            phoneNumber = "02323774"
+                        });
+                });
+
             modelBuilder.Entity("Domain.Models.GeneralEvaluation", b =>
                 {
                     b.Property<long>("ID")
@@ -744,7 +783,7 @@ namespace DataAccess.Migrations
                             ID = 1L,
                             CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Discription = "غدا سيكون موعد دفع الرسوم",
-                            PostDate = new DateTime(2024, 7, 11, 12, 3, 24, 147, DateTimeKind.Local).AddTicks(2783),
+                            PostDate = new DateTime(2024, 8, 11, 1, 5, 36, 669, DateTimeKind.Local).AddTicks(4195),
                             UserID = 1L
                         });
                 });
@@ -1291,10 +1330,6 @@ namespace DataAccess.Migrations
                         .WithMany()
                         .HasForeignKey("BirthCertificateImageID");
 
-                    b.HasOne("Domain.Models.Attachment", "ParentIdentifyImage")
-                        .WithMany()
-                        .HasForeignKey("ParentIdentifyImageID");
-
                     b.HasOne("Domain.Models.Attachment", "PersonalImage")
                         .WithMany()
                         .HasForeignKey("PersonalImageID");
@@ -1304,8 +1339,6 @@ namespace DataAccess.Migrations
                         .HasForeignKey("StudentPersonImageID");
 
                     b.Navigation("BirthCertificateImage");
-
-                    b.Navigation("ParentIdentifyImage");
 
                     b.Navigation("PersonalImage");
 
@@ -1403,6 +1436,15 @@ namespace DataAccess.Migrations
                         .IsRequired();
 
                     b.Navigation("Teacher");
+                });
+
+            modelBuilder.Entity("Domain.Models.FamilyProfile", b =>
+                {
+                    b.HasOne("Domain.Models.Attachment", "ParentIdentifyImage")
+                        .WithMany()
+                        .HasForeignKey("ParentIdentifyImageID");
+
+                    b.Navigation("ParentIdentifyImage");
                 });
 
             modelBuilder.Entity("Domain.Models.GeneralEvaluation", b =>

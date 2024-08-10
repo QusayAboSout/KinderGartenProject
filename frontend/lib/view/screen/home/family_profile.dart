@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/services/session.dart';
 
-class UserProfilePage extends StatelessWidget {
-  const UserProfilePage({super.key});
+class FamilyProfile extends StatelessWidget {
+  const FamilyProfile({super.key});
 
   @override
   Widget build(BuildContext context) {

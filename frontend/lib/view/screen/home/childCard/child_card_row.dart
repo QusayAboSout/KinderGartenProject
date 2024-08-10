@@ -18,7 +18,7 @@ class ChildCardRow extends StatelessWidget {
       child: ListTile(
         tileColor: _rowCardDto.userID == 1
             ?
-            AppColors.CREMIZON
+            AppColors.ACCEPT
             : AppColors.LIGHT_TEXT,
         leading: const CircleAvatar(
           backgroundColor: AppColors.LIGHT_TEXT,
@@ -28,11 +28,11 @@ class ChildCardRow extends StatelessWidget {
           ),
         ),
         title: Text('${_rowCardDto.studentName}'),
-        subtitle: Text('رقم الطلب : ${_rowCardDto.id}',style: const TextStyle(color: AppColors.LIGHT_TEXT),),
+        subtitle: Text('رقم الطلب : ${_rowCardDto.id}',style: const TextStyle(color: AppColors.CREMIZON),),
         trailing: (Text(
           '${DateTime.now().year}',
           style: const TextStyle(
-            color: AppColors.LIGHT_TEXT,
+            color: AppColors.CREMIZON,
             fontSize: 18,
             fontWeight: FontWeight.bold,
           ),

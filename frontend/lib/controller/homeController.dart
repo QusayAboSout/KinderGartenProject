@@ -21,7 +21,7 @@ class HomeController extends GetxController {
     update();
   }
 
-  void showUserProfilePage() {
+  void showFamilyProfile() {
     _selectedIndex = 3;
     update();
   }
