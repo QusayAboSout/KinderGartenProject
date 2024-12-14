@@ -23,13 +23,9 @@ class finalMarksClass extends StatelessWidget {
     return GetBuilder<ClassController>(
       init: controller,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.SECONDARY_COLOR,
         appBar: AppBar(
-          backgroundColor: AppColors.CREMIZON,
-          foregroundColor: AppColors.SECONDARY_COLOR,
           title: const Text(
             'الصفوف',
-            style: TextStyle(color: AppColors.LIGHT_TEXT),
           ),
           centerTitle: true,
         ),
@@ -65,17 +61,13 @@ class FinalMarksClassRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      shadowColor: AppColors.LIGHT_TEXT,
       elevation: 3,
       margin: const EdgeInsets.all(8),
-      color: AppColors.LIGHT_TEXT,
       child: ListTile(
         leading: const CircleAvatar(
-          backgroundColor: AppColors.CREMIZON,
           radius: 30,
           child: Icon(
             Icons.home,
-            color: AppColors.LIGHT_TEXT,
           ),
         ),
         title: Text(
@@ -89,7 +81,6 @@ class FinalMarksClassRow extends StatelessWidget {
           '${_rowClass.classYear}',
           style: const TextStyle(
             fontSize: 14,
-            color: AppColors.CREMIZON,
           ),
         ),
         onTap: () => Get.to(
@@ -125,126 +116,104 @@ class FinalMarksStudents extends StatelessWidget {
     return GetBuilder<ClassController>(
       init: classController,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
-        appBar: AppBar(
-          backgroundColor: AppColors.CREMIZON,
-          foregroundColor: AppColors.SECONDARY_COLOR,
-        ),
-        body: Container(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              children: [
-                const SizedBox(height: 10),
-                const CircleAvatar(
-                  radius: 60,
-                  backgroundImage: AssetImage(
-                      'assets/images/tom.png'), // Replace with actual user image
+        appBar: AppBar(),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              const SizedBox(height: 10),
+              const CircleAvatar(
+                radius: 60,
+                backgroundImage: AssetImage(
+                    'assets/images/tom.png'), // Replace with actual user image
+              ),
+              const SizedBox(height: 10),
+              Title(
+                color: AppColors.BACKGROUND,
+                child: Text(
+                  " تقييم العلامات النهائية لطلاب ${classDto.className}",
+                  style: const TextStyle(
+                      fontSize: 22.3, fontWeight: FontWeight.bold),
                 ),
-                const SizedBox(height: 10),
-                Title(
-                  color: AppColors.BACKGROUND_COLOR,
-                  child: Text(
-                    " تقييم العلامات النهائية لطلاب ${classDto.className}",
-                    style: const TextStyle(
-                        fontSize: 22.3,
-                        color: AppColors.LIGHT_TEXT,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                const SizedBox(height: 10),
-                // const Text(
-                //   "المعلمة المسؤولة : رقية",
-                //   style: TextStyle(fontSize: 17),
-                // ),
-                // const Text(
-                //   "Number of student : 8",
-                //   style: TextStyle(fontSize: 17),
-                // ),
-                const Divider(
-                  thickness: 3,
-                  color: AppColors.LIGHT_TEXT,
-                ),
-                Expanded(
-                  child: DefaultTabController(
-                    length: 1,
-                    initialIndex: 0,
-                    child: Scaffold(
-                      backgroundColor: AppColors.BACKGROUND_COLOR,
-                      appBar: AppBar(
-                        toolbarHeight: 0,
-                        automaticallyImplyLeading: false,
-                        backgroundColor: AppColors.BACKGROUND_COLOR,
-                        bottom: const TabBar(
-                          indicatorColor: AppColors.LIGHT_TEXT,
-                          labelColor: AppColors.LIGHT_TEXT,
-                          tabs: [
-                            Tab(
-                                child: Text(
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18),
-                                    "طلاب الصف")),
-                          ],
-                        ),
+              ),
+              const SizedBox(height: 10),
+              // const Text(
+              //   "المعلمة المسؤولة : رقية",
+              //   style: TextStyle(fontSize: 17),
+              // ),
+              // const Text(
+              //   "Number of student : 8",
+              //   style: TextStyle(fontSize: 17),
+              // ),
+              const Divider(
+                thickness: 3,
+              ),
+              Expanded(
+                child: DefaultTabController(
+                  length: 1,
+                  initialIndex: 0,
+                  child: Scaffold(
+                    backgroundColor: AppColors.BACKGROUND,
+                    appBar: AppBar(
+                      toolbarHeight: 0,
+                      automaticallyImplyLeading: false,
+                      backgroundColor: AppColors.BACKGROUND,
+                      bottom: const TabBar(
+                        tabs: [
+                          Tab(
+                              child: Text(
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18),
+                                  "طلاب الصف")),
+                        ],
                       ),
-                      body: Scaffold(
-                          backgroundColor: AppColors.SECONDARY_COLOR,
-                          body: Column(
-                            children: [
-                              if (controller.loading)
-                                const Padding(
-                                    padding: EdgeInsets.only(top: 10)),
-                              if (controller.loading)
-                                const CustomLoadingAnimation(),
-                              Expanded(
-                                child: ListView.builder(
-                                    itemCount: classController.students!.length,
-                                    scrollDirection: Axis.vertical,
-                                    shrinkWrap: true,
-                                    itemBuilder: (context, index) => Card(
-                                          shadowColor: AppColors.LIGHT_TEXT,
-                                          elevation: 3,
-                                          margin: const EdgeInsets.all(8),
-                                          color: AppColors.LIGHT_TEXT,
-                                          child: ListTile(
-                                            leading: const CircleAvatar(
-                                              radius: 20,
-                                              backgroundColor:
-                                                  AppColors.SECONDARY_COLOR,
-                                              child: Icon(
-                                                Icons.person,
-                                                color: AppColors.LIGHT_TEXT,
-                                              ),
-                                            ),
-                                            title: Text(
-                                              '${classController.students![index].studentName}',
-                                              style: const TextStyle(
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                            trailing: const Icon(
-                                              Icons.quora_rounded,
-                                              color: AppColors.LIGHT_TEXT,
-                                            ),
-                                            onTap: () {
-                                              Get.to(() => StudentFinalMarks(
-                                                  classDto,
-                                                  classController
-                                                      .students![index]));
-                                            },
-                                          ),
-                                        )),
-                              ),
-                            ],
-                          )),
                     ),
+                    body: Scaffold(
+                        body: Column(
+                      children: [
+                        if (controller.loading)
+                          const Padding(padding: EdgeInsets.only(top: 10)),
+                        if (controller.loading) const CustomLoadingAnimation(),
+                        Expanded(
+                          child: ListView.builder(
+                              itemCount: classController.students!.length,
+                              scrollDirection: Axis.vertical,
+                              shrinkWrap: true,
+                              itemBuilder: (context, index) => Card(
+                                    elevation: 3,
+                                    margin: const EdgeInsets.all(8),
+                                    child: ListTile(
+                                      leading: const CircleAvatar(
+                                        radius: 20,
+                                        child: Icon(
+                                          Icons.person,
+                                        ),
+                                      ),
+                                      title: Text(
+                                        '${classController.students![index].studentName}',
+                                        style: const TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      trailing: const Icon(
+                                        Icons.quora_rounded,
+                                      ),
+                                      onTap: () {
+                                        Get.to(() => StudentFinalMarks(classDto,
+                                            classController.students![index]));
+                                      },
+                                    ),
+                                  )),
+                        ),
+                      ],
+                    )),
                   ),
                 ),
-                const SizedBox(height: 10),
-              ],
-            ),
+              ),
+              const SizedBox(height: 10),
+            ],
           ),
         ),
       ),
@@ -282,7 +251,6 @@ class _StudentFinalMarksState extends State<StudentFinalMarks> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.BACKGROUND_COLOR,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         leading: IconButton(
@@ -299,17 +267,13 @@ class _StudentFinalMarksState extends State<StudentFinalMarks> {
                       Get.back();
                       Get.back();
                     },
-                    headColor: AppColors.SECONDARY_COLOR,
-                    btnColor: AppColors.LIGHT_TEXT,
                   );
                 });
           },
           icon: const Icon(
             Icons.arrow_back,
-            color: AppColors.SECONDARY_COLOR,
           ),
         ),
-        backgroundColor: AppColors.CREMIZON,
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -323,13 +287,11 @@ class _StudentFinalMarksState extends State<StudentFinalMarks> {
             ),
             const SizedBox(height: 10),
             Title(
-              color: AppColors.BACKGROUND_COLOR,
+              color: AppColors.BACKGROUND,
               child: Text(
                 "التقييمات النهائية لمواد صف ${widget._classDto.className}",
                 style: const TextStyle(
-                    fontSize: 22.3,
-                    color: AppColors.LIGHT_TEXT,
-                    fontWeight: FontWeight.bold),
+                    fontSize: 22.3, fontWeight: FontWeight.bold),
               ),
             ),
             const SizedBox(height: 10),
@@ -338,7 +300,6 @@ class _StudentFinalMarksState extends State<StudentFinalMarks> {
               style: const TextStyle(fontSize: 17),
             ),
             const Divider(
-              color: Colors.grey,
               thickness: 1,
             ),
             GetBuilder<GeneralEvaluationController>(
@@ -361,20 +322,16 @@ class _StudentFinalMarksState extends State<StudentFinalMarks> {
                               SizedBox(
                                 width: MediaQuery.of(context).size.width * 0.6,
                                 child: Card(
-                                  shadowColor: AppColors.LIGHT_TEXT,
                                   elevation: 3,
                                   margin: const EdgeInsets.all(8),
-                                  color: AppColors.LIGHT_TEXT,
                                   child: ListTile(
                                     leading: const CircleAvatar(
                                       radius: 20,
-                                      backgroundColor: AppColors.LIGHT_TEXT,
                                       child: Icon(Icons.menu_book_sharp),
                                     ),
                                     title: Text(
                                       '${item.subject?.name}',
                                       style: const TextStyle(
-                                        fontSize: 18,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
@@ -427,10 +384,10 @@ class _StudentFinalMarksState extends State<StudentFinalMarks> {
                                         name: 'rating',
                                         decoration: const InputDecoration(
                                             border: OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                    width: 3,
-                                                    color: AppColors
-                                                        .SECONDARY_COLOR)),
+                                              borderSide: BorderSide(
+                                                width: 3,
+                                              ),
+                                            ),
                                             labelText: 'تقييم',
                                             hintText: 'بدون تقييم'),
                                         validator:
@@ -460,7 +417,6 @@ class _StudentFinalMarksState extends State<StudentFinalMarks> {
       floatingActionButton: SizedBox(
         width: MediaQuery.of(context).size.width * 0.9,
         child: FloatingActionButton(
-          backgroundColor: AppColors.SECONDARY_COLOR,
           onPressed: () {
             showDialog(
               context: context,
@@ -485,9 +441,9 @@ class _StudentFinalMarksState extends State<StudentFinalMarks> {
           child: const Text(
             "حفظ التغييرات",
             style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: AppColors.LIGHT_TEXT),
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),

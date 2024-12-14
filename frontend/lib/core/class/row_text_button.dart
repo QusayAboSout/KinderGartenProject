@@ -4,6 +4,7 @@ import 'package:frontend/view/screen/password/forget_password.dart';
 import 'package:frontend/view/screen/login.dart';
 import 'package:frontend/view/screen/signup/sign_up.dart';
 import 'package:get/get.dart';
+
 class RowTextButton extends StatelessWidget {
   final String text;
   final String ButtonText;
@@ -24,7 +25,6 @@ class RowTextButton extends StatelessWidget {
         Text(
           text,
           style: TextStyle(
-            color: AppColors.CREMIZON,
             fontSize: TextSize ?? 20,
           ),
         ),
@@ -43,7 +43,6 @@ class RowTextButton extends StatelessWidget {
           child: Text(
             ButtonText,
             style: const TextStyle(
-                color: AppColors.LIGHT_TEXT,
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
                 decoration: TextDecoration.underline),

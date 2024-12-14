@@ -4,7 +4,7 @@ import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/class/custom_alert_dialog.dart';
 import 'package:frontend/core/class/custom_button.dart';
 import 'package:frontend/model/students.dart';
-import 'package:frontend/view/screen/home/student/students_certificate.dart';
+import 'package:frontend/view/screen/student/students_certificate.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
 
@@ -17,7 +17,7 @@ class StudentProfile extends StatelessWidget {
     if (studentDto.classID != null) {
       await controller.getMyStudentClass(studentDto);
     }
-   await controller.getChildCardOfStudent(studentDto.childCardID!);
+    await controller.getChildCardOfStudent(studentDto.childCardID!);
   }
 
   @override
@@ -92,7 +92,7 @@ class StudentProfile extends StatelessWidget {
                                   bodyText:
                                       'لم يتم إضافة هذا الطالب إلى صف حتى الان',
                                   ButtonText: 'مفهوم',
-                                  btnColor: AppColors.SECONDARY_COLOR,
+                                  btnColor: AppColors.PRIMARY,
                                   onPressed: () {
                                     Get.back();
                                   },

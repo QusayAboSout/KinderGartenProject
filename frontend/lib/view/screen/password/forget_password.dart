@@ -24,7 +24,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: AppColors.BACKGROUND_COLOR,
+      backgroundColor: AppColors.BACKGROUND,
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -45,7 +45,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 50,
-                      color: AppColors.SECONDARY_COLOR,
+                      color: AppColors.PRIMARY,
                     ),
                   ),
                   const SizedBox(height: 30),
@@ -57,7 +57,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                       Text(
                         'لا تقلق! سيتم تغيير كلمة المرور عن طريق ادخال \n البريد الإلكتروني المرتبط بالحساب.',
                         style: TextStyle(
-                            color: AppColors.LIGHT_TEXT, fontSize: 20),
+                            color: AppColors.TEXT_PRIMARY, fontSize: 20),
                       ),
                     ],
                   ),

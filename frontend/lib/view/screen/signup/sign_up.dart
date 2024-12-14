@@ -28,7 +28,7 @@ class _SignUpState extends State<SignUp> {
     return GetBuilder<SiginUpController>(
       init: controller,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
+        backgroundColor: AppColors.BACKGROUND,
         resizeToAvoidBottomInset: false,
         body: SingleChildScrollView(
           child: Center(
@@ -43,7 +43,7 @@ class _SignUpState extends State<SignUp> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
-                      color: AppColors.CREMIZON,
+                      color: AppColors.SECONDARY,
                     ),
                   ),
                   const SizedBox(height: 70),
@@ -108,7 +108,7 @@ class _SignUpState extends State<SignUp> {
                                   await controller.CheckDoublicateEmail(
                                       controller.formKey.currentState
                                           ?.value['email']);
-        
+
                                   if (!controller.isDoubleEmail) {
                                     controller.user.email = controller
                                         .formKey.currentState?.value["email"];

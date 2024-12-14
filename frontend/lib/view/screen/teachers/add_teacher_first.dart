@@ -4,7 +4,7 @@ import 'package:frontend/controller/teacher_controller.dart';
 import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/class/custom_button.dart';
 import 'package:frontend/core/class/custom_text_field.dart';
-import 'package:frontend/view/screen/teachers/taecher.dart';
+import 'package:frontend/view/screen/teachers/taechers.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
 
@@ -26,10 +26,10 @@ class _AddTeacherStep1State extends State<AddTeacherStep1> {
     return GetBuilder<TeacherController>(
       init: controller,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
+        backgroundColor: AppColors.BACKGROUND,
         appBar: AppBar(
-          backgroundColor: AppColors.CREMIZON,
-          foregroundColor: AppColors.SECONDARY_COLOR,
+          backgroundColor: AppColors.SECONDARY,
+          foregroundColor: AppColors.PRIMARY,
           automaticallyImplyLeading: true,
           leading: IconButton(
             onPressed: () {
@@ -37,7 +37,7 @@ class _AddTeacherStep1State extends State<AddTeacherStep1> {
             },
             icon: const Icon(
               Icons.arrow_back,
-              color: AppColors.SECONDARY_COLOR,
+              color: AppColors.PRIMARY,
             ),
           ),
         ),
@@ -53,7 +53,7 @@ class _AddTeacherStep1State extends State<AddTeacherStep1> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
-                      color: AppColors.SECONDARY_COLOR,
+                      color: AppColors.PRIMARY,
                     ),
                   ),
                   const SizedBox(height: 70),
@@ -102,7 +102,7 @@ class _AddTeacherStep1State extends State<AddTeacherStep1> {
                         const Text(
                           "ادخل الكود الذي تم إرساله الى البريد الإلكتروني",
                           style: TextStyle(
-                            color: AppColors.SECONDARY_COLOR,
+                            color: AppColors.PRIMARY,
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),

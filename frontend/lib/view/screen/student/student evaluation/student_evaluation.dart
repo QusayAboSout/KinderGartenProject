@@ -6,8 +6,8 @@ import 'package:frontend/core/services/session.dart';
 import 'package:frontend/model/class.dart';
 import 'package:frontend/model/students.dart';
 import 'package:frontend/model/subjects.dart';
-import 'package:frontend/view/screen/home/student/student%20evaluation/final_marks.dart';
-import 'package:frontend/view/screen/home/student/student%20evaluation/student_progress_evaluation.dart';
+import 'package:frontend/view/screen/student/student%20evaluation/final_marks.dart';
+import 'package:frontend/view/screen/student/student%20evaluation/student_progress_evaluation.dart';
 import 'package:get/get.dart';
 
 class StudentMarks extends StatelessWidget {
@@ -21,17 +21,17 @@ class StudentMarks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      shadowColor: AppColors.LIGHT_TEXT,
+      shadowColor: AppColors.TEXT_PRIMARY,
       elevation: 3,
       margin: const EdgeInsets.all(8),
-      color: AppColors.LIGHT_TEXT,
+      color: AppColors.TEXT_PRIMARY,
       child: ListTile(
         leading: const CircleAvatar(
           radius: 22,
-          backgroundColor: AppColors.SECONDARY_COLOR,
+          backgroundColor: AppColors.PRIMARY,
           child: Icon(
             Icons.person,
-            color: AppColors.LIGHT_TEXT,
+            color: AppColors.TEXT_PRIMARY,
           ),
         ),
         title: Text(

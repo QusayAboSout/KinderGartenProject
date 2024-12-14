@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:frontend/controller/childCardController.dart';
 import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/model/childCardDto.dart';
-import 'package:frontend/view/screen/home/childCard/student_check_form.dart';
+import 'package:frontend/view/screen/childCard/student_check_form.dart';
 import 'package:get/get.dart';
 
 class ChildCardRow extends StatelessWidget {
@@ -16,23 +16,24 @@ class ChildCardRow extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(5, 3, 5, 3),
       child: ListTile(
-        tileColor: _rowCardDto.userID == 1
-            ?
-            AppColors.ACCEPT
-            : AppColors.LIGHT_TEXT,
+        tileColor:
+            _rowCardDto.userID == 1 ? AppColors.ACCEPT : AppColors.TEXT_PRIMARY,
         leading: const CircleAvatar(
-          backgroundColor: AppColors.LIGHT_TEXT,
+          backgroundColor: AppColors.TEXT_PRIMARY,
           child: Icon(
             Icons.person,
-            color: AppColors.BACKGROUND_COLOR,
+            color: AppColors.BACKGROUND,
           ),
         ),
         title: Text('${_rowCardDto.studentName}'),
-        subtitle: Text('رقم الطلب : ${_rowCardDto.id}',style: const TextStyle(color: AppColors.CREMIZON),),
+        subtitle: Text(
+          'رقم الطلب : ${_rowCardDto.id}',
+          style: const TextStyle(color: AppColors.SECONDARY),
+        ),
         trailing: (Text(
           '${DateTime.now().year}',
           style: const TextStyle(
-            color: AppColors.CREMIZON,
+            color: AppColors.SECONDARY,
             fontSize: 18,
             fontWeight: FontWeight.bold,
           ),

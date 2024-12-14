@@ -89,23 +89,23 @@ class _CustomFormBuilderTextFieldState
           keyboardType: widget.textInputType,
           obscureText: widget.password,
           style: const TextStyle(
-            color: AppColors.LIGHT_TEXT,
+            color: AppColors.TEXT_PRIMARY,
             fontSize: 18,
             fontWeight: FontWeight.bold,
           ),
-          cursorColor: AppColors.LIGHT_TEXT,
+          cursorColor: AppColors.TEXT_PRIMARY,
           decoration: InputDecoration(
             labelText: widget.label,
-            focusColor: AppColors.LIGHT_TEXT,
+            focusColor: AppColors.TEXT_PRIMARY,
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(
-                  color: _hasError ? Colors.black : AppColors.SECONDARY_COLOR,
+                  color: _hasError ? Colors.black : AppColors.PRIMARY,
                   width: 2.0),
               borderRadius: const BorderRadius.all(Radius.circular(22.3)),
             ),
             focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(
-                  color: _hasError ? Colors.black : AppColors.SECONDARY_COLOR,
+                  color: _hasError ? Colors.black : AppColors.PRIMARY,
                   width: 2.0),
               borderRadius: const BorderRadius.all(Radius.circular(22.3)),
             ),
@@ -118,12 +118,12 @@ class _CustomFormBuilderTextFieldState
             prefixIcon: widget.formName == 'email'
                 ? const Icon(
                     Icons.person,
-                    color: AppColors.SECONDARY_COLOR,
+                    color: AppColors.PRIMARY,
                   )
                 : widget.formName == 'password'
                     ? const Icon(
                         Icons.lock,
-                        color: AppColors.SECONDARY_COLOR,
+                        color: AppColors.PRIMARY,
                       )
                     : null,
           ),

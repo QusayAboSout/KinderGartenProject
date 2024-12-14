@@ -17,14 +17,11 @@ class Classes extends StatelessWidget {
     return GetBuilder<ClassController>(
       init: controller,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
+        backgroundColor: AppColors.BACKGROUND,
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: AppColors.CREMIZON,
-          foregroundColor: AppColors.SECONDARY_COLOR,
           title: const Text(
             'الصفوف',
-            style: TextStyle(color: AppColors.LIGHT_TEXT),
           ),
         ),
         body: Column(
@@ -46,16 +43,14 @@ class Classes extends StatelessWidget {
         floatingActionButton: SizedBox(
           width: MediaQuery.of(context).size.width * 3 / 10,
           child: FloatingActionButton(
-            backgroundColor: AppColors.CREMIZON,
             onPressed: () {
               Get.to(() => const AddClass());
             },
             child: const Text(
               "إضافة صف",
               style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.LIGHT_TEXT),
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
@@ -63,4 +58,3 @@ class Classes extends StatelessWidget {
     );
   }
 }
-

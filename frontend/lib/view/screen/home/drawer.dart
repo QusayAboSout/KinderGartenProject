@@ -4,14 +4,14 @@ import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/class/custom_alert_dialog.dart';
 import 'package:frontend/core/services/session.dart';
 import 'package:frontend/view/screen/class_manage/class_info.dart';
-import 'package:frontend/view/screen/home/childCard/application_form_screen.dart';
-import 'package:frontend/view/screen/home/student/my_students.dart';
-import 'package:frontend/view/screen/home/student/student%20evaluation/final_marks.dart';
+import 'package:frontend/view/screen/childCard/application_form_screen.dart';
+import 'package:frontend/view/screen/student/my_students.dart';
+import 'package:frontend/view/screen/student/student%20evaluation/final_marks.dart';
 import 'package:frontend/view/screen/subject/subjects.dart';
 import 'package:frontend/view/screen/class_manage/classes.dart';
-import 'package:frontend/view/screen/home/student/students.dart';
+import 'package:frontend/view/screen/student/students.dart';
 import 'package:frontend/view/screen/login.dart';
-import 'package:frontend/view/screen/teachers/taecher.dart';
+import 'package:frontend/view/screen/teachers/taechers.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
 
@@ -29,13 +29,13 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: AppColors.BACKGROUND_COLOR,
+      backgroundColor: AppColors.BACKGROUND,
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
           DrawerHeader(
             decoration: const BoxDecoration(
-              color: AppColors.CREMIZON,
+              color: AppColors.PRIMARY,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -131,7 +131,7 @@ class CustomDrawer extends StatelessWidget {
                                         bodyText:
                                             'لم يتم تحديد الصف المسؤول عنه حتى الان، يرجى اعلام المدير بذلك',
                                         ButtonText: 'مفهوم',
-                                        btnColor: AppColors.SECONDARY_COLOR,
+                                        btnColor: AppColors.PRIMARY,
                                         onPressed: () {
                                           Get.back();
                                           Get.back();
@@ -161,7 +161,7 @@ class CustomDrawer extends StatelessWidget {
                                         bodyText:
                                             'لم يتم تحديد الصف المسؤول عنه حتى الان، يرجى اعلام المدير بذلك',
                                         ButtonText: 'مفهوم',
-                                        btnColor: AppColors.SECONDARY_COLOR,
+                                        btnColor: AppColors.PRIMARY,
                                         onPressed: () {
                                           Get.back();
                                           Get.back();
@@ -208,7 +208,7 @@ class CustomDrawer extends StatelessWidget {
                 icon: Icons.logout,
                 onTap: () {
                   Session.user = null;
-                  Get.offAll(() =>  Login());
+                  Get.offAll(() => Login());
                 })
           ]),
         ],
@@ -235,11 +235,11 @@ class customListTile extends StatelessWidget {
     return ListTile(
       title: Text(
         title,
-        style: const TextStyle(color: AppColors.LIGHT_TEXT),
+        style: const TextStyle(color: AppColors.TEXT_PRIMARY),
       ),
       leading: Icon(
         icon,
-        color: AppColors.LIGHT_TEXT,
+        color: AppColors.TEXT_PRIMARY,
       ),
       onTap: onTap,
       subtitle: subTitle,

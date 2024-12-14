@@ -15,9 +15,9 @@ class RegistrationFees extends StatelessWidget {
     return GetBuilder<ClassController>(
       init: controller,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
+        backgroundColor: AppColors.BACKGROUND,
         appBar: AppBar(
-          backgroundColor: AppColors.SECONDARY_COLOR,
+          backgroundColor: AppColors.PRIMARY,
           title: const Text('الرسوم العامة'),
           actions: [
             Padding(

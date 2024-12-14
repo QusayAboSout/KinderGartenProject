@@ -28,21 +28,19 @@ class AddUnits extends StatelessWidget {
           title: const Text(
             'إضافة درس',
             style: TextStyle(
-                fontWeight: FontWeight.bold, color: AppColors.LIGHT_TEXT),
+              fontWeight: FontWeight.bold,
+            ),
           ),
           centerTitle: true,
-          actions: [
-            IconButton(
-              onPressed: () {
-                Get.back();
-              },
-              icon: const Icon(
-                Icons.arrow_forward,
-                color: AppColors.BACKGROUND_COLOR,
-              ),
+          leading: IconButton(
+            onPressed: () {
+              Get.back();
+            },
+            icon: const Icon(
+              Icons.arrow_back,
+              color: AppColors.BACKGROUND,
             ),
-          ],
-          backgroundColor: AppColors.SECONDARY_COLOR,
+          ),
           automaticallyImplyLeading: false,
         ),
         body: SafeArea(
@@ -57,7 +55,7 @@ class AddUnits extends StatelessWidget {
                       "روضة نور الإيمان الخاصة",
                       style: GoogleFonts.marhey(
                           textStyle: const TextStyle(
-                        color: AppColors.LIGHT_TEXT,
+                        color: AppColors.TEXT_PRIMARY,
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
                       )),
@@ -76,7 +74,8 @@ class AddUnits extends StatelessWidget {
                         text: "إضافة",
                         onPressed: () {
                           if (IsValid()) {
-                            controller.addUnit(_formKey.currentState!.value,_subjectDto.id);
+                            controller.addUnit(
+                                _formKey.currentState!.value, _subjectDto.id);
                             print(" Every thing looks great");
                             showDialog(
                               context: context,

@@ -14,14 +14,14 @@ class ClassSections extends StatelessWidget {
     return GetBuilder<SectionController>(
       init: controller,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
+        backgroundColor: AppColors.BACKGROUND,
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: AppColors.CREMIZON,
-          foregroundColor: AppColors.SECONDARY_COLOR,
+          backgroundColor: AppColors.SECONDARY,
+          foregroundColor: AppColors.PRIMARY,
           title: const Text(
             'الشعبة',
-            style: TextStyle(color: AppColors.LIGHT_TEXT),
+            style: TextStyle(color: AppColors.TEXT_PRIMARY),
           ),
         ),
         body: Column(
@@ -41,21 +41,21 @@ class ClassSections extends StatelessWidget {
                       //
                     },
                     child: Card(
-                      shadowColor: AppColors.LIGHT_TEXT,
+                      shadowColor: AppColors.TEXT_PRIMARY,
                       elevation: 3,
                       margin: const EdgeInsets.all(8),
-                      color: AppColors.SECONDARY_COLOR,
+                      color: AppColors.PRIMARY,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             const CircleAvatar(
-                              backgroundColor: AppColors.LIGHT_TEXT,
+                              backgroundColor: AppColors.TEXT_PRIMARY,
                               radius: 30,
                               child: Icon(
                                 Icons.home,
-                                color: AppColors.LIGHT_TEXT,
+                                color: AppColors.TEXT_PRIMARY,
                               ),
                             ),
                             const SizedBox(height: 8),
@@ -79,7 +79,7 @@ class ClassSections extends StatelessWidget {
         floatingActionButton: SizedBox(
           width: MediaQuery.of(context).size.width * 3 / 10,
           child: FloatingActionButton(
-            backgroundColor: AppColors.SECONDARY_COLOR,
+            backgroundColor: AppColors.PRIMARY,
             onPressed: () {
               // Get.to(() => const AddClass());
             },
@@ -88,7 +88,7 @@ class ClassSections extends StatelessWidget {
               style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: AppColors.LIGHT_TEXT),
+                  color: AppColors.TEXT_PRIMARY),
             ),
           ),
         ),

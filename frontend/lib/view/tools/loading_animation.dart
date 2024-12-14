@@ -9,7 +9,7 @@ class CustomLoadingAnimation extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: SpinKitCircle(
-        color: AppColors.LIGHT_TEXT, // Customize the color as needed
+        color: AppColors.TEXT_PRIMARY, // Customize the color as needed
         size: 50.0, // Adjust the size as needed
         duration: Duration(seconds: 2),
       ),

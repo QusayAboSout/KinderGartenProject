@@ -40,9 +40,9 @@ class _StudentGeneralEvaluationState extends State<StudentGeneralEvaluation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.BACKGROUND_COLOR,
+      backgroundColor: AppColors.BACKGROUND,
       appBar: AppBar(
-        backgroundColor: AppColors.SECONDARY_COLOR,
+        backgroundColor: AppColors.PRIMARY,
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -56,12 +56,12 @@ class _StudentGeneralEvaluationState extends State<StudentGeneralEvaluation> {
             ),
             const SizedBox(height: 10),
             Title(
-              color: AppColors.BACKGROUND_COLOR,
+              color: AppColors.BACKGROUND,
               child: Text(
                 "${widget._classDto.className}",
                 style: const TextStyle(
                     fontSize: 22.3,
-                    color: AppColors.LIGHT_TEXT,
+                    color: AppColors.TEXT_PRIMARY,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -83,14 +83,14 @@ class _StudentGeneralEvaluationState extends State<StudentGeneralEvaluation> {
                         SizedBox(
                           width: MediaQuery.of(context).size.width * 0.6,
                           child: Card(
-                            shadowColor: AppColors.LIGHT_TEXT,
+                            shadowColor: AppColors.TEXT_PRIMARY,
                             elevation: 3,
                             margin: const EdgeInsets.all(8),
-                            color: AppColors.SECONDARY_COLOR,
+                            color: AppColors.PRIMARY,
                             child: ListTile(
                               leading: const CircleAvatar(
                                 radius: 20,
-                                backgroundColor: AppColors.LIGHT_TEXT,
+                                backgroundColor: AppColors.TEXT_PRIMARY,
                               ),
                               title: Text(
                                 '${widget._subjectDto.name}',
@@ -154,7 +154,7 @@ class _StudentGeneralEvaluationState extends State<StudentGeneralEvaluation> {
       floatingActionButton: SizedBox(
         width: MediaQuery.of(context).size.width * 0.9,
         child: FloatingActionButton(
-          backgroundColor: AppColors.SECONDARY_COLOR,
+          backgroundColor: AppColors.PRIMARY,
           onPressed: () {
             addSubjectEvaluation.studentID = widget._studentDto.id;
             addSubjectEvaluation.subjectID = widget._subjectDto.id;

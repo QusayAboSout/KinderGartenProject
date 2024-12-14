@@ -25,12 +25,12 @@ class _AddClassState extends State<AddClass> {
     return GetBuilder<ClassController>(
       init: controller,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
+        backgroundColor: AppColors.BACKGROUND,
         appBar: AppBar(
           title: const Text(
             'إضافة صف',
             style: TextStyle(
-                fontWeight: FontWeight.bold, color: AppColors.LIGHT_TEXT),
+                fontWeight: FontWeight.bold, color: AppColors.TEXT_PRIMARY),
           ),
           centerTitle: true,
           actions: [
@@ -40,11 +40,11 @@ class _AddClassState extends State<AddClass> {
               },
               icon: const Icon(
                 Icons.arrow_forward,
-                color: AppColors.BACKGROUND_COLOR,
+                color: AppColors.BACKGROUND,
               ),
             ),
           ],
-          backgroundColor: AppColors.SECONDARY_COLOR,
+          backgroundColor: AppColors.PRIMARY,
           automaticallyImplyLeading: false,
         ),
         body: SafeArea(
@@ -59,7 +59,7 @@ class _AddClassState extends State<AddClass> {
                       "روضة نور الإيمان الخاصة",
                       style: GoogleFonts.marhey(
                           textStyle: const TextStyle(
-                        color: AppColors.LIGHT_TEXT,
+                        color: AppColors.TEXT_PRIMARY,
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
                       )),

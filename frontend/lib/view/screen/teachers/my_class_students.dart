@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/controller/student_ctrl/my_class_student_controller.dart';
 import 'package:frontend/core/class/colors.dart';
-import 'package:frontend/view/screen/home/student/students.dart';
+import 'package:frontend/view/screen/student/students.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
 
@@ -36,19 +36,19 @@ class _MyClassStudentsState extends State<MyClassStudents> {
               builder: (controller) => Scaffold(
                 appBar: AppBar(
                   toolbarHeight: 50,
-                  backgroundColor: AppColors.CREMIZON,
-                  foregroundColor: AppColors.SECONDARY_COLOR,
+                  backgroundColor: AppColors.SECONDARY,
+                  foregroundColor: AppColors.PRIMARY,
                   centerTitle: true,
                   title: const Text(
                     'قائمة الطلاب',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 22,
-                      color: AppColors.LIGHT_TEXT,
+                      color: AppColors.TEXT_PRIMARY,
                     ),
                   ),
                 ),
-                backgroundColor: AppColors.BACKGROUND_COLOR,
+                backgroundColor: AppColors.BACKGROUND,
                 body: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -59,7 +59,7 @@ class _MyClassStudentsState extends State<MyClassStudents> {
                           child: Scaffold(
                               appBar: AppBar(
                                 automaticallyImplyLeading: false,
-                                backgroundColor: AppColors.BACKGROUND_COLOR,
+                                backgroundColor: AppColors.BACKGROUND,
                                 actions: [
                                   Expanded(
                                     child: Padding(
@@ -74,7 +74,7 @@ class _MyClassStudentsState extends State<MyClassStudents> {
                                               icon: const Icon(
                                                 Icons.search,
                                                 size: 35,
-                                                color: AppColors.LIGHT_TEXT,
+                                                color: AppColors.TEXT_PRIMARY,
                                               ),
                                             ),
                                             SizedBox(
@@ -87,8 +87,7 @@ class _MyClassStudentsState extends State<MyClassStudents> {
                                                   borderRadius:
                                                       BorderRadius.circular(20),
                                                   border: Border.all(
-                                                    color: AppColors
-                                                        .SECONDARY_COLOR,
+                                                    color: AppColors.PRIMARY,
                                                     width: 2,
                                                   ),
                                                 ),
@@ -114,7 +113,8 @@ class _MyClassStudentsState extends State<MyClassStudents> {
                                                             horizontal: 10),
                                                   ),
                                                   style: const TextStyle(
-                                                      color: AppColors.LIGHT_TEXT),
+                                                      color: AppColors
+                                                          .TEXT_PRIMARY),
                                                 ),
                                               ),
                                             ),
@@ -124,8 +124,7 @@ class _MyClassStudentsState extends State<MyClassStudents> {
                                                 borderRadius:
                                                     BorderRadius.circular(15),
                                                 border: Border.all(
-                                                  color:
-                                                      AppColors.SECONDARY_COLOR,
+                                                  color: AppColors.PRIMARY,
                                                   width: 2,
                                                 ),
                                               ),
@@ -134,7 +133,7 @@ class _MyClassStudentsState extends State<MyClassStudents> {
                                                 icon: const Icon(
                                                   Icons.filter_list_rounded,
                                                   size: 30,
-                                                  color: AppColors.LIGHT_TEXT,
+                                                  color: AppColors.TEXT_PRIMARY,
                                                 ),
                                               ),
                                             ),
@@ -146,8 +145,8 @@ class _MyClassStudentsState extends State<MyClassStudents> {
                                 ],
                                 toolbarHeight: 70,
                                 bottom: const TabBar(
-                                  labelColor: AppColors.LIGHT_TEXT,
-                                  indicatorColor: AppColors.LIGHT_TEXT,
+                                  labelColor: AppColors.TEXT_PRIMARY,
+                                  indicatorColor: AppColors.TEXT_PRIMARY,
                                   tabs: [
                                     Tab(
                                       child: Text(
@@ -155,7 +154,7 @@ class _MyClassStudentsState extends State<MyClassStudents> {
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 18,
-                                          color: AppColors.LIGHT_TEXT,
+                                          color: AppColors.TEXT_PRIMARY,
                                         ),
                                       ),
                                     ),
@@ -164,7 +163,7 @@ class _MyClassStudentsState extends State<MyClassStudents> {
                               ),
                               body: controller.isHave == true
                                   ? Container(
-                                      color: AppColors.SECONDARY_COLOR,
+                                      color: AppColors.PRIMARY,
                                       child: TabBarView(
                                         children: [
                                           Expanded(
@@ -190,12 +189,12 @@ class _MyClassStudentsState extends State<MyClassStudents> {
                                       ),
                                     )
                                   : Container(
-                                      color: AppColors.SECONDARY_COLOR,
+                                      color: AppColors.PRIMARY,
                                       child: const Center(
                                         child: Text(
                                           "لست مسؤول عن صف حتى الان",
                                           style: TextStyle(
-                                              color: AppColors.LIGHT_TEXT,
+                                              color: AppColors.TEXT_PRIMARY,
                                               fontSize: 20,
                                               fontWeight: FontWeight.bold),
                                         ),

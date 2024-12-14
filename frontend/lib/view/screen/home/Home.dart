@@ -7,12 +7,12 @@ import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/class/custom_alert_dialog.dart';
 import 'package:frontend/core/services/session.dart';
 import 'package:frontend/model/Posts.dart';
-import 'package:frontend/view/screen/home/childCard/qustions.dart';
+import 'package:frontend/view/screen/childCard/qustions.dart';
 import 'package:frontend/view/screen/home/drawer.dart';
 import 'package:frontend/view/screen/home/family_profile.dart';
 import 'package:frontend/view/screen/home/notification.dart';
-import 'package:frontend/view/screen/home/student/my_students.dart';
-import 'package:frontend/view/screen/home/student/students.dart';
+import 'package:frontend/view/screen/student/my_students.dart';
+import 'package:frontend/view/screen/student/students.dart';
 import 'package:frontend/view/screen/teachers/my_class_students.dart';
 import 'package:get/get.dart';
 
@@ -46,17 +46,14 @@ class _HomeState extends State<Home> {
       builder: (controller) => Scaffold(
         key: _scaffoldKey,
         appBar: AppBar(
-          backgroundColor: AppColors.BACKGROUND_COLOR,
           title: const Center(
             child: Text(
-              '__________',
-              style: TextStyle(color: AppColors.LIGHT_TEXT),
+              'روضة نور الإيمان',
             ),
           ),
           leading: IconButton(
             icon: const Icon(
               Icons.menu,
-              color: AppColors.LIGHT_TEXT,
             ),
             onPressed: () {
               _scaffoldKey.currentState!.openDrawer();
@@ -67,7 +64,6 @@ class _HomeState extends State<Home> {
               IconButton(
                 icon: const Icon(
                   Icons.person_add,
-                  color: AppColors.LIGHT_TEXT,
                 ),
                 onPressed: () {
                   Get.to(() => const childCardForm());
@@ -77,7 +73,6 @@ class _HomeState extends State<Home> {
               return IconButton(
                 icon: const Icon(
                   Icons.notifications,
-                  color: AppColors.LIGHT_TEXT,
                 ),
                 onPressed: () {
                   controller.showNotificationPage();
@@ -88,7 +83,6 @@ class _HomeState extends State<Home> {
         ),
         drawer: CustomDrawer(),
         bottomNavigationBar: BottomAppBar(
-          color: AppColors.CREMIZON,
           // color: const Color(0xFFFFD0D6),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -97,7 +91,6 @@ class _HomeState extends State<Home> {
                 return IconButton(
                   icon: const Icon(
                     Icons.home,
-                    color: AppColors.LIGHT_TEXT,
                   ),
                   onPressed: () {
                     controller.showHomePage();
@@ -108,7 +101,6 @@ class _HomeState extends State<Home> {
                 return IconButton(
                   icon: const Icon(
                     Icons.location_history_rounded,
-                    color: AppColors.LIGHT_TEXT,
                   ),
                   onPressed: () {
                     controller.showFormsPage();
@@ -118,7 +110,9 @@ class _HomeState extends State<Home> {
               const SizedBox(width: 64), // Empty space for the center button
               GetBuilder<HomeController>(builder: (HomeController controller) {
                 return IconButton(
-                  icon: const Icon(Icons.notifications, color: AppColors.LIGHT_TEXT),
+                  icon: const Icon(
+                    Icons.notifications,
+                  ),
                   onPressed: () {
                     controller.showNotificationPage();
                   },
@@ -128,7 +122,6 @@ class _HomeState extends State<Home> {
                 return IconButton(
                   icon: const Icon(
                     Icons.account_circle,
-                    color: AppColors.LIGHT_TEXT,
                   ),
                   onPressed: () {
                     controller.showFamilyProfile();
@@ -145,19 +138,17 @@ class _HomeState extends State<Home> {
             Session.user?.role == 'student'
                 ? MyStudents()
                 : Session.user?.role == 'admin'
-                    ? StudentListPage()
+                    ? MyStudents()
                     : const MyClassStudents(),
             NotificationPage(),
             const FamilyProfile(),
           ],
         ),
         floatingActionButton: FloatingActionButton(
-            backgroundColor: Colors.white,
+            backgroundColor: AppColors.PRIMARY,
             onPressed: () {
               if (Session.user?.role == 'student') {
-
                 Get.to(() => const childCardForm());
-
               } else {
                 showDialog(
                   context: context,
@@ -177,8 +168,8 @@ class _HomeState extends State<Home> {
                               controller: myController,
                               name: 'postInfo',
                               decoration: const InputDecoration(
-                                  labelText: 'وصف المنشور...',
-                                  labelStyle: TextStyle(color: Colors.grey)),
+                                labelText: 'وصف المنشور...',
+                              ),
                             ),
                           ),
                         ],
@@ -207,11 +198,9 @@ class _HomeState extends State<Home> {
             child: Session.user?.role != 'admin'
                 ? const Icon(
                     Icons.person_add,
-                    color: AppColors.SECONDARY_COLOR,
                   )
                 : const Icon(
                     Icons.add,
-                    color: AppColors.SECONDARY_COLOR,
                   )),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),
@@ -229,7 +218,6 @@ class HomePageContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: AppColors.BACKGROUND_COLOR,
         child: GetBuilder<PostController>(
             id: 'postHome',
             builder: (controller) {
@@ -244,16 +232,17 @@ class HomePageContent extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Card(
-                          color: AppColors.CREMIZON,
                           elevation: 3,
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(0, 12, 12, 12),
                             child: ListTile(
-                              textColor: AppColors.LIGHT_TEXT,
                               leading: const CircleAvatar(
+                                backgroundColor: AppColors.PRIMARY,
                                 radius: 20,
-                                backgroundImage:
-                                    AssetImage('assets/images/pic1.jpg'),
+                                child: Icon(
+                                  Icons.person,
+                                  color: AppColors.BUTTON_TEXT,
+                                ),
                               ),
                               title: Row(
                                 children: [
@@ -262,7 +251,6 @@ class HomePageContent extends StatelessWidget {
                                     style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
-                                      color: AppColors.BACKGROUND_COLOR
                                     ),
                                   ),
                                 ],
@@ -279,14 +267,13 @@ class HomePageContent extends StatelessWidget {
                                             style: TextStyle(
                                                 fontSize: 18,
                                                 fontWeight: FontWeight.bold,
-                                                color:
-                                                    AppColors.SECONDARY_COLOR),
+                                                color: AppColors.PRIMARY),
                                           ),
                                           content: Text(
                                             postDescription,
                                             style: const TextStyle(
+                                              color: AppColors.TEXT_SECONDARY,
                                               fontSize: 16,
-                                              color: AppColors.LIGHT_TEXT
                                             ),
                                           ),
                                           actions: <Widget>[
@@ -294,9 +281,9 @@ class HomePageContent extends StatelessWidget {
                                               child: const Text(
                                                 'إغلاق',
                                                 style: TextStyle(
-                                                  color: AppColors.LIGHT_TEXT,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
+                                                    fontWeight: FontWeight.bold,
+                                                    color:
+                                                        AppColors.BUTTON_TEXT),
                                               ),
                                               onPressed: () {
                                                 Navigator.of(context).pop();

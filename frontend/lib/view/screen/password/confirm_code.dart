@@ -31,21 +31,21 @@ class _ConfirmCodeState extends State<ConfirmCode> {
     return GetBuilder<SiginupConfirmCodeController>(
       init: controller,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
+        backgroundColor: AppColors.BACKGROUND,
         appBar: AppBar(
           automaticallyImplyLeading: false,
           actions: [
             IconButton(
               onPressed: () {
-                Get.to(() =>  Login());
+                Get.to(() => Login());
               },
               icon: const Icon(
                 Icons.arrow_forward,
-                color: AppColors.BACKGROUND_COLOR,
+                color: AppColors.BACKGROUND,
               ),
             ),
           ],
-          backgroundColor: AppColors.SECONDARY_COLOR,
+          backgroundColor: AppColors.PRIMARY,
         ),
         body: SingleChildScrollView(
           child: Center(
@@ -60,7 +60,7 @@ class _ConfirmCodeState extends State<ConfirmCode> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
-                      color: AppColors.SECONDARY_COLOR,
+                      color: AppColors.PRIMARY,
                     ),
                   ),
                   const SizedBox(height: 70),
@@ -80,7 +80,7 @@ class _ConfirmCodeState extends State<ConfirmCode> {
                       const Text(
                         "ادخل الكود الذي تم إرساله الى البريد الإلكتروني",
                         style: TextStyle(
-                          color: AppColors.SECONDARY_COLOR,
+                          color: AppColors.PRIMARY,
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
@@ -149,7 +149,13 @@ class _ConfirmCodeState extends State<ConfirmCode> {
                                                 'تم التحقق من ملكية الحساب, سيتم نقلك إلى صفحة تغير كلمة المرور',
                                             ButtonText: 'موافق',
                                             onPressed: () {
-                                              Get.to(() => (code: controller.formKey.currentState!.fields['code']!.value));
+                                              Get.to(() => (
+                                                    code: controller
+                                                        .formKey
+                                                        .currentState!
+                                                        .fields['code']!
+                                                        .value
+                                                  ));
                                             },
                                           );
                                         }));

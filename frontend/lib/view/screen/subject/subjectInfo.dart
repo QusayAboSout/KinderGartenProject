@@ -21,40 +21,34 @@ class SubjectInfo extends StatelessWidget {
   final SubjectController subjectController = Get.find<SubjectController>();
   final UnitController unitController = Get.find<UnitController>();
   final ClassController classController = Get.find<ClassController>();
-  // subject 
+  // subject
   @override
   Widget build(BuildContext context) {
     return GetBuilder<SubjectController>(
       init: subjectController,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
-        appBar: AppBar(
-          backgroundColor: AppColors.CREMIZON,
-          foregroundColor: AppColors.SECONDARY_COLOR,
-        ),
+        appBar: AppBar(),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
               const SizedBox(height: 10),
               const CircleAvatar(
-                backgroundColor: AppColors.CREMIZON,
                 radius: 60,
                 child: Icon(
                   Icons.home,
-                  color: AppColors.LIGHT_TEXT,
                   size: 60,
                 ),
               ),
               const SizedBox(height: 10),
               Title(
-                color: AppColors.BACKGROUND_COLOR,
+                color: AppColors.BACKGROUND,
                 child: Text(
                   "${subjectDto.name}",
                   style: const TextStyle(
                       fontSize: 22.3,
-                      color: AppColors.LIGHT_TEXT,
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.TEXT_PRIMARY),
                 ),
               ),
               const SizedBox(height: 10),
@@ -73,10 +67,10 @@ class SubjectInfo extends StatelessWidget {
                   appBar: AppBar(
                     toolbarHeight: 10,
                     automaticallyImplyLeading: false,
-                    backgroundColor: AppColors.BACKGROUND_COLOR,
+                    backgroundColor: AppColors.BACKGROUND,
                     bottom: const TabBar(
-                      indicatorColor: AppColors.LIGHT_TEXT,
-                      labelColor: AppColors.LIGHT_TEXT,
+                      indicatorColor: AppColors.TEXT_PRIMARY,
+                      labelColor: AppColors.TEXT_PRIMARY,
                       tabs: [
                         Tab(
                             child: Text(
@@ -87,7 +81,6 @@ class SubjectInfo extends StatelessWidget {
                     ),
                   ),
                   body: Container(
-                    color: AppColors.SECONDARY_COLOR,
                     child: TabBarView(
                       children: [
                         GetBuilder<UnitController>(
@@ -121,16 +114,13 @@ class SubjectInfo extends StatelessWidget {
         floatingActionButton: SizedBox(
           width: MediaQuery.of(context).size.width * 3 / 10,
           child: FloatingActionButton(
-            backgroundColor: AppColors.CREMIZON,
             onPressed: () {
               Get.to(() => AddUnits(subjectDto));
             },
             child: const Text(
               "إضافة درس",
               style: TextStyle(
-                fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: AppColors.LIGHT_TEXT
               ),
             ),
           ),

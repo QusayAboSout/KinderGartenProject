@@ -45,7 +45,7 @@ class _StudentUnitMarkState extends State<StudentUnitMark> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.BACKGROUND_COLOR,
+      backgroundColor: AppColors.BACKGROUND,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         leading: IconButton(
@@ -67,10 +67,10 @@ class _StudentUnitMarkState extends State<StudentUnitMark> {
           },
           icon: const Icon(
             Icons.arrow_back,
-            color: AppColors.BACKGROUND_COLOR,
+            color: AppColors.BACKGROUND,
           ),
         ),
-        backgroundColor: AppColors.SECONDARY_COLOR,
+        backgroundColor: AppColors.PRIMARY,
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -84,12 +84,12 @@ class _StudentUnitMarkState extends State<StudentUnitMark> {
             ),
             const SizedBox(height: 10),
             Title(
-              color: AppColors.BACKGROUND_COLOR,
+              color: AppColors.BACKGROUND,
               child: Text(
                 "${widget._subjectDto.name}",
                 style: const TextStyle(
                     fontSize: 22.3,
-                    color: AppColors.LIGHT_TEXT,
+                    color: AppColors.TEXT_PRIMARY,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -103,7 +103,7 @@ class _StudentUnitMarkState extends State<StudentUnitMark> {
             ),
             Expanded(
               child: Container(
-                color: AppColors.SECONDARY_COLOR,
+                color: AppColors.PRIMARY,
                 child: GetBuilder<ProgressEvaluationController>(
                   builder: (controller) => Column(
                     children: [
@@ -124,14 +124,14 @@ class _StudentUnitMarkState extends State<StudentUnitMark> {
                                   width:
                                       MediaQuery.of(context).size.width * 0.6,
                                   child: Card(
-                                    shadowColor: AppColors.LIGHT_TEXT,
+                                    shadowColor: AppColors.TEXT_PRIMARY,
                                     elevation: 3,
                                     margin: const EdgeInsets.all(8),
-                                    color: AppColors.SECONDARY_COLOR,
+                                    color: AppColors.PRIMARY,
                                     child: ListTile(
                                       leading: const CircleAvatar(
                                         radius: 20,
-                                        backgroundColor: AppColors.LIGHT_TEXT,
+                                        backgroundColor: AppColors.TEXT_PRIMARY,
                                       ),
                                       title: Text(
                                         '${item.unit?.name}',
@@ -190,7 +190,7 @@ class _StudentUnitMarkState extends State<StudentUnitMark> {
       floatingActionButton: SizedBox(
         width: MediaQuery.of(context).size.width * 0.9,
         child: FloatingActionButton(
-          backgroundColor: AppColors.SECONDARY_COLOR,
+          backgroundColor: AppColors.PRIMARY,
           onPressed: () {
             showDialog(
               context: context,

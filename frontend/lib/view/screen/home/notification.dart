@@ -3,7 +3,7 @@ import 'package:frontend/controller/childCardController.dart';
 import 'package:frontend/controller/notification_controller.dart';
 import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/model/childCardDto.dart';
-import 'package:frontend/view/screen/home/childCard/student_check_form_with_reason.dart';
+import 'package:frontend/view/screen/childCard/student_check_form_with_reason.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
 
@@ -15,7 +15,6 @@ class NotificationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.SECONDARY_COLOR,
       child: FutureBuilder(
           future: _controller.getChildCardsStatusByUser(),
           builder: (context, snapshot) {
@@ -62,7 +61,7 @@ class NotificationPage extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold,
-                                      color: AppColors.LIGHT_TEXT),
+                                      color: AppColors.TEXT_PRIMARY),
                                 ),
                               ),
                       ),
@@ -91,10 +90,10 @@ class NotificationChildCardRow extends StatelessWidget {
         child: ListTile(
           // tileColor:
           leading: const CircleAvatar(
-            backgroundColor: AppColors.LIGHT_TEXT,
+            backgroundColor: AppColors.TEXT_PRIMARY,
             child: Icon(
               Icons.person,
-              color: AppColors.LIGHT_TEXT,
+              color: AppColors.TEXT_PRIMARY,
             ),
           ),
           title: Text('${_rowCardDto.studentName}'),

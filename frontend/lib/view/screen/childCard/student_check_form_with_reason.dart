@@ -8,7 +8,7 @@ import 'package:frontend/core/class/custom_button.dart';
 import 'package:frontend/core/class/custom_text_field.dart';
 import 'package:frontend/core/services/session.dart';
 import 'package:frontend/model/childCardDto.dart';
-import 'package:frontend/view/screen/home/childCard/application_form_screen.dart';
+import 'package:frontend/view/screen/childCard/application_form_screen.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -45,19 +45,18 @@ class _StudentCheckFormWithReasonState
     return GetBuilder<ChildCardController>(
       init: controller,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
+        backgroundColor: AppColors.BACKGROUND,
         appBar: AppBar(
           title: const Text(
             'بطاقة طفل الروضة',
-            style:
-                TextStyle(fontWeight: FontWeight.bold, color: AppColors.LIGHT_TEXT),
+            style: TextStyle(
+                fontWeight: FontWeight.bold, color: AppColors.TEXT_PRIMARY),
           ),
           centerTitle: true,
-          backgroundColor: AppColors.CREMIZON,
-          foregroundColor: AppColors.SECONDARY_COLOR,
+          backgroundColor: AppColors.SECONDARY,
+          foregroundColor: AppColors.PRIMARY,
         ),
         body: SafeArea(
-          
           child: SingleChildScrollView(
             child: Center(
               child: FormBuilder(
@@ -69,7 +68,7 @@ class _StudentCheckFormWithReasonState
                       "روضة نور الإيمان الخاصة",
                       style: GoogleFonts.marhey(
                           textStyle: const TextStyle(
-                        color: AppColors.LIGHT_TEXT,
+                        color: AppColors.TEXT_PRIMARY,
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
                       )),
@@ -165,7 +164,7 @@ class _StudentCheckFormWithReasonState
                             children: [
                               CustomButton(
                                 text: "قبول",
-                                txtColor: AppColors.LIGHT_TEXT,
+                                txtColor: AppColors.TEXT_PRIMARY,
                                 color: AppColors.ACCEPT,
                                 buttonWidth: MediaQuery.of(context).size.width *
                                     4.5 /
@@ -208,7 +207,7 @@ class _StudentCheckFormWithReasonState
                                     4.5 /
                                     10,
                                 text: "رفض",
-                                txtColor: AppColors.LIGHT_TEXT,
+                                txtColor: AppColors.TEXT_PRIMARY,
                                 color: AppColors.DANGER,
                                 onPressed: () {
                                   showDialog(

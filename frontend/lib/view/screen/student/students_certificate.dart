@@ -28,13 +28,13 @@ class _StudentCertificateState extends State<StudentCertificate> {
       home: GetBuilder<StudentCertificateController>(
         builder: (controller) {
           return Scaffold(
-            backgroundColor: AppColors.SECONDARY_COLOR,
+            backgroundColor: AppColors.PRIMARY,
             appBar: AppBar(
-              backgroundColor: AppColors.CREMIZON,
-              foregroundColor: AppColors.SECONDARY_COLOR,
+              backgroundColor: AppColors.SECONDARY,
+              foregroundColor: AppColors.PRIMARY,
               title: const Text(
                 'أداء الطالب',
-                style: TextStyle(color: AppColors.LIGHT_TEXT),
+                style: TextStyle(color: AppColors.TEXT_PRIMARY),
               ),
               centerTitle: true,
               actions: [
@@ -77,7 +77,7 @@ class _StudentCertificateState extends State<StudentCertificate> {
                         columnSpacing: 20,
                         dataRowHeight: 60,
                         headingRowColor: WidgetStateColor.resolveWith(
-                            (states) => AppColors.SECONDARY_COLOR),
+                            (states) => AppColors.PRIMARY),
                         columns: const [
                           DataColumn(
                             label: Text(
@@ -170,7 +170,7 @@ class _StudentCertificateState extends State<StudentCertificate> {
                             columnSpacing: 20,
                             dataRowHeight: 60,
                             headingRowColor: WidgetStateColor.resolveWith(
-                                (states) => AppColors.SECONDARY_COLOR),
+                                (states) => AppColors.PRIMARY),
                             columns: const [
                               DataColumn(
                                 label: Text(

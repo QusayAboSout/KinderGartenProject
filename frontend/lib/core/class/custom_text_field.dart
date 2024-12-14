@@ -100,85 +100,76 @@ class _CustomTextFieldState extends State<CustomTextField> {
               : widget.validate,
           keyboardType: widget.textInputType,
           obscureText: widget.password,
-          style: const TextStyle(
-              color: AppColors.LIGHT_TEXT,
-              fontSize: 18,
-              fontWeight: FontWeight.bold),
-          cursorColor: AppColors.LIGHT_TEXT,
+          style: Theme.of(context).textTheme.bodyLarge,
+          cursorColor: Theme.of(context).primaryColor,
           decoration: InputDecoration(
-            errorStyle: const TextStyle(color: AppColors.DANGER, fontSize: 15),
+            filled: true,
+            fillColor: Theme.of(context).inputDecorationTheme.fillColor,
+            errorStyle: const TextStyle(
+              color: AppColors.DANGER,
+              fontSize: 15,
+            ),
             errorBorder: OutlineInputBorder(
               borderSide: BorderSide(
-                  color:
-                      _hasError ? AppColors.DANGER : AppColors.CREMIZON,
+                  color: _hasError
+                      ? AppColors.DANGER
+                      : Theme.of(context).primaryColor,
                   width: 2.0),
-              borderRadius: const BorderRadius.all(Radius.circular(22.3)),
+              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
             ),
             focusedErrorBorder: OutlineInputBorder(
               borderSide: BorderSide(
-                  color:
-                      _hasError ? AppColors.DANGER : AppColors.CREMIZON,
+                  color: _hasError
+                      ? AppColors.DANGER
+                      : Theme.of(context).primaryColor,
                   width: 2.0),
-              borderRadius: const BorderRadius.all(Radius.circular(22.3)),
+              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
             ),
             label: Text(
               widget.label,
-              style: const TextStyle(
-                  color: AppColors.LIGHT_TEXT,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
+              style: Theme.of(context).inputDecorationTheme.labelStyle,
             ),
-            focusColor: AppColors.LIGHT_TEXT,
             enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                    color: _hasError
-                        ? AppColors.DANGER
-                        : AppColors.CREMIZON,
-                    width: 2.0),
-                borderRadius: const BorderRadius.all(Radius.circular(22.3))),
-            focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(
-                color: AppColors.CREMIZON,
+                  color: _hasError
+                      ? Theme.of(context).primaryColor
+                      : Theme.of(context).primaryColor,
+                  width: 2.0),
+              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Theme.of(context).primaryColor,
                 width: 2.0,
               ),
-              borderRadius: BorderRadius.all(Radius.circular(22.3)),
+              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
             ),
             hintText: widget.hint,
-            border: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(
-                Radius.circular(10),
-              ),
-              borderSide: BorderSide(
-                color: AppColors.LIGHT_TEXT,
-                width: 1,
-                style: BorderStyle.solid,
-              ),
+            hintStyle: const TextStyle(
+              color: Color.fromRGBO(231, 234, 238, 0.91),
             ),
-            hintStyle:
-                const TextStyle(color: Color.fromARGB(91, 231, 234, 238)),
             prefixIcon: widget.formName == 'email'
-                ? const Icon(
+                ? Icon(
                     Icons.person,
-                    color: AppColors.CREMIZON,
+                    color: Theme.of(context).iconTheme.color,
                   )
                 : widget.formName == 'password'
-                    ? const Icon(
+                    ? Icon(
                         Icons.lock,
-                        color: AppColors.CREMIZON,
+                        color: Theme.of(context).iconTheme.color,
                       )
-                : widget.formName == 'confirmPassword'
-                    ? const Icon(
-                        Icons.lock,
-                        color: AppColors.CREMIZON,
-                      )
-                    : null,
+                    : widget.formName == 'confirmPassword'
+                        ? Icon(
+                            Icons.lock,
+                            color: Theme.of(context).iconTheme.color,
+                          )
+                        : null,
           ),
           name: widget.formName,
           inputFormatters: widget.inputFormat,
           enabled: widget.enabled,
           readOnly: widget.readonly,
           maxLength: widget.maxLength,
-          
         ),
       ),
     );

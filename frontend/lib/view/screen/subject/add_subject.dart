@@ -32,7 +32,7 @@ class _AddSubjectState extends State<AddSubject> {
           title: const Text(
             'إضافة مادة',
             style: TextStyle(
-                fontWeight: FontWeight.bold, color: AppColors.LIGHT_TEXT),
+                fontWeight: FontWeight.bold, color: AppColors.TEXT_PRIMARY),
           ),
           centerTitle: true,
           actions: [
@@ -42,11 +42,11 @@ class _AddSubjectState extends State<AddSubject> {
               },
               icon: const Icon(
                 Icons.arrow_forward,
-                color: AppColors.BACKGROUND_COLOR,
+                color: AppColors.BACKGROUND,
               ),
             ),
           ],
-          backgroundColor: AppColors.SECONDARY_COLOR,
+          backgroundColor: AppColors.PRIMARY,
           automaticallyImplyLeading: false,
         ),
         body: SafeArea(
@@ -61,7 +61,7 @@ class _AddSubjectState extends State<AddSubject> {
                       "روضة نور الإيمان الخاصة",
                       style: GoogleFonts.marhey(
                           textStyle: const TextStyle(
-                        color: AppColors.LIGHT_TEXT,
+                        color: AppColors.TEXT_PRIMARY,
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
                       )),
@@ -84,7 +84,7 @@ class _AddSubjectState extends State<AddSubject> {
                             showDialog(
                               context: context,
                               builder: (context) => CustomAlertDialog(
-                                headColor: AppColors.SECONDARY_COLOR,
+                                headColor: AppColors.PRIMARY,
                                 headText: "إضافة كتاب",
                                 bodyText:
                                     "تمت إضافة كتاب  ${_formKey.currentState!.value["name"]}",

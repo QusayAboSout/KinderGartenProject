@@ -23,21 +23,16 @@ class CustomAlertDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: AppColors.LIGHT_TEXT,
-      titleTextStyle: TextStyle(
-          color: headColor ?? AppColors.CREMIZON,
-          fontWeight: FontWeight.bold,
-          fontSize: 20),
-      contentTextStyle: const TextStyle(color: AppColors.LIGHT_TEXT),
-      title: headText != null ? Text(headText!) : null,
+      titleTextStyle:
+          const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+      title: headText != null
+          ? Text(
+              headText!,
+              style: const TextStyle(color: AppColors.PRIMARY),
+            )
+          : null,
       content: Text(bodyText),
-      actions: <Widget>[
-        CustomButton(
-            txtColor: AppColors.LIGHT_TEXT,
-            text: ButtonText,
-            color: AppColors.SECONDARY_COLOR,
-            onPressed: onPressed)
-      ],
+      actions: <Widget>[CustomButton(text: ButtonText, onPressed: onPressed)],
     );
   }
 }
@@ -65,24 +60,20 @@ class CustomAlertDialog2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: AppColors.LIGHT_TEXT,
-      titleTextStyle: TextStyle(
-        color: headColor ?? AppColors.SECONDARY_COLOR,
+      titleTextStyle: const TextStyle(
         fontWeight: FontWeight.bold,
-        fontSize: 20,
       ),
-      contentTextStyle: const TextStyle(color: AppColors.LIGHT_TEXT),
       title: headText != null ? Text(headText!) : null,
       content: widget,
       actions: <Widget>[
         ElevatedButton(
           onPressed: onPressed,
           style: ElevatedButton.styleFrom(
-            backgroundColor: btnColor ?? AppColors.SECONDARY_COLOR,
+            backgroundColor: btnColor ?? AppColors.PRIMARY,
           ),
           child: Text(
             buttonText,
-            style: const TextStyle(color: AppColors.LIGHT_TEXT),
+            style: const TextStyle(color: AppColors.TEXT_PRIMARY),
           ),
         ),
       ],

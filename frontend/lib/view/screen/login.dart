@@ -7,6 +7,7 @@ import 'package:frontend/core/class/custom_text_field.dart';
 import 'package:frontend/core/class/custom_button.dart';
 import 'package:frontend/core/class/row_text_button.dart';
 import 'package:get/get.dart';
+
 // loginFast
 class Login extends StatefulWidget {
   Login({super.key});
@@ -31,7 +32,6 @@ class _LoginState extends State<Login> {
     return GetBuilder<LoginController>(
       init: loginController,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
         resizeToAvoidBottomInset: false,
         body: Center(
           child: FormBuilder(
@@ -42,9 +42,9 @@ class _LoginState extends State<Login> {
                 const Text(
                   'تسجيل دخول',
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 40,
-                      color: AppColors.LIGHT_TEXT),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 40,
+                  ),
                 ),
                 const SizedBox(height: 130),
                 CustomTextField(

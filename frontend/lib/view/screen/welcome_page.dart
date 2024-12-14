@@ -11,9 +11,8 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: AppColors.BACKGROUND_COLOR,
+      // backgroundColor: AppColors.BACKGROUND,
       body: Container(
-        color: AppColors.BACKGROUND_COLOR,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -30,22 +29,19 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ),
               ),
-               Text(
+              Text(
                 'اهلا وسهلا بكم في روضة \n نور الإيمان الخاصة',
-                      style: GoogleFonts.marhey(
-                          textStyle: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30,
-                    color: AppColors.LIGHT_TEXT,
-                      )),
+                style: GoogleFonts.marhey(
+                    textStyle: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30,
+                )),
               ),
               const SizedBox(height: 150),
               CustomButton(
-                  color: AppColors.CREMIZON,
-                  txtColor: AppColors.LIGHT_TEXT,
                   text: 'التالي',
                   onPressed: () {
-                    Get.to(() =>  Login());
+                    Get.to(() => Login());
                   })
             ],
           ),

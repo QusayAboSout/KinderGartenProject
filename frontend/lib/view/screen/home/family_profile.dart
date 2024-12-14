@@ -9,7 +9,6 @@ class FamilyProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     // Implement your user profile page UI here
     return Container(
-      color: AppColors.SECONDARY_COLOR,
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -25,7 +24,7 @@ class FamilyProfile extends StatelessWidget {
               style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: AppColors.LIGHT_TEXT),
+                  color: AppColors.TEXT_PRIMARY),
             ),
             const SizedBox(height: 16),
           ],

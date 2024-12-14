@@ -21,14 +21,10 @@ class Subjects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.SECONDARY_COLOR,
       appBar: AppBar(
         centerTitle: true,
-        foregroundColor: AppColors.SECONDARY_COLOR,
-        backgroundColor: AppColors.CREMIZON,
         title: const Text(
           'إدارة المواد',
-          style: TextStyle(color: AppColors.LIGHT_TEXT),
         ),
       ),
       body: GetBuilder<SubjectController>(
@@ -54,16 +50,15 @@ class Subjects extends StatelessWidget {
           ? SizedBox(
               width: MediaQuery.of(context).size.width * 3 / 10,
               child: FloatingActionButton(
-                backgroundColor: AppColors.CREMIZON,
                 onPressed: () {
                   Get.to(() => const AddSubject());
                 },
                 child: const Text(
                   "إضافة مادة",
                   style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.LIGHT_TEXT),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             )
@@ -87,17 +82,13 @@ class _SubjectRowState extends State<SubjectRow> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      shadowColor: AppColors.CREMIZON,
       elevation: 3,
       margin: const EdgeInsets.all(8),
-      color: AppColors.LIGHT_TEXT,
       child: ListTile(
         leading: const CircleAvatar(
           radius: 22,
-          backgroundColor: AppColors.CREMIZON,
           child: Icon(
             Icons.menu_book,
-            color: AppColors.LIGHT_TEXT,
           ),
         ),
         title: Text(
@@ -111,7 +102,6 @@ class _SubjectRowState extends State<SubjectRow> {
           'المدرس : كل المعلمات',
           style: TextStyle(
             fontSize: 14,
-            color: AppColors.CREMIZON,
           ),
         ),
         trailing: PopupMenuButton<String>(
@@ -136,7 +126,7 @@ class _SubjectRowState extends State<SubjectRow> {
                           bodyText:
                               'يحتوي هذا الكتاب على مجموعة دروس، يرجى حذفهن قبل حذف هذا الدرس',
                           ButtonText: 'مفهوم',
-                          btnColor: AppColors.SECONDARY_COLOR,
+                          btnColor: AppColors.PRIMARY,
                           onPressed: () {
                             Get.back();
                           },
@@ -161,4 +151,3 @@ class _SubjectRowState extends State<SubjectRow> {
     );
   }
 }
-

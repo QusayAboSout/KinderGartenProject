@@ -6,7 +6,7 @@ import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/model/class.dart';
 import 'package:frontend/model/class_subjects.dart';
 import 'package:frontend/model/subjects.dart';
-import 'package:frontend/view/screen/home/student/students.dart';
+import 'package:frontend/view/screen/student/students.dart';
 import 'package:frontend/view/screen/subject/subjet_with_units.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
@@ -31,34 +31,26 @@ class ClassInfo extends StatelessWidget {
     return GetBuilder<ClassController>(
       init: classController,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
-        appBar: AppBar(
-          backgroundColor: AppColors.CREMIZON,
-          foregroundColor: AppColors.SECONDARY_COLOR,
-        ),
+        appBar: AppBar(),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
               const SizedBox(height: 10),
               const CircleAvatar(
-                backgroundColor: AppColors.LIGHT_TEXT,
                 radius: 60,
                 child: Icon(
                   Icons.home,
                   size: 60,
-                  color: AppColors.LIGHT_TEXT,
                 ),
               ),
               const SizedBox(height: 10),
               Title(
-                color: AppColors.BACKGROUND_COLOR,
+                color: AppColors.BACKGROUND,
                 child: Text(
                   "${classDto.className}",
                   style: const TextStyle(
-                      fontSize: 22.3,
-                      color: AppColors.LIGHT_TEXT,
-                      fontWeight: FontWeight.bold),
+                      fontSize: 22.3, fontWeight: FontWeight.bold),
                 ),
               ),
               const SizedBox(height: 10),
@@ -89,14 +81,13 @@ class ClassInfo extends StatelessWidget {
                   length: 3,
                   initialIndex: 2,
                   child: Scaffold(
-                    backgroundColor: AppColors.BACKGROUND_COLOR,
                     appBar: AppBar(
                       toolbarHeight: 10,
                       automaticallyImplyLeading: false,
-                      backgroundColor: AppColors.BACKGROUND_COLOR,
+                      backgroundColor: AppColors.BACKGROUND,
                       bottom: const TabBar(
-                        indicatorColor: AppColors.LIGHT_TEXT,
-                        labelColor: AppColors.LIGHT_TEXT,
+                        indicatorColor: AppColors.TEXT_PRIMARY,
+                        labelColor: AppColors.TEXT_PRIMARY,
                         tabs: [
                           Tab(
                               child: Text(
@@ -125,7 +116,6 @@ class ClassInfo extends StatelessWidget {
                         ///////////// $$$$$$ The Money $$$$$ ///////////////////////////////////////////
                         /////////////////////////////////////////////////////////////////////////////////////////
                         const Scaffold(
-                          backgroundColor: AppColors.SECONDARY_COLOR,
                           body: Column(
                             children: [
                               Text('Money'),
@@ -136,7 +126,6 @@ class ClassInfo extends StatelessWidget {
                         ///////////// The Subjects /////////////////////////////////////////////
                         /////////////////////////////////////////////////////////////////////////////////////////
                         Scaffold(
-                          backgroundColor: AppColors.SECONDARY_COLOR,
                           body: GetBuilder<ClassSubjectsController>(
                             builder: (controller) => Column(
                               children: [
@@ -151,18 +140,13 @@ class ClassInfo extends StatelessWidget {
                                               .classID ==
                                           classDto.id) {
                                         return Card(
-                                          shadowColor: AppColors.LIGHT_TEXT,
                                           elevation: 3,
                                           margin: const EdgeInsets.all(8),
-                                          color: AppColors.LIGHT_TEXT,
                                           child: ListTile(
                                               leading: const CircleAvatar(
                                                 radius: 22,
-                                                backgroundColor:
-                                                    AppColors.SECONDARY_COLOR,
                                                 child: Icon(
                                                   Icons.menu_book,
-                                                  color: AppColors.LIGHT_TEXT,
                                                 ),
                                               ),
                                               title: Text(
@@ -224,14 +208,12 @@ class ClassInfo extends StatelessWidget {
                           floatingActionButton: SizedBox(
                             width: MediaQuery.of(context).size.width * 3 / 10,
                             child: FloatingActionButton(
-                              backgroundColor: AppColors.SECONDARY_COLOR,
                               onPressed: () {
                                 showModal(context);
                               },
                               child: const Text(
                                 "إضافة كتاب",
                                 style: TextStyle(
-                                  fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -289,14 +271,11 @@ class ClassInfo extends StatelessWidget {
                     scrollDirection: Axis.vertical,
                     shrinkWrap: true,
                     itemBuilder: (context, index) => Card(
-                      shadowColor: AppColors.LIGHT_TEXT,
                       elevation: 3,
                       margin: const EdgeInsets.all(8),
-                      color: AppColors.SECONDARY_COLOR,
                       child: ListTile(
                         leading: const CircleAvatar(
                           radius: 30,
-                          backgroundColor: AppColors.LIGHT_TEXT,
                         ),
                         title: Text(
                           '${controller.subjects[index].name}',
@@ -307,7 +286,6 @@ class ClassInfo extends StatelessWidget {
                         ),
                         trailing: const Icon(
                           Icons.quora_rounded,
-                          color: AppColors.LIGHT_TEXT,
                         ),
                         onTap: () {
                           ClassSubjectsDto obj = ClassSubjectsDto();

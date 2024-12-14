@@ -22,7 +22,7 @@ class signupInfo extends StatelessWidget {
   // signupinfofast
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.BACKGROUND_COLOR,
+      backgroundColor: AppColors.BACKGROUND,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
@@ -44,11 +44,11 @@ class signupInfo extends StatelessWidget {
             },
             icon: const Icon(
               Icons.arrow_forward,
-              color: AppColors.BACKGROUND_COLOR,
+              color: AppColors.BACKGROUND,
             ),
           ),
         ],
-        backgroundColor: AppColors.SECONDARY_COLOR,
+        backgroundColor: AppColors.PRIMARY,
       ),
       body: SingleChildScrollView(
         child: GetBuilder<SiginUpController>(
@@ -65,7 +65,7 @@ class signupInfo extends StatelessWidget {
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 40,
-                          color: AppColors.CREMIZON,
+                          color: AppColors.SECONDARY,
                         ),
                       ),
                       const SizedBox(height: 70),

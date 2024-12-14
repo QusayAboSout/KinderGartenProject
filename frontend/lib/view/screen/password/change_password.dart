@@ -9,8 +9,7 @@ import 'package:get/get.dart';
 class ChangePassword extends StatefulWidget {
   ChangePassword({super.key});
 
-  final SiginUpController controller =
-      Get.find<SiginUpController>();
+  final SiginUpController controller = Get.find<SiginUpController>();
 
   @override
   State<ChangePassword> createState() => _ChangePasswordState();
@@ -25,7 +24,7 @@ class _ChangePasswordState extends State<ChangePassword> {
       // init: ,
       builder: (controller) => Scaffold(
         resizeToAvoidBottomInset: false,
-        backgroundColor: AppColors.BACKGROUND_COLOR,
+        backgroundColor: AppColors.BACKGROUND,
         body: Center(
           child: FormBuilder(
             key: _formKey,
@@ -37,7 +36,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
-                      color: AppColors.SECONDARY_COLOR),
+                      color: AppColors.PRIMARY),
                 ),
                 const SizedBox(height: 130),
                 CustomTextField(

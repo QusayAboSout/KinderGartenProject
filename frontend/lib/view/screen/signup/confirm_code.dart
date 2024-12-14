@@ -32,21 +32,21 @@ class _ConfirmCodeState extends State<ConfirmCode> {
     return GetBuilder<SiginupConfirmCodeController>(
       init: controller,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
+        backgroundColor: AppColors.BACKGROUND,
         appBar: AppBar(
           automaticallyImplyLeading: false,
           actions: [
             IconButton(
               onPressed: () {
-                Get.to(() =>  Login());
+                Get.to(() => Login());
               },
               icon: const Icon(
                 Icons.arrow_forward,
-                color: AppColors.CREMIZON,
+                color: AppColors.SECONDARY,
               ),
             ),
           ],
-          backgroundColor: AppColors.SECONDARY_COLOR,
+          backgroundColor: AppColors.PRIMARY,
         ),
         body: SingleChildScrollView(
           child: Center(
@@ -61,7 +61,7 @@ class _ConfirmCodeState extends State<ConfirmCode> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
-                      color: AppColors.CREMIZON,
+                      color: AppColors.SECONDARY,
                     ),
                   ),
                   const SizedBox(height: 70),
@@ -82,7 +82,7 @@ class _ConfirmCodeState extends State<ConfirmCode> {
                       const Text(
                         "ادخل الكود الذي تم إرساله الى البريد الإلكتروني",
                         style: TextStyle(
-                          color: AppColors.LIGHT_TEXT,
+                          color: AppColors.TEXT_PRIMARY,
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),

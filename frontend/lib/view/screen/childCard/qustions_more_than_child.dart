@@ -10,14 +10,14 @@ import 'package:frontend/view/screen/home/Home.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class childCardForm extends StatefulWidget {
-  const childCardForm({super.key});
+class ChildCardMoreThanChild extends StatefulWidget {
+  const ChildCardMoreThanChild({super.key});
 
   @override
-  State<childCardForm> createState() => _childCardFormState();
+  State<ChildCardMoreThanChild> createState() => _ChildCardMoreThanChildState();
 }
 
-class _childCardFormState extends State<childCardForm> {
+class _ChildCardMoreThanChildState extends State<ChildCardMoreThanChild> {
   final TextEditingController _dataController = TextEditingController();
   final _formKey = GlobalKey<FormBuilderState>();
   final ChildCardController _childCardController =
@@ -28,16 +28,16 @@ class _childCardFormState extends State<childCardForm> {
     return GetBuilder(
       init: ChildCardController(),
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
+        backgroundColor: AppColors.BACKGROUND,
         appBar: AppBar(
           title: const Text(
             'بطاقة طفل الروضة',
-            style:
-                TextStyle(fontWeight: FontWeight.bold, color: AppColors.LIGHT_TEXT),
+            style: TextStyle(
+                fontWeight: FontWeight.bold, color: AppColors.TEXT_PRIMARY),
           ),
           centerTitle: true,
-          backgroundColor: AppColors.CREMIZON,
-          foregroundColor: AppColors.SECONDARY_COLOR,
+          backgroundColor: AppColors.SECONDARY,
+          foregroundColor: AppColors.PRIMARY,
           leading: IconButton(
             onPressed: () {
               showDialog(
@@ -52,14 +52,14 @@ class _childCardFormState extends State<childCardForm> {
                         Get.back();
                         Get.back();
                       },
-                      headColor: AppColors.SECONDARY_COLOR,
-                      btnColor: AppColors.LIGHT_TEXT,
+                      headColor: AppColors.PRIMARY,
+                      btnColor: AppColors.TEXT_PRIMARY,
                     );
                   });
             },
             icon: const Icon(
               Icons.arrow_back,
-              color: AppColors.SECONDARY_COLOR,
+              color: AppColors.PRIMARY,
             ),
           ),
         ),
@@ -75,7 +75,7 @@ class _childCardFormState extends State<childCardForm> {
                       "روضة نور الإيمان الخاصة",
                       style: GoogleFonts.marhey(
                           textStyle: const TextStyle(
-                        color: AppColors.LIGHT_TEXT,
+                        color: AppColors.TEXT_PRIMARY,
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
                       )),
@@ -93,42 +93,6 @@ class _childCardFormState extends State<childCardForm> {
                       ],
                     ),
                     SizedBox(height: sizedBoxHeight),
-                    CustomTextField(
-                      label: 'اسم الأب',
-                      hint: 'الاسم...',
-                      formName: 'fatherName',
-                      textInputType: TextInputType.text,
-                      isQ: true,
-                      inputFormat: <TextInputFormatter>[
-                        FilteringTextInputFormatter.allow(
-                            RegExp(r'[a-zA-Z\s\u0600-\u06FF]')),
-                      ],
-                    ),
-                    SizedBox(height: sizedBoxHeight),
-                    CustomTextField(
-                      label: 'اسم الجد',
-                      hint: 'الاسم...',
-                      formName: 'grandFatherName',
-                      textInputType: TextInputType.text,
-                      isQ: true,
-                      inputFormat: <TextInputFormatter>[
-                        FilteringTextInputFormatter.allow(
-                            RegExp(r'[a-zA-Z\s\u0600-\u06FF]')),
-                      ],
-                    ),
-                    SizedBox(height: sizedBoxHeight),
-                    CustomTextField(
-                      label: 'اسم العائلة',
-                      hint: 'الاسم...',
-                      formName: 'familyName',
-                      textInputType: TextInputType.text,
-                      isQ: true,
-                      inputFormat: <TextInputFormatter>[
-                        FilteringTextInputFormatter.allow(
-                            RegExp(r'[a-zA-Z\s\u0600-\u06FF]')),
-                      ],
-                    ),
-                    SizedBox(height: sizedBoxHeight),
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 9 / 10,
                       child: FormBuilderTextField(
@@ -137,23 +101,23 @@ class _childCardFormState extends State<childCardForm> {
                         decoration: const InputDecoration(
                           label: Text("تاريخ ميلاد الطفل"),
                           labelStyle: TextStyle(
-                              color: AppColors.LIGHT_TEXT,
+                              color: AppColors.TEXT_PRIMARY,
                               fontSize: 20,
                               fontWeight: FontWeight.bold),
                           filled: true,
                           prefixIcon: Icon(
                             Icons.calendar_today,
-                            color: AppColors.LIGHT_TEXT,
+                            color: AppColors.TEXT_PRIMARY,
                           ),
                           enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                  color: AppColors.CREMIZON, width: 2.0),
+                                  color: AppColors.SECONDARY, width: 2.0),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(22.3))),
-                          fillColor: AppColors.BACKGROUND_COLOR,
+                          fillColor: AppColors.BACKGROUND,
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                                color: AppColors.CREMIZON, width: 2.0),
+                                color: AppColors.SECONDARY, width: 2.0),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(22.3)),
                           ),
@@ -164,26 +128,6 @@ class _childCardFormState extends State<childCardForm> {
                         },
                         validator: _validateDate,
                       ),
-                    ),
-                    SizedBox(height: sizedBoxHeight),
-                    const CustomTextField(
-                      label: 'مكان السكن',
-                      hint: 'الاسم...',
-                      formName: 'address',
-                      textInputType: TextInputType.text,
-                      isQ: true,
-                    ),
-                    SizedBox(height: sizedBoxHeight),
-                    CustomTextField(
-                      label: 'رقم هاتف البيت',
-                      hint: 'الرقم...',
-                      formName: 'phoneNumber',
-                      textInputType: TextInputType.number,
-                      isQ: true,
-                      inputFormat: [
-                        FilteringTextInputFormatter.allow(RegExp(r'[0-9]'))
-                      ],
-                      maxLength: 10,
                     ),
                     SizedBox(height: sizedBoxHeight),
                     CustomTextField(
@@ -197,18 +141,6 @@ class _childCardFormState extends State<childCardForm> {
                             RegExp(r'[a-zA-Z\s\u0600-\u06FF]')),
                       ],
                     ),
-                    SizedBox(height: sizedBoxHeight),
-                    // CustomTextField(
-                    //   label: 'الحالة الاجتماعية للوالدين',
-                    //   hint: 'الحالة...',
-                    //   formName: 'parentsSituation',
-                    //   textInputType: TextInputType.text,
-                    //   isQ: true,
-                    //   inputFormat: <TextInputFormatter>[
-                    //     FilteringTextInputFormatter.allow(
-                    //         RegExp(r'[a-zA-Z\s\u0600-\u06FF]')),
-                    //   ],
-                    // ),
                     SizedBox(height: sizedBoxHeight),
                     CustomButton(
                         text: "تسليم",
@@ -255,7 +187,7 @@ class _childCardFormState extends State<childCardForm> {
     setState(() {
       _dataController.text = picked.toString().split(" ")[0];
     });
-    }
+  }
 
   String? _validateDate(String? value) {
     if (value == null || value.isEmpty) {

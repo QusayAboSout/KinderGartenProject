@@ -17,7 +17,6 @@ class ClassRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return GestureDetector(
       onTap: () => Get.to(
         () => ClassInfo(classDto: _rowClass),
@@ -32,7 +31,6 @@ class ClassRow extends StatelessWidget {
                 bodyText:
                     'هل أنت متأكد من عملية حذف هذا الصف ؟؟\n سيتم عمل تغييرات على المعلومات المرتبطة بهذا الصف',
                 ButtonText: 'تأكيد',
-                btnColor: AppColors.SECONDARY_COLOR,
                 onPressed: () {
                   controller.deleteClass(_rowClass.id);
                 },
@@ -40,10 +38,8 @@ class ClassRow extends StatelessWidget {
             }));
       },
       child: Card(
-        shadowColor: AppColors.LIGHT_TEXT,
         elevation: 3,
         margin: const EdgeInsets.all(8),
-        color: AppColors.LIGHT_TEXT,
         // Use a PopupMenuButton as the trailing widget
         // Note: You may need to adjust the position of the PopupMenuButton
         // depending on your layout
@@ -53,10 +49,9 @@ class ClassRow extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               const CircleAvatar(
-                backgroundColor: AppColors.CREMIZON,
-                radius: 30, child: Icon(
+                radius: 30,
+                child: Icon(
                   Icons.home,
-                  color: AppColors.LIGHT_TEXT,
                 ),
               ),
               const SizedBox(height: 8),
@@ -72,7 +67,6 @@ class ClassRow extends StatelessWidget {
                 '${_rowClass.classYear}',
                 style: const TextStyle(
                   fontSize: 14,
-                  color: AppColors.LIGHT_TEXT,
                 ),
               ),
             ],

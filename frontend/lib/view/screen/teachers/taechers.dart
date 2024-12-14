@@ -20,15 +20,13 @@ class TeacherManagement extends StatelessWidget {
         init: controller,
         builder: (controller) => Scaffold(
               appBar: AppBar(
-                foregroundColor: AppColors.SECONDARY_COLOR,
-                backgroundColor: AppColors.CREMIZON,
                 centerTitle: true,
                 title: const Text(
                   'قائمة المعلمات',
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 22,
-                      color: AppColors.LIGHT_TEXT),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 22,
+                  ),
                 ),
                 leading: IconButton(
                   onPressed: () {
@@ -36,14 +34,11 @@ class TeacherManagement extends StatelessWidget {
                   },
                   icon: const Icon(
                     Icons.arrow_back,
-                    color: AppColors.SECONDARY_COLOR,
                   ),
                 ),
               ),
-              backgroundColor: AppColors.BACKGROUND_COLOR,
               body: Scaffold(
                 appBar: AppBar(
-                  backgroundColor: AppColors.SECONDARY_COLOR,
                   toolbarHeight: 100,
                   automaticallyImplyLeading: false,
                   actions: [
@@ -61,35 +56,23 @@ class TeacherManagement extends StatelessWidget {
                                     icon: const Icon(
                                       Icons.search,
                                       size: 35,
-                                      color: AppColors.CREMIZON,
                                     ),
                                   ),
                                   SizedBox(
                                     width: MediaQuery.of(context).size.width *
                                         0.65,
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
-                                        border: Border.all(
-                                            color: AppColors.CREMIZON,
-                                            width: 2),
-                                      ),
-                                      child: TextField(
-                                        controller: searchController,
-                                        onChanged: (value) {
-                                          controller.filterTeachers(value);
-                                        },
-                                        decoration: const InputDecoration(
-                                          hintText: 'ابحث عن معلمة...',
-                                          hintStyle: TextStyle(
-                                              color: Color.fromRGBO(
-                                                  244, 241, 241, 0.944)),
-                                          border: InputBorder.none,
-                                          contentPadding: EdgeInsets.symmetric(
-                                              horizontal: 10),
-                                        ),
-                                        style: const TextStyle(
-                                            color: AppColors.SECONDARY_COLOR),
+                                    child: TextField(
+                                      controller: searchController,
+                                      onChanged: (value) {
+                                        controller.filterTeachers(value);
+                                      },
+                                      decoration: const InputDecoration(
+                                        hintText: 'ابحث عن معلمة...',
+                                        hintStyle: TextStyle(
+                                            color: AppColors.TEXT_SECONDARY),
+                                        border: InputBorder.none,
+                                        contentPadding: EdgeInsets.symmetric(
+                                            horizontal: 10),
                                       ),
                                     ),
                                   ),
@@ -98,15 +81,14 @@ class TeacherManagement extends StatelessWidget {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(15),
                                       border: Border.all(
-                                          color: AppColors.CREMIZON,
-                                          width: 2),
+                                          width: 2,
+                                          color: AppColors.BACKGROUND),
                                     ),
                                     child: IconButton(
                                       onPressed: () {},
                                       icon: const Icon(
                                         Icons.filter_list_rounded,
                                         size: 30,
-                                        color: AppColors.LIGHT_TEXT,
                                       ),
                                     ),
                                   )
@@ -123,7 +105,6 @@ class TeacherManagement extends StatelessWidget {
                   ],
                 ),
                 body: Container(
-                  color: AppColors.SECONDARY_COLOR,
                   child: Column(
                     children: [
                       if (controller.loading)
@@ -150,16 +131,14 @@ class TeacherManagement extends StatelessWidget {
               floatingActionButton: SizedBox(
                 width: MediaQuery.of(context).size.width * 3 / 10,
                 child: FloatingActionButton(
-                  backgroundColor: AppColors.CREMIZON,
+                  backgroundColor: AppColors.PRIMARY,
                   onPressed: () {
                     Get.to(() => const AddTeacherStep1());
                   },
                   child: const Text(
                     "إضافة معلمة",
                     style: TextStyle(
-                      fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: AppColors.LIGHT_TEXT
                     ),
                   ),
                 ),
@@ -177,13 +156,10 @@ class TeacherRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      shadowColor: AppColors.LIGHT_TEXT,
       elevation: 2,
       margin: const EdgeInsets.all(8),
-      color: AppColors.LIGHT_TEXT,
       child: ListTile(
         leading: const Icon(
-          color: AppColors.CREMIZON,
           Icons.account_circle_rounded, // Specify the desired icon
           size: 50, // Adjust the size of the icon
         ),
@@ -198,12 +174,10 @@ class TeacherRow extends StatelessWidget {
           'التخصص : ${_rowTeacher.speciallizationName}',
           style: const TextStyle(
             fontSize: 14,
-            color: AppColors.CREMIZON,
           ),
         ),
         trailing: const Icon(
           Icons.star,
-          color: AppColors.CREMIZON,
         ),
         onTap: () {
           Get.to(() => TeacherProfile(teacherDto: _rowTeacher));

@@ -3,7 +3,7 @@ import 'package:frontend/controller/student_ctrl/students_controller.dart';
 import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/services/session.dart';
 import 'package:frontend/model/students.dart';
-import 'package:frontend/view/screen/home/student/students.dart';
+import 'package:frontend/view/screen/student/students.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
@@ -18,11 +18,8 @@ class MyStudents extends StatelessWidget {
   Widget build(BuildContext context) {
     double? sizedBoxHeight = 20;
     return Scaffold(
-      backgroundColor: AppColors.SECONDARY_COLOR,
       appBar: AppBar(
         toolbarHeight: 60,
-        backgroundColor: AppColors.CREMIZON,
-        foregroundColor: AppColors.SECONDARY_COLOR,
       ),
       body: FutureBuilder<void>(
           future: studentController.getMyStudents(),
@@ -41,16 +38,15 @@ class MyStudents extends StatelessWidget {
                         const Text(
                           'طلابي',
                           style: TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.LIGHT_TEXT),
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                         SizedBox(height: sizedBoxHeight),
                         const Padding(
                           padding: EdgeInsets.all(10),
                           child: Divider(
                             thickness: 3,
-                            color: Colors.grey,
                           ),
                         ),
                         Expanded(
@@ -67,12 +63,22 @@ class MyStudents extends StatelessWidget {
                                   return const Row();
                                 }
                               },
-                              noItemsFoundIndicatorBuilder: (_) => Column(
+                              noItemsFoundIndicatorBuilder: (_) => const Column(
                                 children: [
-                                  Text(
-                                    "لا يوجد طلاب",
-                                    style: TextStyle(
-                                        color: Theme.of(context).primaryColor),
+                                  SizedBox(
+                                    height: 100,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "لا يوجد طلاب",
+                                          style: TextStyle(
+                                              fontSize: 20,
+                                              color: AppColors.DANGER),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),

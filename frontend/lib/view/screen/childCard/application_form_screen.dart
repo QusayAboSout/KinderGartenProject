@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/controller/childCardController.dart';
 import 'package:frontend/core/class/colors.dart';
-import 'package:frontend/view/screen/home/childCard/child_card_row.dart';
+import 'package:frontend/view/screen/childCard/child_card_row.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
 
@@ -21,11 +21,7 @@ class _ApplicationFormScreenState extends State<ApplicationFormScreen> {
     return GetBuilder<ChildCardController>(
       init: controller,
       builder: (controller) => Scaffold(
-        appBar: AppBar(
-          backgroundColor: AppColors.CREMIZON,
-          foregroundColor: AppColors.SECONDARY_COLOR,
-        ),
-        backgroundColor: AppColors.BACKGROUND_COLOR,
+        appBar: AppBar(),
         body: Center(
           child: Column(
             children: [
@@ -33,9 +29,9 @@ class _ApplicationFormScreenState extends State<ApplicationFormScreen> {
               const Text(
                 "قائمة طلبات الالتحاق",
                 style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: AppColors.LIGHT_TEXT),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               Expanded(
                 child: Padding(
@@ -72,7 +68,7 @@ class _ApplicationFormScreenState extends State<ApplicationFormScreen> {
                             style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
-                                color: AppColors.LIGHT_TEXT),
+                                color: AppColors.DANGER),
                           ),
                         ),
                 ),

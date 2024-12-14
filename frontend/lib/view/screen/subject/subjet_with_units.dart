@@ -6,7 +6,7 @@ import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/model/class.dart';
 import 'package:frontend/model/class_subjects.dart';
 import 'package:frontend/model/subjects.dart';
-import 'package:frontend/view/screen/home/student/student%20evaluation/student_evaluation.dart';
+import 'package:frontend/view/screen/student/student%20evaluation/student_evaluation.dart';
 import 'package:frontend/view/screen/units/unit.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
@@ -30,10 +30,10 @@ class ClassSubjectsInfo extends StatelessWidget {
     return GetBuilder<SubjectController>(
       init: subjectController,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
+        backgroundColor: AppColors.BACKGROUND,
         appBar: AppBar(
-          backgroundColor: AppColors.CREMIZON,
-          foregroundColor: AppColors.SECONDARY_COLOR,
+          backgroundColor: AppColors.SECONDARY,
+          foregroundColor: AppColors.PRIMARY,
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -47,12 +47,12 @@ class ClassSubjectsInfo extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               Title(
-                color: AppColors.BACKGROUND_COLOR,
+                color: AppColors.BACKGROUND,
                 child: Text(
                   "${subjectDto.name}",
                   style: const TextStyle(
                       fontSize: 22.3,
-                      color: AppColors.LIGHT_TEXT,
+                      color: AppColors.TEXT_PRIMARY,
                       fontWeight: FontWeight.bold),
                 ),
               ),
@@ -77,14 +77,14 @@ class ClassSubjectsInfo extends StatelessWidget {
                 length: 2,
                 initialIndex: 1,
                 child: Scaffold(
-                  backgroundColor: AppColors.BACKGROUND_COLOR,
+                  backgroundColor: AppColors.BACKGROUND,
                   appBar: AppBar(
                     toolbarHeight: 0,
                     automaticallyImplyLeading: false,
-                    backgroundColor: AppColors.BACKGROUND_COLOR,
+                    backgroundColor: AppColors.BACKGROUND,
                     bottom: const TabBar(
-                      indicatorColor: AppColors.LIGHT_TEXT,
-                      labelColor: AppColors.LIGHT_TEXT,
+                      indicatorColor: AppColors.TEXT_PRIMARY,
+                      labelColor: AppColors.TEXT_PRIMARY,
                       tabs: [
                         Tab(
                           child: Text(

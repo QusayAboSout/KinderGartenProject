@@ -10,7 +10,7 @@ import 'package:frontend/core/class/custom_button.dart';
 import 'package:frontend/core/class/custom_text_field.dart';
 import 'package:frontend/model/user.dart';
 import 'package:frontend/view/screen/home/Home.dart';
-import 'package:frontend/view/screen/teachers/taecher.dart';
+import 'package:frontend/view/screen/teachers/taechers.dart';
 import 'package:get/get.dart';
 
 class AddTeacherStep2 extends StatelessWidget {
@@ -26,7 +26,7 @@ class AddTeacherStep2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.BACKGROUND_COLOR,
+      backgroundColor: AppColors.BACKGROUND,
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -46,10 +46,10 @@ class AddTeacherStep2 extends StatelessWidget {
           },
           icon: const Icon(
             Icons.arrow_back,
-            color: AppColors.BACKGROUND_COLOR,
+            color: AppColors.BACKGROUND,
           ),
         ),
-        backgroundColor: AppColors.SECONDARY_COLOR,
+        backgroundColor: AppColors.PRIMARY,
       ),
       body: SingleChildScrollView(
         child: Center(
@@ -63,7 +63,7 @@ class AddTeacherStep2 extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 40,
-                    color: AppColors.SECONDARY_COLOR,
+                    color: AppColors.PRIMARY,
                   ),
                 ),
                 const SizedBox(height: 30),

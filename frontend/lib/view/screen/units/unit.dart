@@ -17,17 +17,14 @@ class UnitRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      shadowColor: AppColors.LIGHT_TEXT,
+      shadowColor: AppColors.TEXT_PRIMARY,
       elevation: 3,
       margin: const EdgeInsets.all(8),
-      color: AppColors.LIGHT_TEXT,
       child: ListTile(
         leading: const CircleAvatar(
-          backgroundColor: AppColors.SECONDARY_COLOR,
           radius: 30,
           child: Icon(
             Icons.menu_book,
-            color: AppColors.CREMIZON,
           ),
         ),
         title: Text(
@@ -41,7 +38,6 @@ class UnitRow extends StatelessWidget {
           'رقم الدرس : ${_rowUnit.id}',
           style: const TextStyle(
             fontSize: 14,
-            color: AppColors.CREMIZON,
           ),
         ),
         trailing: PopupMenuButton<String>(
