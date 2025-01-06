@@ -5,6 +5,7 @@ class StudentDto {
   String? parentPhoneNumber;
   num? classID;
   num? userID;
+  num? sectinoID;
   num? generalEvaluationID;
   num? progressEvaluationID;
   num? attendanceID;
@@ -20,6 +21,7 @@ class StudentDto {
     this.parentPhoneNumber,
     this.classID,
     this.userID,
+    this.sectinoID,
     this.generalEvaluationID,
     this.progressEvaluationID,
     this.attendanceID,
@@ -47,6 +49,7 @@ class StudentDto {
     birthCertificateImageID = json['birthCertificateImageID'];
     parentCertificateImageID = json['parentCertificateImageID'];
     personalImageID = json['personalImageID'];
+    sectinoID = json['sectionID'];
   }
 
   Map<String, dynamic> toJson() {
@@ -64,6 +67,7 @@ class StudentDto {
     data['birthCertificateImageID'] = birthCertificateImageID;
     data['parentCertificateImageID'] = parentCertificateImageID;
     data['personalImageID'] = personalImageID;
+    data['sectionID'] = sectinoID;
     return data;
   }
 }

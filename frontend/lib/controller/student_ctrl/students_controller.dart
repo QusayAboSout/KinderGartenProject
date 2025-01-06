@@ -1,9 +1,11 @@
 import 'package:frontend/core/services/child_card_services.dart';
 import 'package:frontend/core/services/class_service.dart';
+import 'package:frontend/core/services/section_services.dart';
 import 'package:frontend/core/services/student_services.dart';
 import 'package:frontend/locator.dart';
 import 'package:frontend/model/childCardDto.dart';
 import 'package:frontend/model/custom_excetion.dart';
+import 'package:frontend/model/section.dart';
 import 'package:frontend/model/student_filter.dart';
 import 'package:frontend/model/students.dart';
 import 'package:frontend/utils/global.dart';
@@ -21,7 +23,8 @@ class StudentController extends GetxController {
   var childCardServices = locator<ChildCardServices>();
   var classService = locator<ClassServices>();
   var childCardService = locator<ChildCardServices>();
-
+  var sectionService = locator<SectionServices>();
+  List<SectionDto> sections = [];
   ChildCardDto childCardDto = ChildCardDto();
   // var service = locator<>();
   StudentFilter getDto = StudentFilter();
@@ -126,5 +129,11 @@ class StudentController extends GetxController {
     }
     showProgress = false;
     update(['progress']);
+  }
+
+  Future<List<SectionDto>> getClassSections(num? classID) async {
+    var result = await sectionService.getSections(classID);
+    sections.addAll(result);
+    return sections;
   }
 }

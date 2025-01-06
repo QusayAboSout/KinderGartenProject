@@ -14,14 +14,10 @@ class ClassSections extends StatelessWidget {
     return GetBuilder<SectionController>(
       init: controller,
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND,
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: AppColors.SECONDARY,
-          foregroundColor: AppColors.PRIMARY,
           title: const Text(
             'الشعبة',
-            style: TextStyle(color: AppColors.TEXT_PRIMARY),
           ),
         ),
         body: Column(
@@ -41,21 +37,17 @@ class ClassSections extends StatelessWidget {
                       //
                     },
                     child: Card(
-                      shadowColor: AppColors.TEXT_PRIMARY,
                       elevation: 3,
                       margin: const EdgeInsets.all(8),
-                      color: AppColors.PRIMARY,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             const CircleAvatar(
-                              backgroundColor: AppColors.TEXT_PRIMARY,
                               radius: 30,
                               child: Icon(
                                 Icons.home,
-                                color: AppColors.TEXT_PRIMARY,
                               ),
                             ),
                             const SizedBox(height: 8),
@@ -79,16 +71,15 @@ class ClassSections extends StatelessWidget {
         floatingActionButton: SizedBox(
           width: MediaQuery.of(context).size.width * 3 / 10,
           child: FloatingActionButton(
-            backgroundColor: AppColors.PRIMARY,
             onPressed: () {
               // Get.to(() => const AddClass());
             },
             child: const Text(
               "إضافة شعبة",
               style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.TEXT_PRIMARY),
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),

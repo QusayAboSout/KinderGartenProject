@@ -23,8 +23,6 @@ class StudentCheckForm extends StatefulWidget {
 class _StudentCheckFormState extends State<StudentCheckForm> {
   final ChildCardController controller = Get.find<ChildCardController>();
 
-  final StudentController stdController = Get.find<StudentController>();
-
   final _formKey = GlobalKey<FormBuilderState>();
   final _rejectFormKey = GlobalKey<FormBuilderState>();
 
@@ -178,7 +176,7 @@ class _StudentCheckFormState extends State<StudentCheckForm> {
                                           btnColor: AppColors.ACCEPT,
                                           onPressed: () async {
                                             if (IsValid()) {
-                                              await stdController.addStudent(
+                                              await controller.addStudent(
                                                   widget.childCard,
                                                   _formKey.currentState!.value);
                                               widget.childCard.isCheck = true;

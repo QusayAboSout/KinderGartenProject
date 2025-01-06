@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/controller/class_ctrl/class_controller.dart';
+import 'package:frontend/controller/class_ctrl/section_controller.dart';
 import 'package:frontend/controller/student_ctrl/current_students_controller.dart';
 import 'package:frontend/controller/student_ctrl/students_controller.dart';
 import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/services/session.dart';
 import 'package:frontend/model/class.dart';
 import 'package:frontend/model/students.dart';
+import 'package:frontend/view/screen/sections/row_section.dart';
 import 'package:frontend/view/screen/student/student_profile.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
@@ -290,18 +292,18 @@ class ClassRowModal extends StatelessWidget {
   final StudentDto _rowStudent;
   final ClassController classController = Get.find<ClassController>();
   final StudentController studentController = Get.find<StudentController>();
+  Future<void> _loadData() async {
+    studentController.getClassSections(_rowClass.id);
+  }
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      shadowColor: AppColors.TEXT_PRIMARY,
       elevation: 3,
       margin: const EdgeInsets.all(8),
-      color: AppColors.PRIMARY,
       child: ListTile(
         leading: const CircleAvatar(
           radius: 30,
-          backgroundColor: AppColors.TEXT_PRIMARY,
         ),
         title: Text(
           '${_rowClass.className}',
@@ -314,12 +316,10 @@ class ClassRowModal extends StatelessWidget {
           '${_rowClass.classYear}',
           style: const TextStyle(
             fontSize: 14,
-            color: AppColors.TEXT_PRIMARY,
           ),
         ),
         trailing: const Icon(
           Icons.quora_rounded,
-          color: AppColors.TEXT_PRIMARY,
         ),
         onTap: () {
           final Map<String, dynamic> value = <String, dynamic>{};
@@ -328,6 +328,31 @@ class ClassRowModal extends StatelessWidget {
           studentController.updateStudent(_rowStudent, value);
         },
       ),
+    );
+  }
+
+  void showModalSections(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return FutureBuilder(
+            future: _loadData(),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(child: CustomLoadingAnimation());
+              } else if (snapshot.hasError) {
+                return Center(child: Text('Error: ${snapshot.error}'));
+              } else {
+                return ListView.builder(
+                  itemCount: studentController.sections.length,
+                  scrollDirection: Axis.vertical,
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) =>
+                      SectionRowModal(studentController.sections[index]),
+                );
+              }
+            });
+      },
     );
   }
 }

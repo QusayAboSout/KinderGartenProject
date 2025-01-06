@@ -1,5 +1,7 @@
+import 'package:frontend/controller/student_ctrl/students_controller.dart';
 import 'package:frontend/core/services/child_card_services.dart';
 import 'package:frontend/core/services/session.dart';
+import 'package:frontend/core/services/student_services.dart';
 import 'package:frontend/locator.dart';
 import 'package:frontend/model/childCardDto.dart';
 import 'package:frontend/model/custom_excetion.dart';
@@ -13,6 +15,7 @@ class ChildCardController extends GetxController {
   var childCardDto = ChildCardDto();
   var error = "";
   var service = locator<ChildCardServices>();
+  final StudentController _studentController = StudentController();
   final ChildCardPaginationResult _childCardPaginationResult =
       ChildCardPaginationResult(data: []);
   List<ChildCardDto> cards = [];
@@ -128,18 +131,15 @@ class ChildCardController extends GetxController {
     update();
   }
 
-  // updateCheckCard(ChildCardDto childCard) {
-  //   final Map<String, dynamic> value = <String, dynamic>{};
-  //   childCard.isCheck = true;
-  //   value.addAll(childCard.toJson());
-  //   updateChildCard(childCard, value);
-  // }
-
   deleteChildCard(num? id) async {
     if (id == null) return;
     var result = await service.deleteChildCard(id);
     pagingController.refresh();
     update();
     getChildCardsByUser();
+  }
+
+  addStudent(ChildCardDto? card, Map<String, dynamic> value) async {
+    await _studentController.addStudent(card, value);
   }
 }
