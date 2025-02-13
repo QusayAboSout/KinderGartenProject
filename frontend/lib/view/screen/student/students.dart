@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/controller/class_ctrl/class_controller.dart';
-import 'package:frontend/controller/class_ctrl/section_controller.dart';
 import 'package:frontend/controller/student_ctrl/current_students_controller.dart';
 import 'package:frontend/controller/student_ctrl/students_controller.dart';
 import 'package:frontend/core/class/colors.dart';

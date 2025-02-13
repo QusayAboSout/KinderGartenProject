@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/view/screen/password/forget_password.dart';
 import 'package:frontend/view/screen/login.dart';
 import 'package:frontend/view/screen/signup/sign_up.dart';

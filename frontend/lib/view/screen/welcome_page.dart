@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/class/custom_button.dart';
 import 'package:frontend/view/screen/login.dart';
 import 'package:get/get.dart';

@@ -12,7 +12,6 @@ import 'package:frontend/view/screen/home/drawer.dart';
 import 'package:frontend/view/screen/home/family_profile.dart';
 import 'package:frontend/view/screen/home/notification.dart';
 import 'package:frontend/view/screen/student/my_students.dart';
-import 'package:frontend/view/screen/student/students.dart';
 import 'package:frontend/view/screen/teachers/my_class_students.dart';
 import 'package:get/get.dart';
 

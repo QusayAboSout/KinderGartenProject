@@ -9,7 +9,6 @@ import 'package:frontend/view/screen/units/add_units.dart';
 import 'package:frontend/view/screen/units/unit.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class SubjectInfo extends StatelessWidget {
   final SubjectDto subjectDto;

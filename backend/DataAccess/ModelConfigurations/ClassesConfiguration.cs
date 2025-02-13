@@ -16,6 +16,7 @@ namespace DataAccess.ModelConfigurations
         public ClacessConfiguration(EntityTypeBuilder<Class> entityTypeBuilder)
         {
             entityTypeBuilder.HasOne(c => c.Teacher).WithOne().OnDelete(DeleteBehavior.NoAction);
+            entityTypeBuilder.HasMany(c => c.Sections).WithOne().OnDelete(DeleteBehavior.NoAction);
             entityTypeBuilder.HasData(CreateData());
         }
 

@@ -18,14 +18,14 @@ namespace DataAccess.Data
         public DbSet<Attachment> Attachments { get; set; } = null!;
         public DbSet<AttachmentActivityStudent> AttachmentActivityStudents { get; set; } = null!;
         public DbSet<Attendance> Attendances { get; set; } = null!;
-        public DbSet<Class> Section { get; set; } = null!;
+        public DbSet<Class> Classes { get; set; } = null!;
         public DbSet<Comments> Comments { get; set; } = null!;
         public DbSet<ContactNumbers> ContactNumbers { get; set; } = null!;
         public DbSet<Diseases> Diseases { get; set; } = null!;
         public DbSet<Experience> Experiences { get; set; } = null!;
         public DbSet<GeneralEvaluation> GeneralEvaluations { get; set; } = null!;
         public DbSet<Guardian> Guardians { get; set; } = null!;
-        public DbSet<Section> GurdianTypes { get; set; } = null!;
+        public DbSet<GuardianType> GurdianTypes { get; set; } = null!;
         public DbSet<Hobbies> Hobbies { get; set; } = null!;
         public DbSet<Messaging> Messagings { get; set; } = null!;
         public DbSet<Posts> Postss { get; set; } = null!;
@@ -42,6 +42,7 @@ namespace DataAccess.Data
         public DbSet<UserVerificationCode> UserVerificationCodes { get; set; }
         public DbSet<ClassSubjects> ClassSubjects { get; set; }
         public DbSet<FamilyProfile> FamilyProfiles { get; set; }
+        public DbSet<Section> Sections { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

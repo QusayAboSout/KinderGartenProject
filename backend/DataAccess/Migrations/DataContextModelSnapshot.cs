@@ -311,21 +311,21 @@ namespace DataAccess.Migrations
                         .IsUnique()
                         .HasFilter("[TeacherID] IS NOT NULL");
 
-                    b.ToTable("Section");
+                    b.ToTable("Classes");
 
                     b.HasData(
                         new
                         {
                             ID = 1L,
                             ClassName = "براعم",
-                            ClassYear = 2024L,
+                            ClassYear = 2025L,
                             CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             ID = 2L,
                             ClassName = "بستان",
-                            ClassYear = 2024L,
+                            ClassYear = 2025L,
                             CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
@@ -665,7 +665,7 @@ namespace DataAccess.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("GuardianType");
+                    b.ToTable("GurdianTypes");
                 });
 
             modelBuilder.Entity("Domain.Models.Hobbies", b =>
@@ -783,7 +783,7 @@ namespace DataAccess.Migrations
                             ID = 1L,
                             CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Discription = "غدا سيكون موعد دفع الرسوم",
-                            PostDate = new DateTime(2024, 8, 11, 1, 5, 36, 669, DateTimeKind.Local).AddTicks(4195),
+                            PostDate = new DateTime(2025, 2, 13, 15, 10, 41, 88, DateTimeKind.Local).AddTicks(6359),
                             UserID = 1L
                         });
                 });
@@ -875,7 +875,7 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("ClassID");
 
-                    b.ToTable("GurdianTypes");
+                    b.ToTable("Sections");
 
                     b.HasData(
                         new
@@ -1551,7 +1551,8 @@ namespace DataAccess.Migrations
                 {
                     b.HasOne("Domain.Models.Class", "Class")
                         .WithMany("Sections")
-                        .HasForeignKey("ClassID");
+                        .HasForeignKey("ClassID")
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("Class");
                 });

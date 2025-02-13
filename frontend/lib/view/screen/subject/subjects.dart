@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/controller/class_ctrl/class_controller.dart';
 import 'package:frontend/controller/subject_controller.dart';
-import 'package:frontend/controller/unit_controller.dart';
 import 'package:frontend/core/class/colors.dart';
 import 'package:frontend/core/class/custom_alert_dialog.dart';
 import 'package:frontend/core/services/session.dart';
-import 'package:frontend/model/class_subjects.dart';
 import 'package:frontend/model/subjects.dart';
 import 'package:frontend/view/screen/subject/add_subject.dart';
 import 'package:frontend/view/screen/subject/subjectInfo.dart';
-import 'package:frontend/view/screen/units/add_units.dart';
-import 'package:frontend/view/screen/units/unit.dart';
 import 'package:frontend/view/tools/loading_animation.dart';
 import 'package:get/get.dart';
 
